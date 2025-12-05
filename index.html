@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formalita - Accompagnement dans vos démarches administratives. Titres de séjour, naturalisation, état civil, formalités entreprises. Service professionnel en Savoie et partout en France.">
+    <meta name="keywords" content="démarches administratives, titre de séjour, naturalisation, état civil, formalités entreprises, Chambéry, Savoie">
+    <meta name="author" content="Formalita">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Formalita - Vos formalités en toute sérénité">
+    <meta property="og:description" content="Accompagnement professionnel dans vos démarches administratives. Particuliers et entreprises.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://formalita.fr">
+    
+    <title>Formalita - Vos formalités en toute sérénité</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>">
+    
+    <style>
+        :root {
+            --orange-primary: #F5A623;
+            --orange-light: #FFD093;
+            --orange-dark: #E8940F;
+            --blue-primary: #2B5F9E;
+            --blue-light: #4A7DB8;
+            --blue-dark: #1E4A7A;
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-600: #4B5563;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+        
+        /* ===== HEADER ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gray-100);
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        .logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+        
+        .logo-text span {
+            color: var(--orange-primary);
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--gray-600);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: var(--orange-primary);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            color: white;
+            box-shadow: 0 4px 14px rgba(245, 166, 35, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 166, 35, 0.5);
+        }
+        
+        .btn-secondary {
+            background: var(--blue-primary);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--blue-dark);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--orange-primary);
+            color: var(--orange-primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--orange-primary);
+            color: white;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--gray-800);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 1.5rem 4rem;
+            background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 50%, rgba(245, 166, 35, 0.05) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 150%;
+            background: radial-gradient(ellipse, rgba(245, 166, 35, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(43, 95, 158, 0.1);
+            color: var(--blue-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-badge::before {
+            content: '✨';
+        }
+        
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--gray-900);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        .stat {
+            text-align: left;
+        }
+        
+        .stat-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--orange-primary);
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+        
+        .hero-visual {
+            position: relative;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .hero-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+        }
+        
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--blue-primary));
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0.3;
+        }
+        
+        .hero-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        
+        .hero-card-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--orange-light), var(--orange-primary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .hero-card-title {
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+        
+        .hero-card-subtitle {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+        
+        .checklist {
+            list-style: none;
+        }
+        
+        .checklist li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        
+        .checklist li:last-child {
+            border-bottom: none;
+        }
+        
+        .checklist-icon {
+            width: 24px;
+            height: 24px;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #22C55E;
+            font-size: 0.75rem;
+        }
+        
+        .floating-badge {
+            position: absolute;
+            background: white;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .floating-badge.top-right {
+            top: -20px;
+            right: -20px;
+            background: var(--blue-primary);
+            color: white;
+        }
+        
+        .floating-badge.bottom-left {
+            bottom: -20px;
+            left: -20px;
+            animation-delay: 1.5s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* ===== SERVICES ===== */
+        .services {
+            padding: 6rem 1.5rem;
+            background: white;
+        }
+        
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-label {
+            display: inline-block;
+            background: rgba(245, 166, 35, 0.1);
+            color: var(--orange-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .tab-btn {
+            padding: 1rem 2rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 50px;
+            background: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .tab-btn.active {
+            background: var(--orange-primary);
+            border-color: var(--orange-primary);
+            color: white;
+        }
+        
+        .tab-btn:hover:not(.active) {
+            border-color: var(--orange-primary);
+            color: var(--orange-primary);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .service-card {
+            background: var(--gray-50);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .service-card:hover {
+            background: white;
+            border-color: var(--gray-200);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--orange-light), var(--orange-primary));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 0.75rem;
+        }
+        
+        .service-card p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+        
+        /* ===== WHY US ===== */
+        .why-us {
+            padding: 6rem 1.5rem;
+            background: linear-gradient(135deg, var(--blue-primary), var(--blue-dark));
+            color: white;
+        }
+        
+        .why-us .section-label {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        
+        .why-us .section-title {
+            color: white;
+        }
+        
+        .why-us .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        
+        .benefit-card p {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+        }
+        
+        /* ===== CONTACT FORM ===== */
+        .contact {
+            padding: 6rem 1.5rem;
+            background: var(--gray-50);
+        }
+        
+        .contact-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+        }
+        
+        .contact-header {
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+        }
+        
+        .contact-header h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-header p {
+            opacity: 0.9;
+        }
+        
+        .contact-form {
+            padding: 3rem 2rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--gray-800);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--orange-primary);
+            box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-submit {
+            text-align: center;
+        }
+        
+        .form-submit .btn {
+            width: 100%;
+            max-width: 300px;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .form-legal {
+            margin-top: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--gray-600);
+            text-align: center;
+        }
+        
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--gray-900);
+            color: white;
+            padding: 4rem 1.5rem 2rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand .logo-text {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-heading {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--orange-primary);
+        }
+        
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .footer-bottom p {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.875rem;
+        }
+        
+        .legal-notice {
+            background: rgba(245, 166, 35, 0.1);
+            border: 1px solid rgba(245, 166, 35, 0.3);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.8);
+            text-align: center;
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-content {
+                order: 1;
+            }
+            
+            .hero-visual {
+                order: 2;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding-top: 6rem;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+                flex-wrap: wrap;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tab-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .floating-badge {
+                display: none;
+            }
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">F</div>
+                <div class="logo-text">Formal<span>ita</span></div>
+            </a>
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#pourquoi">Pourquoi nous</a>
+                <a href="#contact" class="btn btn-primary">Nous contacter</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">Partenaire certifié Pôle Démarches</div>
+                <h1>Vos <span class="highlight">formalités</span> en toute sérénité</h1>
+                <p>Nous vous accompagnons dans toutes vos démarches administratives. Particuliers ou professionnels, gagnez du temps et de la tranquillité d'esprit.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Demander un accompagnement</a>
+                    <a href="#services" class="btn btn-outline">Découvrir nos services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Dossiers acceptés</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">48h</div>
+                        <div class="stat-label">Délai de réponse</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Clients accompagnés</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="floating-badge top-right">🎯 100% personnalisé</div>
+                    <div class="floating-badge bottom-left">⚡ Réponse rapide</div>
+                    <div class="hero-card-header">
+                        <div class="hero-card-icon">📋</div>
+                        <div>
+                            <div class="hero-card-title">Votre dossier simplifié</div>
+                            <div class="hero-card-subtitle">Nous gérons tout pour vous</div>
+                        </div>
+                    </div>
+                    <ul class="checklist">
+                        <li>
+                            <div class="checklist-icon">✓</div>
+                            <span>Analyse de votre situation</span>
+                        </li>
+                        <li>
+                            <div class="checklist-icon">✓</div>
+                            <span>Constitution du dossier</span>
+                        </li>
+                        <li>
+                            <div class="checklist-icon">✓</div>
+                            <span>Suivi jusqu'à l'aboutissement</span>
+                        </li>
+                        <li>
+                            <div class="checklist-icon">✓</div>
+                            <span>Accompagnement personnalisé</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-label">Nos services</div>
+                <h2 class="section-title">Un accompagnement adapté à vos besoins</h2>
+                <p class="section-subtitle">Que vous soyez particulier ou professionnel, nous avons la solution pour simplifier vos démarches.</p>
+            </div>
+            
+            <div class="services-tabs">
+                <button class="tab-btn active" data-tab="particuliers">👤 Particuliers</button>
+                <button class="tab-btn" data-tab="professionnels">🏢 Professionnels</button>
+            </div>
+            
+            <div class="services-grid" id="services-particuliers">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🛂</div>
+                    <h3>Titres de séjour</h3>
+                    <p>Première demande, renouvellement, changement de statut. Nous constituons votre dossier de A à Z.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🇫🇷</div>
+                    <h3>Naturalisation</h3>
+                    <p>Accompagnement complet pour votre demande de nationalité française.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">📜</div>
+                    <h3>État civil</h3>
+                    <p>Actes de naissance, mariage, décès. Demandes et apostilles.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏠</div>
+                    <h3>Logement social</h3>
+                    <p>Constitution et suivi de votre dossier de demande de logement.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🚗</div>
+                    <h3>Permis de conduire</h3>
+                    <p>Échange, renouvellement, duplicata. Toutes vos démarches permis.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">👴</div>
+                    <h3>Retraites & pensions</h3>
+                    <p>Aide à la constitution de vos dossiers de retraite.</p>
+                </div>
+            </div>
+            
+            <div class="services-grid" id="services-professionnels" style="display: none;">
+                <div class="service-card fade-in">
+                    <div class="service-icon">👥</div>
+                    <h3>Gestion RH externalisée</h3>
+                    <p>Déléguez vos formalités administratives RH à nos experts.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">⚖️</div>
+                    <h3>Conformité réglementaire</h3>
+                    <p>Assurez-vous d'être en règle avec toutes les obligations légales.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">📊</div>
+                    <h3>Déclarations sociales</h3>
+                    <p>DSN, URSSAF, déclarations fiscales. On s'occupe de tout.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">💰</div>
+                    <h3>Dossiers de financement</h3>
+                    <p>Montage de dossiers pour subventions et aides aux entreprises.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">📝</div>
+                    <h3>Formalités entreprises</h3>
+                    <p>Création, modification, radiation. Toutes vos démarches juridiques.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🌍</div>
+                    <h3>Immigration professionnelle</h3>
+                    <p>Titres de séjour salariés, détachements, mobilité internationale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us" id="pourquoi">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-label">Pourquoi Formalita ?</div>
+                <h2 class="section-title">L'expertise au service de votre tranquillité</h2>
+                <p class="section-subtitle">Nous simplifions la complexité administrative pour que vous puissiez vous concentrer sur l'essentiel.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Expertise reconnue</h3>
+                    <p>Des conseillers formés et expérimentés, partenaires certifiés Pôle Démarches.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">⏱️</div>
+                    <h3>Gain de temps</h3>
+                    <p>Nous gérons l'intégralité de vos démarches. Vous n'avez qu'à nous fournir les documents.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Accompagnement personnalisé</h3>
+                    <p>Un interlocuteur dédié qui connaît votre dossier et vous tient informé à chaque étape.</p>
+                </div>
+                <div class="benefit-card fade-in">
+                    <div class="benefit-icon">✅</div>
+                    <h3>Résultats garantis</h3>
+                    <p>98% de dossiers acceptés grâce à notre expertise et notre rigueur.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-wrapper">
+                <div class="contact-header">
+                    <h2>Parlons de votre projet</h2>
+                    <p>Remplissez ce formulaire et nous vous recontacterons sous 24h</p>
+                </div>
+                
+                <!-- Netlify Form -->
+                <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p style="display:none;">
+                        <label>Ne pas remplir si vous êtes humain: <input name="bot-field"></label>
+                    </p>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prenom">Prénom *</label>
+                            <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nom *</label>
+                            <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" placeholder="06 XX XX XX XX">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="profil">Vous êtes *</label>
+                        <select id="profil" name="profil" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="particulier">Un particulier</option>
+                            <option value="entreprise">Une entreprise / Un professionnel</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="besoin">Quel est votre besoin ? *</label>
+                        <select id="besoin" name="besoin" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="titre-sejour">Titre de séjour</option>
+                            <option value="naturalisation">Naturalisation</option>
+                            <option value="etat-civil">État civil</option>
+                            <option value="logement">Logement social</option>
+                            <option value="permis">Permis de conduire</option>
+                            <option value="retraite">Retraite / Pension</option>
+                            <option value="rh">Gestion RH / Admin entreprise</option>
+                            <option value="financement">Dossier de financement</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Décrivez brièvement votre situation</label>
+                        <textarea id="message" name="message" placeholder="Donnez-nous quelques détails sur votre situation et votre besoin..."></textarea>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary">Envoyer ma demande</button>
+                    </div>
+                    
+                    <p class="form-legal">
+                        En soumettant ce formulaire, vous acceptez d'être recontacté par Formalita. 
+                        Vos données sont traitées conformément à notre politique de confidentialité (RGPD).
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">F</div>
+                        <div class="logo-text">Formal<span>ita</span></div>
+                    </div>
+                    <p>Votre partenaire de confiance pour toutes vos démarches administratives. Particuliers et professionnels.</p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Titres de séjour</a></li>
+                        <li><a href="#services">Naturalisation</a></li>
+                        <li><a href="#services">État civil</a></li>
+                        <li><a href="#services">Formalités entreprises</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Informations</h4>
+                    <ul class="footer-links">
+                        <li><a href="#pourquoi">À propos</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <div class="footer-contact-item">
+                        <span>📧</span>
+                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6605090812070512260009140b070a0f1207480014">[email&#160;protected]</a></span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <span>📍</span>
+                        <span>Chambéry, Savoie (73)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="legal-notice">
+                ⚠️ <strong>Mention légale obligatoire :</strong> Formalita est un service privé indépendant, non affilié à l'administration publique. Partenaire certifié Pôle Démarches.
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Formalita - Groupe Yuki. Tous droits réservés.</p>
+                <p>YUEKI SAS - RCS Chambéry 919 778 167</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Tab switching
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const servicesParticuliers = document.getElementById('services-particuliers');
+        const servicesProfessionnels = document.getElementById('services-professionnels');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                if (btn.dataset.tab === 'particuliers') {
+                    servicesParticuliers.style.display = 'grid';
+                    servicesProfessionnels.style.display = 'none';
+                } else {
+                    servicesParticuliers.style.display = 'none';
+                    servicesProfessionnels.style.display = 'grid';
+                }
+            });
+        });
+        
+        // Fade in on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(el => observer.observe(el));
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.
