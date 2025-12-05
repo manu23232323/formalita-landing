@@ -1,0 +1,27 @@
+# Netlify configuration
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  publish = "."
+
+# Redirect form submissions to success page
+[[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
+
+# Custom headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Form configuration
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
