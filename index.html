@@ -3,930 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Formalita - Expert N°1 en démarches administratives. Titres de séjour, naturalisation, aides sociales, logement. 98% de réussite. Consultation gratuite.">
-    <title>Formalita | Expert N°1 Démarches Administratives France</title>
-    
-    <!-- Preload fonts for performance -->
+    <title>Formalita - Vos démarches administratives simplifiées</title>
+    <meta name="description" content="Formalita vous accompagne dans toutes vos démarches administratives : titres de séjour, naturalisation, cartes d'identité, passeports. Service rapide et professionnel.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23F97316'/%3E%3Cstop offset='100%25' stop-color='%23EA580C'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' rx='22' width='100' height='100'/%3E%3Ctext y='.88em' x='50' text-anchor='middle' font-family='system-ui' font-size='58' font-weight='700' fill='white'%3EF%3C/text%3E%3C/svg%3E">
-
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* ═══════════════════════════════════════════════════════════
-           FORMALITA PREMIUM - Design System
-           ═══════════════════════════════════════════════════════════ */
-        
         :root {
-            /* Brand Colors */
-            --orange-50: #FFF7ED;
-            --orange-100: #FFEDD5;
-            --orange-200: #FED7AA;
-            --orange-300: #FDBA74;
-            --orange-400: #FB923C;
-            --orange-500: #F97316;
-            --orange-600: #EA580C;
-            --orange-700: #C2410C;
-            
-            --navy-50: #F0F5FF;
-            --navy-100: #E0EAFF;
-            --navy-200: #C7D7FE;
-            --navy-300: #A4BCFD;
-            --navy-400: #8098F9;
-            --navy-500: #6172F3;
-            --navy-600: #444CE7;
-            --navy-700: #3538CD;
-            --navy-800: #2D31A6;
-            --navy-900: #1E2167;
-            --navy-950: #121435;
-            
-            /* Neutrals */
-            --slate-50: #F8FAFC;
-            --slate-100: #F1F5F9;
-            --slate-200: #E2E8F0;
-            --slate-300: #CBD5E1;
-            --slate-400: #94A3B8;
-            --slate-500: #64748B;
-            --slate-600: #475569;
-            --slate-700: #334155;
-            --slate-800: #1E293B;
-            --slate-900: #0F172A;
-            --slate-950: #020617;
-            
-            /* Semantic */
-            --success: #22C55E;
-            --success-light: #DCFCE7;
-            --warning: #EAB308;
-            --error: #EF4444;
-            
-            /* Typography */
-            --font-display: 'Fraunces', Georgia, serif;
-            --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-            
-            /* Spacing */
-            --space-1: 4px;
-            --space-2: 8px;
-            --space-3: 12px;
-            --space-4: 16px;
-            --space-5: 20px;
-            --space-6: 24px;
-            --space-8: 32px;
-            --space-10: 40px;
-            --space-12: 48px;
-            --space-16: 64px;
-            --space-20: 80px;
-            --space-24: 96px;
-            --space-32: 128px;
-            
-            /* Shadows */
-            --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
-            --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.25);
-            --shadow-glow: 0 0 60px rgba(249,115,22,0.4);
-            --shadow-glow-lg: 0 0 100px rgba(249,115,22,0.3);
-            
-            /* Radius */
-            --radius-sm: 6px;
-            --radius-md: 10px;
-            --radius-lg: 16px;
-            --radius-xl: 24px;
-            --radius-2xl: 32px;
-            --radius-full: 9999px;
-            
-            /* Transitions */
-            --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-            --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-            --duration-fast: 150ms;
-            --duration-base: 300ms;
-            --duration-slow: 500ms;
+            --orange: #F5A623;
+            --orange-dark: #E09000;
+            --blue: #2B5F9E;
+            --blue-dark: #1E4A7A;
+            --dark: #1a1a2e;
+            --gray-900: #2d2d3a;
+            --gray-600: #6b7280;
+            --gray-400: #9ca3af;
+            --gray-200: #e5e7eb;
+            --gray-100: #f3f4f6;
+            --white: #ffffff;
         }
 
-        /* ═══════════════════════════════════════════════════════════
-           RESET & BASE
-           ═══════════════════════════════════════════════════════════ */
-        
-        *, *::before, *::after {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-        }
-
         body {
-            font-family: var(--font-body);
+            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 16px;
             line-height: 1.6;
-            color: var(--slate-800);
-            background: var(--slate-50);
-            overflow-x: hidden;
+            color: var(--gray-900);
+            background: var(--white);
         }
 
-        ::selection {
-            background: var(--orange-200);
-            color: var(--orange-900);
-        }
-
-        img, svg {
-            display: block;
-            max-width: 100%;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        button {
-            font: inherit;
-            cursor: pointer;
-            border: none;
-            background: none;
-        }
-
-        /* ═══════════════════════════════════════════════════════════
-           LAYOUT
-           ═══════════════════════════════════════════════════════════ */
-        
-        .container {
-            width: 100%;
-            max-width: 1320px;
-            margin: 0 auto;
-            padding: 0 var(--space-6);
-        }
-
-        .section {
-            padding: var(--space-24) 0;
-        }
-
-        /* ═══════════════════════════════════════════════════════════
-           COMPONENTS - Buttons
-           ═══════════════════════════════════════════════════════════ */
-        
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-3);
-            padding: var(--space-4) var(--space-8);
-            font-size: 15px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            border-radius: var(--radius-lg);
-            transition: all var(--duration-base) var(--ease-out);
-            position: relative;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 50%);
-            opacity: 0;
-            transition: opacity var(--duration-fast);
-        }
-
-        .btn:hover::before {
-            opacity: 1;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--orange-500) 0%, var(--orange-600) 100%);
-            color: white;
-            box-shadow: 
-                0 2px 4px rgba(249,115,22,0.2),
-                0 8px 24px rgba(249,115,22,0.3),
-                inset 0 1px 0 rgba(255,255,255,0.2);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 
-                0 4px 8px rgba(249,115,22,0.25),
-                0 16px 40px rgba(249,115,22,0.35),
-                inset 0 1px 0 rgba(255,255,255,0.2);
-        }
-
-        .btn-primary:active {
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: var(--slate-800);
-            box-shadow: 
-                0 0 0 1px rgba(0,0,0,0.06),
-                var(--shadow-sm);
-        }
-
-        .btn-secondary:hover {
-            background: var(--slate-50);
-            box-shadow: 
-                0 0 0 1px rgba(0,0,0,0.08),
-                var(--shadow-md);
-            transform: translateY(-2px);
-        }
-
-        .btn-ghost {
-            color: var(--slate-600);
-            padding: var(--space-3) var(--space-5);
-        }
-
-        .btn-ghost:hover {
-            color: var(--slate-900);
-            background: var(--slate-100);
-        }
-
-        .btn-lg {
-            padding: var(--space-5) var(--space-10);
-            font-size: 16px;
-            border-radius: var(--radius-xl);
-        }
-
-        .btn-icon {
-            width: 20px;
-            height: 20px;
-            transition: transform var(--duration-base) var(--ease-out);
-        }
-
-        .btn:hover .btn-icon {
-            transform: translateX(4px);
-        }
-
-        /* ═══════════════════════════════════════════════════════════
-           HEADER
-           ═══════════════════════════════════════════════════════════ */
-        
+        /* Header */
         .header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
+            background: var(--white);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             z-index: 1000;
-            padding: var(--space-5) 0;
-            transition: all var(--duration-base) var(--ease-out);
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(248, 250, 252, 0.8);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border-bottom: 1px solid rgba(0,0,0,0.04);
-            opacity: 0;
-            transition: opacity var(--duration-base);
-        }
-
-        .header.scrolled::before {
-            opacity: 1;
+            padding: 0.75rem 0;
         }
 
         .header-inner {
-            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
-            z-index: 10;
-        }
-
-        .logo-mark {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(135deg, var(--orange-500) 0%, var(--orange-600) 100%);
-            border-radius: var(--radius-md);
-            display: grid;
-            place-items: center;
-            font-family: var(--font-display);
-            font-size: 22px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: white;
-            box-shadow: 0 4px 12px rgba(249,115,22,0.35);
-            transition: transform var(--duration-base) var(--ease-spring);
+            color: var(--dark);
+            text-decoration: none;
         }
 
-        .logo:hover .logo-mark {
-            transform: rotate(-6deg) scale(1.05);
-        }
-
-        .logo-text {
-            font-family: var(--font-display);
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--slate-900);
-            letter-spacing: -0.03em;
-        }
-
-        .logo-text span {
-            color: var(--orange-500);
+        .logo span {
+            color: var(--orange);
         }
 
         .nav {
             display: flex;
             align-items: center;
-            gap: var(--space-2);
+            gap: 2rem;
         }
 
-        .nav-link {
-            padding: var(--space-3) var(--space-4);
-            font-size: 15px;
+        .nav a {
+            color: var(--gray-600);
+            text-decoration: none;
             font-weight: 500;
-            color: var(--slate-600);
-            border-radius: var(--radius-md);
-            transition: all var(--duration-fast);
+            font-size: 0.95rem;
+            transition: color 0.2s;
         }
 
-        .nav-link:hover {
-            color: var(--slate-900);
-            background: rgba(0,0,0,0.04);
+        .nav a:hover {
+            color: var(--orange);
         }
 
-        .nav-cta {
-            margin-left: var(--space-4);
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
         }
 
-        .mobile-toggle {
+        .btn-primary {
+            background: var(--orange);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--orange-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--blue);
+            border: 2px solid var(--blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--blue);
+            color: var(--white);
+        }
+
+        .mobile-menu {
             display: none;
-            width: 44px;
-            height: 44px;
-            align-items: center;
-            justify-content: center;
-            border-radius: var(--radius-md);
-            z-index: 10;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
         }
 
-        .mobile-toggle:hover {
-            background: var(--slate-100);
+        .mobile-menu svg {
+            width: 24px;
+            height: 24px;
+            color: var(--dark);
         }
 
-        .hamburger {
-            width: 22px;
-            height: 14px;
-            position: relative;
-        }
-
-        .hamburger span {
-            position: absolute;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: var(--slate-700);
-            border-radius: 1px;
-            transition: all var(--duration-fast) var(--ease-out);
-        }
-
-        .hamburger span:first-child { top: 0; }
-        .hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
-        .hamburger span:last-child { bottom: 0; }
-
-        /* ═══════════════════════════════════════════════════════════
-           HERO
-           ═══════════════════════════════════════════════════════════ */
-        
+        /* Hero */
         .hero {
-            position: relative;
-            min-height: 100vh;
+            padding: 8rem 1.5rem 4rem;
+            background: linear-gradient(135deg, var(--gray-100) 0%, var(--white) 100%);
+            min-height: 70vh;
             display: flex;
             align-items: center;
-            padding: var(--space-32) 0 var(--space-20);
-            overflow: hidden;
         }
 
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse 100% 100% at 0% 0%, rgba(249,115,22,0.08) 0%, transparent 50%),
-                radial-gradient(ellipse 80% 80% at 100% 100%, rgba(99,102,241,0.06) 0%, transparent 50%),
-                var(--slate-50);
-        }
-
-        .hero-grid {
-            position: absolute;
-            inset: 0;
-            background-image: 
-                linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
-            background-size: 60px 60px;
-            mask-image: radial-gradient(ellipse 80% 80% at 50% 30%, black, transparent);
-            -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 30%, black, transparent);
-        }
-
-        .hero-glow {
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 800px;
-            height: 600px;
-            background: radial-gradient(ellipse, rgba(249,115,22,0.15) 0%, transparent 70%);
-            filter: blur(80px);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--space-16);
+            gap: 4rem;
             align-items: center;
         }
 
-        .hero-text {
-            max-width: 620px;
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.15;
+            color: var(--dark);
+            margin-bottom: 1.25rem;
         }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-3);
-            padding: var(--space-2) var(--space-4) var(--space-2) var(--space-2);
-            background: white;
-            border: 1px solid var(--slate-200);
-            border-radius: var(--radius-full);
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--slate-700);
-            margin-bottom: var(--space-8);
-            box-shadow: var(--shadow-sm);
-            animation: fadeInUp 0.8s var(--ease-out) backwards;
+        .hero-content h1 span {
+            color: var(--orange);
         }
 
-        .hero-badge-icon {
-            display: grid;
-            place-items: center;
-            width: 28px;
-            height: 28px;
-            background: linear-gradient(135deg, var(--navy-500), var(--navy-600));
-            border-radius: var(--radius-full);
-            font-size: 14px;
+        .hero-content p {
+            font-size: 1.15rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            max-width: 500px;
         }
 
-        .hero-badge-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--success);
-            border-radius: var(--radius-full);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.1); }
-        }
-
-        .hero-title {
-            font-family: var(--font-display);
-            font-size: clamp(44px, 5.5vw, 72px);
-            font-weight: 700;
-            line-height: 1.05;
-            color: var(--slate-900);
-            margin-bottom: var(--space-6);
-            letter-spacing: -0.03em;
-            animation: fadeInUp 0.8s var(--ease-out) 0.1s backwards;
-        }
-
-        .hero-title .gradient {
-            background: linear-gradient(135deg, var(--orange-500) 0%, var(--orange-600) 50%, var(--orange-500) 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: shimmer 3s linear infinite;
-        }
-
-        @keyframes shimmer {
-            to { background-position: 200% center; }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .hero-subtitle {
-            font-size: 19px;
-            line-height: 1.7;
-            color: var(--slate-600);
-            margin-bottom: var(--space-10);
-            animation: fadeInUp 0.8s var(--ease-out) 0.2s backwards;
-        }
-
-        .hero-actions {
+        .hero-buttons {
             display: flex;
-            gap: var(--space-4);
+            gap: 1rem;
             flex-wrap: wrap;
-            margin-bottom: var(--space-12);
-            animation: fadeInUp 0.8s var(--ease-out) 0.3s backwards;
         }
 
-        .hero-stats {
-            display: flex;
-            gap: var(--space-10);
-            padding-top: var(--space-8);
-            border-top: 1px solid var(--slate-200);
-            animation: fadeInUp 0.8s var(--ease-out) 0.4s backwards;
-        }
-
-        .hero-stat {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hero-stat-value {
-            font-family: var(--font-display);
-            font-size: 40px;
-            font-weight: 700;
-            color: var(--slate-900);
-            letter-spacing: -0.03em;
-            line-height: 1;
-        }
-
-        .hero-stat-value span {
-            color: var(--orange-500);
-        }
-
-        .hero-stat-label {
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--slate-500);
-            margin-top: var(--space-2);
-        }
-
-        /* Hero Visual - Image Background Design */
-        .hero-visual {
-            position: relative;
-            height: 100%;
-            min-height: 500px;
-            border-radius: var(--radius-2xl);
-            overflow: hidden;
-            animation: fadeInUp 0.8s var(--ease-out) 0.3s backwards;
-        }
-
-        .hero-image {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-            border-radius: var(--radius-2xl);
-        }
-
-        .hero-image-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                to right,
-                rgba(248, 250, 252, 1) 0%,
-                rgba(248, 250, 252, 0.8) 15%,
-                rgba(248, 250, 252, 0.3) 40%,
-                rgba(248, 250, 252, 0) 60%
-            );
-            border-radius: var(--radius-2xl);
-        }
-
-        /* Trust Badge flottant */
-        .hero-trust-badge {
-            position: absolute;
-            bottom: 30px;
-            left: 30px;
-            background: white;
-            border-radius: var(--radius-xl);
-            padding: var(--space-4) var(--space-6);
-            box-shadow: 
-                var(--shadow-xl),
-                0 0 0 1px rgba(0,0,0,0.05);
+        .hero-trust {
             display: flex;
             align-items: center;
-            gap: var(--space-4);
-            animation: floatBadge 4s ease-in-out infinite;
-            z-index: 10;
-        }
-
-        @keyframes floatBadge {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        .hero-trust-stars {
-            display: flex;
-            gap: 2px;
-            color: #FBBF24;
-            font-size: 18px;
-        }
-
-        .hero-trust-rating {
-            font-family: var(--font-display);
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--slate-900);
-            line-height: 1;
-        }
-
-        .hero-trust-text {
-            font-size: 13px;
-            color: var(--slate-500);
-            font-weight: 500;
-            line-height: 1.3;
-        }
-
-        .hero-trust-divider {
-            width: 1px;
-            height: 40px;
-            background: var(--slate-200);
-        }
-
-        /* Checkmark pour les listes ailleurs */
-        .check-circle {
-            width: 26px;
-            height: 26px;
-            background: linear-gradient(135deg, var(--success), #16A34A);
-            border-radius: var(--radius-full);
-            display: grid;
-            place-items: center;
-            flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(34,197,94,0.3);
-        }
-
-        .check-circle svg {
-            width: 14px;
-            height: 14px;
-            color: white;
-        }
-
-        .hero-float-icon.blue {
-            background: linear-gradient(135deg, var(--navy-100), var(--navy-200));
-        }
-
-        .hero-float-text {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--slate-800);
-        }
-
-        .hero-float-text small {
-            display: block;
-            font-weight: 400;
-            font-size: 12px;
-            color: var(--slate-500);
-        }
-
-        /* ═══════════════════════════════════════════════════════════
-           TRUST BAR
-           ═══════════════════════════════════════════════════════════ */
-        
-        .trust {
-            padding: var(--space-12) 0;
-            background: white;
-            border-top: 1px solid var(--slate-100);
-            border-bottom: 1px solid var(--slate-100);
-        }
-
-        .trust-inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: var(--space-16);
-            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-200);
         }
 
         .trust-item {
             display: flex;
             align-items: center;
-            gap: var(--space-3);
-            font-size: 15px;
-            font-weight: 500;
-            color: var(--slate-600);
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--gray-600);
         }
 
-        .trust-icon {
-            font-size: 22px;
+        .trust-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--orange);
         }
 
-        /* ═══════════════════════════════════════════════════════════
-           SERVICES
-           ═══════════════════════════════════════════════════════════ */
-        
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        /* Services */
         .services {
-            background: white;
+            padding: 5rem 1.5rem;
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .section-header {
             text-align: center;
-            max-width: 680px;
-            margin: 0 auto var(--space-16);
+            margin-bottom: 3rem;
         }
 
         .section-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: var(--space-2) var(--space-4);
-            background: var(--orange-50);
-            color: var(--orange-600);
-            font-size: 13px;
+            display: inline-block;
+            background: var(--orange);
+            color: var(--white);
+            font-size: 0.8rem;
             font-weight: 600;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
             text-transform: uppercase;
-            letter-spacing: 0.06em;
-            border-radius: var(--radius-full);
-            margin-bottom: var(--space-5);
+            letter-spacing: 0.5px;
         }
 
-        .section-title {
-            font-family: var(--font-display);
-            font-size: clamp(32px, 4vw, 48px);
-            font-weight: 700;
-            color: var(--slate-900);
-            margin-bottom: var(--space-4);
-            letter-spacing: -0.02em;
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.25rem;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
         }
 
-        .section-desc {
-            font-size: 18px;
-            color: var(--slate-500);
-            line-height: 1.7;
+        .section-header p {
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        /* Tabs */
-        .services-tabs {
-            display: flex;
-            justify-content: center;
-            gap: var(--space-2);
-            padding: var(--space-2);
-            background: var(--slate-100);
-            border-radius: var(--radius-full);
-            width: fit-content;
-            margin: 0 auto var(--space-12);
-        }
-
-        .tab-btn {
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: var(--space-3) var(--space-6);
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--slate-600);
-            border-radius: var(--radius-full);
-            transition: all var(--duration-fast) var(--ease-out);
-        }
-
-        .tab-btn:hover:not(.active) {
-            color: var(--slate-800);
-        }
-
-        .tab-btn.active {
-            background: white;
-            color: var(--slate-900);
-            box-shadow: var(--shadow-md);
-        }
-
-        .tab-emoji {
-            font-size: 18px;
-        }
-
-        /* Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: var(--space-6);
+            gap: 1.5rem;
         }
 
         .service-card {
-            position: relative;
-            background: var(--slate-50);
-            border: 1px solid transparent;
-            border-radius: var(--radius-xl);
-            padding: var(--space-6);
-            transition: all var(--duration-base) var(--ease-out);
-            cursor: pointer;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, var(--orange-500), var(--orange-600));
-            opacity: 0;
-            transition: opacity var(--duration-base);
-            border-radius: var(--radius-xl);
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-2xl);
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-card > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-card:hover .service-icon {
-            background: rgba(255,255,255,0.2);
-        }
-
-        .service-card:hover .service-name,
-        .service-card:hover .service-desc {
-            color: white;
-        }
-
-        .service-card:hover .service-arrow {
-            color: white;
-            transform: translateX(6px);
+            border-color: var(--orange);
+            box-shadow: 0 10px 30px rgba(245, 166, 35, 0.15);
+            transform: translateY(-4px);
         }
 
         .service-icon {
-            width: 52px;
-            height: 52px;
-            background: white;
-            border-radius: var(--radius-lg);
-            display: grid;
-            place-items: center;
-            font-size: 26px;
-            margin-bottom: var(--space-5);
-            box-shadow: var(--shadow-sm);
-            transition: all var(--duration-base);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
         }
 
-        .service-name {
-            font-size: 17px;
-            font-weight: 700;
-            color: var(--slate-900);
-            margin-bottom: var(--space-2);
-            transition: color var(--duration-base);
+        .service-icon svg {
+            width: 24px;
+            height: 24px;
+            color: var(--white);
         }
 
-        .service-desc {
-            font-size: 14px;
-            color: var(--slate-500);
-            line-height: 1.6;
-            margin-bottom: var(--space-4);
-            transition: color var(--duration-base);
-        }
-
-        .service-arrow {
-            color: var(--orange-500);
-            font-size: 18px;
+        .service-card h3 {
+            font-size: 1rem;
             font-weight: 600;
-            transition: all var(--duration-base);
+            color: var(--dark);
+            margin-bottom: 0.5rem;
         }
 
-        /* ═══════════════════════════════════════════════════════════
-           PROCESS
-           ═══════════════════════════════════════════════════════════ */
-        
+        .service-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--orange);
+            margin-bottom: 1rem;
+        }
+
+        .service-price span {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--gray-600);
+        }
+
+        .btn-small {
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+        }
+
+        /* Process */
         .process {
-            background: var(--slate-50);
+            padding: 5rem 1.5rem;
+            background: var(--gray-100);
         }
 
-        .process-track {
+        .process-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: var(--space-8);
-            position: relative;
-        }
-
-        .process-track::before {
-            content: '';
-            position: absolute;
-            top: 44px;
-            left: 60px;
-            right: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--orange-400), var(--navy-400));
-            border-radius: 2px;
+            gap: 2rem;
         }
 
         .process-step {
@@ -934,1330 +333,509 @@
             position: relative;
         }
 
-        .process-number {
-            width: 56px;
-            height: 56px;
-            background: white;
-            border: 3px solid var(--orange-400);
-            border-radius: var(--radius-full);
-            display: grid;
-            place-items: center;
-            font-family: var(--font-display);
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--orange-500);
-            margin: 0 auto var(--space-6);
-            position: relative;
-            z-index: 1;
-            transition: all var(--duration-base) var(--ease-spring);
-            box-shadow: var(--shadow-md);
-        }
-
-        .process-step:hover .process-number {
-            background: var(--orange-500);
-            color: white;
-            transform: scale(1.15);
-            box-shadow: var(--shadow-glow);
-        }
-
-        .process-icon {
-            width: 72px;
-            height: 72px;
-            background: white;
-            border-radius: var(--radius-xl);
-            display: grid;
-            place-items: center;
-            font-size: 32px;
-            margin: 0 auto var(--space-5);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .process-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--slate-900);
-            margin-bottom: var(--space-2);
-        }
-
-        .process-desc {
-            font-size: 14px;
-            color: var(--slate-500);
-            line-height: 1.6;
-            max-width: 200px;
-            margin: 0 auto;
-        }
-
-        /* ═══════════════════════════════════════════════════════════
-           WHY US
-           ═══════════════════════════════════════════════════════════ */
-        
-        .why-us {
-            background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-950) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .why-us::before {
+        .process-step::after {
             content: '';
             position: absolute;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse 60% 60% at 0% 0%, rgba(249,115,22,0.15) 0%, transparent 50%),
-                radial-gradient(ellipse 60% 60% at 100% 100%, rgba(99,102,241,0.1) 0%, transparent 50%);
+            top: 30px;
+            right: -1rem;
+            width: calc(100% - 60px);
+            height: 2px;
+            background: var(--orange);
+            opacity: 0.3;
         }
 
-        .why-us .section-tag {
-            background: rgba(249,115,22,0.15);
-            color: var(--orange-400);
+        .process-step:last-child::after {
+            display: none;
         }
 
-        .why-us .section-title {
-            color: white;
-        }
-
-        .why-us .section-desc {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--space-6);
-            position: relative;
-            z-index: 1;
-        }
-
-        .benefit-card {
-            text-align: center;
-            padding: var(--space-10) var(--space-6);
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: var(--radius-2xl);
-            backdrop-filter: blur(10px);
-            transition: all var(--duration-base) var(--ease-out);
-        }
-
-        .benefit-card:hover {
-            background: rgba(255,255,255,0.08);
-            transform: translateY(-8px);
-            border-color: rgba(255,255,255,0.15);
-        }
-
-        .benefit-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, rgba(249,115,22,0.2), rgba(249,115,22,0.1));
-            border: 1px solid rgba(249,115,22,0.25);
-            border-radius: var(--radius-full);
-            display: grid;
-            place-items: center;
-            font-size: 36px;
-            margin: 0 auto var(--space-6);
-        }
-
-        .benefit-title {
-            font-size: 20px;
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--white);
+            border: 3px solid var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: white;
-            margin-bottom: var(--space-3);
+            color: var(--orange);
         }
 
-        .benefit-desc {
-            font-size: 15px;
-            color: rgba(255,255,255,0.65);
-            line-height: 1.6;
+        .process-step h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
         }
 
-        /* ═══════════════════════════════════════════════════════════
-           TESTIMONIALS
-           ═══════════════════════════════════════════════════════════ */
-        
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+
+        /* Testimonials */
         .testimonials {
-            background: white;
+            padding: 5rem 1.5rem;
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .testimonials .section-header h2 {
+            color: var(--white);
+        }
+
+        .testimonials .section-header p {
+            color: var(--gray-400);
         }
 
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-8);
+            gap: 1.5rem;
         }
 
         .testimonial-card {
-            background: var(--slate-50);
-            border-radius: var(--radius-2xl);
-            padding: var(--space-8);
-            transition: all var(--duration-base) var(--ease-out);
-        }
-
-        .testimonial-card:hover {
-            background: white;
-            box-shadow: var(--shadow-2xl);
-            transform: translateY(-4px);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
         }
 
         .testimonial-stars {
-            display: flex;
-            gap: 4px;
-            margin-bottom: var(--space-5);
-        }
-
-        .star {
-            color: var(--orange-400);
-            font-size: 18px;
+            color: var(--orange);
+            margin-bottom: 1rem;
+            font-size: 1rem;
         }
 
         .testimonial-text {
-            font-size: 16px;
-            color: var(--slate-700);
-            line-height: 1.8;
-            margin-bottom: var(--space-6);
+            font-size: 0.95rem;
+            color: var(--gray-200);
+            margin-bottom: 1rem;
+            line-height: 1.7;
         }
 
         .testimonial-author {
             display: flex;
             align-items: center;
-            gap: var(--space-4);
+            gap: 0.75rem;
         }
 
         .testimonial-avatar {
-            width: 52px;
-            height: 52px;
-            background: linear-gradient(135deg, var(--orange-300), var(--orange-500));
-            border-radius: var(--radius-full);
-            display: grid;
-            place-items: center;
-            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: 700;
-            color: white;
+            font-size: 0.9rem;
         }
 
         .testimonial-name {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--slate-900);
+            font-weight: 600;
+            font-size: 0.9rem;
         }
 
         .testimonial-service {
-            font-size: 14px;
-            color: var(--slate-500);
+            font-size: 0.8rem;
+            color: var(--gray-400);
         }
 
-        /* ═══════════════════════════════════════════════════════════
-           CONTACT
-           ═══════════════════════════════════════════════════════════ */
-        
-        .contact {
-            background: var(--slate-50);
+        /* CTA */
+        .cta {
+            padding: 4rem 1.5rem;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+            text-align: center;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: var(--space-12);
-            max-width: 1100px;
+        .cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+
+        .cta p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta .btn {
+            background: var(--white);
+            color: var(--orange);
+        }
+
+        .cta .btn:hover {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 3rem 1.5rem 1.5rem;
+            background: var(--dark);
+            color: var(--gray-400);
+        }
+
+        .footer-inner {
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .contact-info {
-            background: linear-gradient(135deg, var(--navy-700), var(--navy-900));
-            border-radius: var(--radius-2xl);
-            padding: var(--space-10);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-info::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -30%;
-            width: 80%;
-            height: 80%;
-            background: radial-gradient(circle, rgba(249,115,22,0.2) 0%, transparent 60%);
-        }
-
-        .contact-info > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-info-title {
-            font-family: var(--font-display);
-            font-size: 30px;
-            font-weight: 700;
-            margin-bottom: var(--space-4);
-        }
-
-        .contact-info-text {
-            font-size: 16px;
-            color: rgba(255,255,255,0.75);
-            margin-bottom: var(--space-10);
-            line-height: 1.7;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-4);
-            margin-bottom: var(--space-6);
-        }
-
-        .contact-item-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(255,255,255,0.1);
-            border-radius: var(--radius-lg);
+        .footer-top {
             display: grid;
-            place-items: center;
-            font-size: 22px;
-            flex-shrink: 0;
-        }
-
-        .contact-item-label {
-            font-size: 13px;
-            color: rgba(255,255,255,0.55);
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            margin-bottom: 4px;
-        }
-
-        .contact-item-value {
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .contact-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-3);
-            padding: var(--space-4) var(--space-5);
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: var(--radius-lg);
-            margin-top: var(--space-8);
-            font-size: 14px;
-        }
-
-        /* Form */
-        .contact-form {
-            background: white;
-            border-radius: var(--radius-2xl);
-            padding: var(--space-10);
-            box-shadow: var(--shadow-2xl);
-        }
-
-        .form-title {
-            font-family: var(--font-display);
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--slate-900);
-            margin-bottom: var(--space-2);
-        }
-
-        .form-subtitle {
-            font-size: 15px;
-            color: var(--slate-500);
-            margin-bottom: var(--space-8);
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-5);
-        }
-
-        .form-group {
-            margin-bottom: var(--space-5);
-        }
-
-        .form-label {
-            display: block;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--slate-700);
-            margin-bottom: var(--space-2);
-        }
-
-        .form-input,
-        .form-select,
-        .form-textarea {
-            width: 100%;
-            padding: var(--space-4) var(--space-5);
-            font-size: 15px;
-            font-family: inherit;
-            color: var(--slate-800);
-            background: var(--slate-50);
-            border: 2px solid var(--slate-200);
-            border-radius: var(--radius-lg);
-            transition: all var(--duration-fast);
-        }
-
-        .form-input:focus,
-        .form-select:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: var(--orange-400);
-            background: white;
-            box-shadow: 0 0 0 4px rgba(249,115,22,0.1);
-        }
-
-        .form-input::placeholder,
-        .form-textarea::placeholder {
-            color: var(--slate-400);
-        }
-
-        .form-textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .form-submit {
-            margin-top: var(--space-3);
-        }
-
-        .form-submit .btn {
-            width: 100%;
-        }
-
-        .form-legal {
-            font-size: 13px;
-            color: var(--slate-500);
-            margin-top: var(--space-4);
-            line-height: 1.6;
-        }
-
-        /* ═══════════════════════════════════════════════════════════
-           CTA
-           ═══════════════════════════════════════════════════════════ */
-        
-        .cta {
-            padding: var(--space-20) 0;
-            background: linear-gradient(135deg, var(--orange-500) 0%, var(--orange-600) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .cta-content {
-            position: relative;
-            text-align: center;
-            color: white;
-        }
-
-        .cta-title {
-            font-family: var(--font-display);
-            font-size: clamp(32px, 4vw, 48px);
-            font-weight: 700;
-            margin-bottom: var(--space-4);
-        }
-
-        .cta-text {
-            font-size: 18px;
-            opacity: 0.9;
-            margin-bottom: var(--space-8);
-            max-width: 560px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* ═══════════════════════════════════════════════════════════
-           FOOTER
-           ═══════════════════════════════════════════════════════════ */
-        
-        .footer {
-            background: var(--slate-950);
-            color: white;
-            padding: var(--space-20) 0 var(--space-10);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr repeat(3, 1fr);
-            gap: var(--space-16);
-            margin-bottom: var(--space-16);
-        }
-
-        .footer-brand {
-            max-width: 300px;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .footer-brand .logo {
-            margin-bottom: var(--space-5);
+            color: var(--white);
+            margin-bottom: 1rem;
+            display: inline-block;
         }
 
-        .footer-brand .logo-text {
-            color: white;
+        .footer-brand p {
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
 
-        .footer-text {
-            font-size: 15px;
-            color: var(--slate-400);
-            line-height: 1.7;
-        }
-
-        .footer-heading {
-            font-size: 13px;
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.95rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--slate-500);
-            margin-bottom: var(--space-6);
+            margin-bottom: 1rem;
         }
 
-        .footer-links {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-4);
+        .footer-col a {
+            display: block;
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
         }
 
-        .footer-links a {
-            font-size: 15px;
-            color: var(--slate-400);
-            transition: color var(--duration-fast);
-        }
-
-        .footer-links a:hover {
-            color: var(--orange-400);
-        }
-
-        .footer-contact-item {
-            display: flex;
-            align-items: center;
-            gap: var(--space-3);
-            font-size: 15px;
-            color: var(--slate-400);
-            margin-bottom: var(--space-4);
-        }
-
-        .footer-contact-icon {
-            color: var(--orange-400);
-            font-size: 18px;
-        }
-
-        .footer-legal {
-            padding: var(--space-5);
-            background: rgba(249,115,22,0.08);
-            border: 1px solid rgba(249,115,22,0.15);
-            border-radius: var(--radius-lg);
-            margin-bottom: var(--space-10);
-            text-align: center;
-        }
-
-        .footer-legal p {
-            font-size: 13px;
-            color: var(--slate-400);
-        }
-
-        .footer-legal strong {
-            color: var(--orange-400);
+        .footer-col a:hover {
+            color: var(--orange);
         }
 
         .footer-bottom {
+            padding-top: 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: var(--space-8);
-            border-top: 1px solid rgba(255,255,255,0.08);
+            font-size: 0.85rem;
         }
 
-        .footer-bottom p {
-            font-size: 14px;
-            color: var(--slate-500);
+        .footer-legal {
+            background: rgba(255,255,255,0.05);
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 1rem;
         }
 
-        .footer-bottom-links {
-            display: flex;
-            gap: var(--space-6);
-        }
-
-        .footer-bottom-links a {
-            font-size: 14px;
-            color: var(--slate-500);
-            transition: color var(--duration-fast);
-        }
-
-        .footer-bottom-links a:hover {
-            color: var(--orange-400);
-        }
-
-        /* ═══════════════════════════════════════════════════════════
-           RESPONSIVE
-           ═══════════════════════════════════════════════════════════ */
-        
-        @media (max-width: 1200px) {
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
+        /* Responsive */
         @media (max-width: 1024px) {
-            .hero-content {
-                grid-template-columns: 1.1fr 0.9fr;
-                gap: var(--space-8);
-            }
-
-            .hero-visual {
-                min-height: 380px;
-            }
-
-            .hero-trust-badge {
-                bottom: 20px;
-                left: 20px;
-                padding: var(--space-3) var(--space-5);
-            }
-
             .services-grid {
                 grid-template-columns: repeat(3, 1fr);
-                gap: var(--space-4);
             }
-
-            .process-track {
-                grid-template-columns: repeat(4, 1fr);
-                gap: var(--space-6);
-            }
-
-            .benefits-grid {
+            
+            .process-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-10);
+            
+            .process-step::after {
+                display: none;
             }
         }
 
         @media (max-width: 900px) {
-            .hero-content {
+            .hero-inner {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-
-            .hero-subtitle {
+            
+            .hero-content p {
                 margin-left: auto;
                 margin-right: auto;
             }
-
-            .hero-actions {
+            
+            .hero-buttons {
                 justify-content: center;
             }
-
-            .hero-stats {
+            
+            .hero-trust {
                 justify-content: center;
             }
-
-            .hero-visual {
-                max-width: 100%;
-                margin: 0 auto;
-                min-height: 350px;
+            
+            .hero-image {
+                order: -1;
             }
-
-            .hero-image-overlay {
-                background: linear-gradient(
-                    to bottom,
-                    rgba(248, 250, 252, 0.9) 0%,
-                    rgba(248, 250, 252, 0.4) 30%,
-                    rgba(248, 250, 252, 0.2) 100%
-                );
+            
+            .hero-image img {
+                max-width: 350px;
             }
-
+            
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .process-track {
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-8);
-            }
-
-            .process-track::before {
-                display: none;
-            }
-
+            
             .testimonials-grid {
-                grid-template-columns: 1fr;
-                max-width: 560px;
-                margin: 0 auto;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .nav {
                 display: none;
             }
-
-            .mobile-toggle {
-                display: flex;
+            
+            .mobile-menu {
+                display: block;
             }
-
-            /* Services : TOUJOURS 2 colonnes, cartes compactes */
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-3);
+            
+            .hero {
+                padding: 6rem 1rem 3rem;
+                min-height: auto;
             }
-
-            .service-card {
-                padding: var(--space-4);
+            
+            .hero-content h1 {
+                font-size: 2rem;
             }
-
-            .service-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
-                margin-bottom: var(--space-3);
-            }
-
-            .service-name {
-                font-size: 14px;
-                margin-bottom: var(--space-1);
-            }
-
-            .service-desc {
-                font-size: 12px;
-                line-height: 1.4;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-            }
-
-            .service-arrow {
-                display: none;
-            }
-
-            .services-tabs {
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: var(--space-2);
-                justify-content: center;
-            }
-
-            .tab-btn {
-                padding: var(--space-2) var(--space-3);
-                font-size: 13px;
-            }
-
-            .tab-emoji {
-                font-size: 16px;
-            }
-
-            /* Process : 2 colonnes compact */
-            .process-track {
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-4);
-            }
-
-            .process-step {
-                padding: var(--space-4);
-            }
-
-            .process-icon {
-                font-size: 28px;
-            }
-
-            .process-title {
-                font-size: 14px;
-            }
-
-            .process-desc {
-                font-size: 12px;
-            }
-
-            /* Benefits : 2 colonnes */
-            .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-4);
-            }
-
-            .benefit-card {
-                padding: var(--space-5);
-            }
-
-            .benefit-title {
-                font-size: 15px;
-            }
-
-            .benefit-desc {
-                font-size: 13px;
-            }
-
-            .form-row {
+            
+            .services-grid,
+            .process-grid,
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
-
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: var(--space-6);
+            
+            .section-header h2 {
+                font-size: 1.75rem;
             }
-
+            
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+            
             .footer-bottom {
                 flex-direction: column;
-                gap: var(--space-5);
-                text-align: center;
-            }
-
-            .hero-visual {
-                min-height: 300px;
-            }
-
-            .hero-trust-badge {
-                bottom: 15px;
-                left: 15px;
-                right: 15px;
-                justify-content: center;
-            }
-
-            .hero-trust-rating {
-                font-size: 20px;
-            }
-
-            .section {
-                padding: var(--space-12) 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .services-grid {
-                gap: var(--space-2);
-            }
-
-            .service-card {
-                padding: var(--space-3);
-            }
-
-            .service-icon {
-                width: 36px;
-                height: 36px;
-                font-size: 18px;
-                margin-bottom: var(--space-2);
-            }
-
-            .service-name {
-                font-size: 13px;
-            }
-
-            .service-desc {
-                font-size: 11px;
-                -webkit-line-clamp: 2;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
+                gap: 1rem;
                 text-align: center;
             }
         }
-
-        /* ═══════════════════════════════════════════════════════════
-           ANIMATIONS
-           ═══════════════════════════════════════════════════════════ */
-        
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s var(--ease-out);
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; }
-        .reveal-delay-4 { transition-delay: 0.4s; }
     </style>
-<!-- deploy-trigger: 1765122960 -->
 </head>
 <body>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         HEADER
-         ═══════════════════════════════════════════════════════════ -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="header-inner">
-                <a href="#" class="logo">
-                    <div class="logo-mark">F</div>
-                    <div class="logo-text">Formal<span>ita</span></div>
-                </a>
-
-                <nav class="nav">
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#process" class="nav-link">Comment ça marche</a>
-                    <a href="#why-us" class="nav-link">Pourquoi nous</a>
-                    <a href="#testimonials" class="nav-link">Avis clients</a>
-                    <a href="#contact" class="btn btn-primary nav-cta">
-                        Consultation gratuite
-                    </a>
-                </nav>
-
-                <button class="mobile-toggle" aria-label="Menu">
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </button>
-            </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="/" class="logo">Formal<span>ita</span></a>
+            <nav class="nav">
+                <a href="#services">Services</a>
+                <a href="#process">Comment ça marche</a>
+                <a href="#testimonials">Avis clients</a>
+                <a href="tel:+33400000000">04 00 00 00 00</a>
+                <a href="#contact" class="btn btn-primary">Consultation gratuite</a>
+            </nav>
+            <button class="mobile-menu">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
         </div>
     </header>
 
-    <!-- ═══════════════════════════════════════════════════════════
-         HERO
-         ═══════════════════════════════════════════════════════════ -->
+    <!-- Hero -->
     <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-grid"></div>
-        <div class="hero-glow"></div>
-        
-        <div class="container">
+        <div class="hero-inner">
             <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-badge">
-                        <span class="hero-badge-icon">🏛️</span>
-                        Partenaire certifié Pôle Démarches
-                        <span class="hero-badge-dot"></span>
-                    </div>
-
-                    <h1 class="hero-title">
-                        Vos démarches<br>
-                        <span class="gradient">administratives</span>,<br>
-                        notre expertise.
-                    </h1>
-
-                    <p class="hero-subtitle">
-                        Titres de séjour, aides sociales, logement : nous simplifions le complexe. 
-                        98% de taux de réussite grâce à notre équipe d'experts dédiés.
-                    </p>
-
-                    <div class="hero-actions">
-                        <a href="#contact" class="btn btn-primary btn-lg">
-                            Consultation gratuite
-                            <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                        <a href="#services" class="btn btn-secondary btn-lg">
-                            Découvrir nos services
-                        </a>
-                    </div>
-
-                    <div class="hero-stats">
-                        <div class="hero-stat">
-                            <div class="hero-stat-value">1600<span>+</span></div>
-                            <div class="hero-stat-label">Dossiers par an</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-value">98<span>%</span></div>
-                            <div class="hero-stat-label">Taux de réussite</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-value">48<span>h</span></div>
-                            <div class="hero-stat-label">Délai de réponse</div>
-                        </div>
-                    </div>
+                <h1>Vos démarches<br><span>administratives,</span><br>notre expertise.</h1>
+                <p>Titre de séjour, naturalisation, carte d'identité, passeport... Nous prenons en charge vos formalités de A à Z pour vous faire gagner du temps.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Consultation gratuite →</a>
+                    <a href="#services" class="btn btn-outline">Voir nos services</a>
                 </div>
-
-                <div class="hero-visual">
-                    <!-- Image de fond rassurante -->
-                    <img 
-                        src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80" 
-                        alt="Conseillère Formalita souriante" 
-                        class="hero-image"
-                        loading="eager"
-                    >
-                    <div class="hero-image-overlay"></div>
-                    
-                    <!-- Badge de confiance flottant -->
-                    <div class="hero-trust-badge">
-                        <div>
-                            <div class="hero-trust-stars">★★★★★</div>
-                            <div class="hero-trust-rating">4.9/5</div>
-                        </div>
-                        <div class="hero-trust-divider"></div>
-                        <div class="hero-trust-text">
-                            <strong>1600+</strong> dossiers<br>traités avec succès
-                        </div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <span>+500 dossiers traités</span>
+                    </div>
+                    <div class="trust-item">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <span>98% de réussite</span>
+                    </div>
+                    <div class="trust-item">
+                        <svg fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <span>Réponse sous 24h</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         TRUST BAR
-         ═══════════════════════════════════════════════════════════ -->
-    <section class="trust">
-        <div class="container">
-            <div class="trust-inner">
-                <div class="trust-item">
-                    <span class="trust-icon">🔒</span>
-                    Données 100% sécurisées
-                </div>
-                <div class="trust-item">
-                    <span class="trust-icon">⚡</span>
-                    Réponse garantie sous 48h
-                </div>
-                <div class="trust-item">
-                    <span class="trust-icon">🏆</span>
-                    +1600 dossiers traités par an
-                </div>
-                <div class="trust-item">
-                    <span class="trust-icon">💬</span>
-                    Interlocuteur dédié
-                </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=700&fit=crop&crop=face" alt="Conseillère Formalita">
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-         SERVICES
-         ═══════════════════════════════════════════════════════════ -->
-    <section class="services section" id="services">
+    <!-- Services -->
+    <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <div class="section-tag">Nos expertises</div>
-                <h2 class="section-title">Toutes vos démarches,<br>un seul interlocuteur</h2>
-                <p class="section-desc">
-                    Immigration, aides sociales, logement : nous maîtrisons l'ensemble des procédures administratives françaises.
-                </p>
+                <span class="section-tag">Nos services</span>
+                <h2>Toutes vos démarches, un seul interlocuteur</h2>
+                <p>Des tarifs clairs, un accompagnement personnalisé du début à la fin.</p>
             </div>
-
-            <div class="services-tabs">
-                <button class="tab-btn active" data-tab="immigration">
-                    <span class="tab-emoji">🛂</span>
-                    Immigration
-                </button>
-                <button class="tab-btn" data-tab="aides">
-                    <span class="tab-emoji">🤝</span>
-                    Aides sociales
-                </button>
-                <button class="tab-btn" data-tab="logement">
-                    <span class="tab-emoji">🏠</span>
-                    Logement
-                </button>
-                <button class="tab-btn" data-tab="autres">
-                    <span class="tab-emoji">📄</span>
-                    Autres
-                </button>
-            </div>
-
-            <!-- Immigration -->
-            <div class="services-grid" id="tab-immigration">
-                <a href="/titre-sejour" class="service-card reveal" style="text-decoration: none; color: inherit; display: block;">
-                    <div class="service-icon">🛂</div>
-                    <h3 class="service-name">Titre de séjour</h3>
-                    <p class="service-desc">Première demande avec constitution complète du dossier et accompagnement préfecture.</p>
-                    <span class="service-arrow">→</span>
-                </a>
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon">🔄</div>
-                    <h3 class="service-name">Renouvellement</h3>
-                    <p class="service-desc">Anticipez votre renouvellement et évitez toute rupture de droits.</p>
-                    <span class="service-arrow">→</span>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/></svg>
+                    </div>
+                    <h3>Titre de séjour</h3>
+                    <div class="service-price">850€ <span>TTC</span></div>
+                    <a href="titre-sejour.html" class="btn btn-primary btn-small">En savoir plus</a>
                 </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon">📊</div>
-                    <h3 class="service-name">Changement de statut</h3>
-                    <p class="service-desc">Étudiant vers salarié, visiteur vers vie privée... Toutes les transitions.</p>
-                    <span class="service-arrow">→</span>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/></svg>
+                    </div>
+                    <h3>Naturalisation</h3>
+                    <div class="service-price">1 200€ <span>TTC</span></div>
+                    <a href="#contact" class="btn btn-primary btn-small">En savoir plus</a>
                 </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon">⭐</div>
-                    <h3 class="service-name">Passeport Talent</h3>
-                    <p class="service-desc">Carte pluriannuelle pour profils qualifiés, entrepreneurs et investisseurs.</p>
-                    <span class="service-arrow">→</span>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z"/></svg>
+                    </div>
+                    <h3>Carte d'identité</h3>
+                    <div class="service-price">150€ <span>TTC</span></div>
+                    <a href="#contact" class="btn btn-primary btn-small">En savoir plus</a>
                 </div>
-                <a href="/titre-sejour" class="service-card reveal" style="text-decoration: none; color: inherit; display: block;">
-                    <div class="service-icon">💼</div>
-                    <h3 class="service-name">Autorisation de travail</h3>
-                    <p class="service-desc">Demandes pour employeurs et salariés étrangers.</p>
-                    <span class="service-arrow">→</span>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    </div>
+                    <h3>Passeport</h3>
+                    <div class="service-price">150€ <span>TTC</span></div>
+                    <a href="#contact" class="btn btn-primary btn-small">En savoir plus</a>
                 </div>
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon">🇫🇷</div>
-                    <h3 class="service-name">Naturalisation</h3>
-                    <p class="service-desc">Parcours complet vers l'acquisition de la nationalité française.</p>
-                    <span class="service-arrow">→</span>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h3>Actes d'état civil</h3>
+                    <div class="service-price">80€ <span>TTC</span></div>
+                    <a href="#contact" class="btn btn-primary btn-small">En savoir plus</a>
                 </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon">👨‍👩‍👧</div>
-                    <h3 class="service-name">Regroupement familial</h3>
-                    <p class="service-desc">Réunissez votre famille en toute conformité légale.</p>
-                    <span class="service-arrow">→</span>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    </div>
+                    <h3>Logement social</h3>
+                    <div class="service-price">200€ <span>TTC</span></div>
+                    <a href="#contact" class="btn btn-primary btn-small">En savoir plus</a>
                 </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon">⚖️</div>
-                    <h3 class="service-name">Recours OQTF</h3>
-                    <p class="service-desc">Contestation d'obligation de quitter le territoire français.</p>
-                    <span class="service-arrow">→</span>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"/></svg>
+                    </div>
+                    <h3>Permis de conduire</h3>
+                    <div class="service-price">120€ <span>TTC</span></div>
+                    <a href="#contact" class="btn btn-primary btn-small">En savoir plus</a>
                 </div>
-            </div>
-
-            <!-- Aides sociales -->
-            <div class="services-grid" id="tab-aides" style="display: none;">
-                <a href="/titre-sejour" class="service-card reveal" style="text-decoration: none; color: inherit; display: block;">
-                    <div class="service-icon">🏥</div>
-                    <h3 class="service-name">Démarches CAF / CPAM</h3>
-                    <p class="service-desc">Ouverture de droits, mises à jour, réclamations et régularisations.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon">💰</div>
-                    <h3 class="service-name">RSA</h3>
-                    <p class="service-desc">Demande initiale, renouvellement et accompagnement insertion.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon">📈</div>
-                    <h3 class="service-name">Prime d'activité</h3>
-                    <p class="service-desc">Complément de revenus pour les travailleurs modestes.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon">♿</div>
-                    <h3 class="service-name">AAH</h3>
-                    <p class="service-desc">Allocation Adulte Handicapé : constitution et suivi MDPH.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-                <a href="/titre-sejour" class="service-card reveal" style="text-decoration: none; color: inherit; display: block;">
-                    <div class="service-icon">👶</div>
-                    <h3 class="service-name">Allocations familiales</h3>
-                    <p class="service-desc">Toutes les prestations liées à la famille et aux enfants.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon">👴</div>
-                    <h3 class="service-name">ASPA / Minimum vieillesse</h3>
-                    <p class="service-desc">Allocation de solidarité aux personnes âgées.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-            </div>
-
-            <!-- Logement -->
-            <div class="services-grid" id="tab-logement" style="display: none;">
-                <a href="/titre-sejour" class="service-card reveal" style="text-decoration: none; color: inherit; display: block;">
-                    <div class="service-icon">🏠</div>
-                    <h3 class="service-name">Aide au logement APL</h3>
-                    <p class="service-desc">Demande et simulation d'aide personnalisée au logement.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon">🏢</div>
-                    <h3 class="service-name">Demande HLM</h3>
-                    <p class="service-desc">Constitution du dossier de logement social et suivi.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon">⚡</div>
-                    <h3 class="service-name">DALO</h3>
-                    <p class="service-desc">Droit au logement opposable : recours prioritaire.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon">🔑</div>
-                    <h3 class="service-name">FSL</h3>
-                    <p class="service-desc">Fonds de solidarité logement : aide à l'accès et au maintien.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-            </div>
-
-            <!-- Autres -->
-            <div class="services-grid" id="tab-autres" style="display: none;">
-                <a href="/titre-sejour" class="service-card reveal" style="text-decoration: none; color: inherit; display: block;">
-                    <div class="service-icon">📊</div>
-                    <h3 class="service-name">Déclarations fiscales</h3>
-                    <p class="service-desc">Impôts sur le revenu, déclarations et régularisations.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-icon">🚗</div>
-                    <h3 class="service-name">Permis de conduire</h3>
-                    <p class="service-desc">Échange, renouvellement, récupération de points.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-icon">📜</div>
-                    <h3 class="service-name">État civil</h3>
-                    <p class="service-desc">Actes de naissance, mariage, transcription.</p>
-                    <span class="service-arrow">→</span>
-                </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-icon">🏢</div>
-                    <h3 class="service-name">Formalités entreprises</h3>
-                    <p class="service-desc">Création, modification, obligations administratives.</p>
-                    <span class="service-arrow">→</span>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3>Services aux entreprises</h3>
+                    <div class="service-price">Sur devis</div>
+                    <a href="#contact" class="btn btn-primary btn-small">Nous contacter</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-         PROCESS
-         ═══════════════════════════════════════════════════════════ -->
-    <section class="process section" id="process">
+    <!-- Process -->
+    <section class="process" id="process">
         <div class="container">
             <div class="section-header">
-                <div class="section-tag">Comment ça marche</div>
-                <h2 class="section-title">4 étapes vers la réussite</h2>
-                <p class="section-desc">
-                    Un processus simple et transparent pour vous accompagner sereinement.
-                </p>
+                <span class="section-tag">Simple et rapide</span>
+                <h2>Comment ça marche ?</h2>
+                <p>Un processus clair en 4 étapes pour vos démarches.</p>
             </div>
-
-            <div class="process-track">
-                <div class="process-step reveal">
-                    <div class="process-number">1</div>
-                    <div class="process-icon">📝</div>
-                    <h3 class="process-title">Décrivez votre besoin</h3>
-                    <p class="process-desc">Formulaire en 2 minutes pour nous expliquer votre situation.</p>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Contact</h3>
+                    <p>Appelez-nous ou remplissez le formulaire pour une première consultation gratuite.</p>
                 </div>
-                <div class="process-step reveal reveal-delay-1">
-                    <div class="process-number">2</div>
-                    <div class="process-icon">📞</div>
-                    <h3 class="process-title">On vous rappelle</h3>
-                    <p class="process-desc">Un expert analyse votre dossier gratuitement sous 48h.</p>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Analyse</h3>
+                    <p>Nous étudions votre situation et définissons ensemble la meilleure stratégie.</p>
                 </div>
-                <div class="process-step reveal reveal-delay-2">
-                    <div class="process-number">3</div>
-                    <div class="process-icon">📋</div>
-                    <h3 class="process-title">On s'occupe de tout</h3>
-                    <p class="process-desc">Constitution du dossier et démarches effectuées pour vous.</p>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Constitution</h3>
+                    <p>Nous préparons votre dossier complet et vérifions chaque document.</p>
                 </div>
-                <div class="process-step reveal reveal-delay-3">
-                    <div class="process-number">4</div>
-                    <div class="process-icon">🎉</div>
-                    <h3 class="process-title">Dossier validé !</h3>
-                    <p class="process-desc">Recevez votre titre, aide ou attestation en toute sérénité.</p>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Suivi</h3>
+                    <p>Nous déposons votre dossier et assurons le suivi jusqu'à l'obtention.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-         WHY US
-         ═══════════════════════════════════════════════════════════ -->
-    <section class="why-us section" id="why-us">
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
-                <div class="section-tag">Pourquoi Formalita</div>
-                <h2 class="section-title">L'excellence au service<br>de vos droits</h2>
-                <p class="section-desc">
-                    Une équipe d'experts dédiée à votre réussite administrative.
-                </p>
+                <span class="section-tag">Avis clients</span>
+                <h2>Ils nous font confiance</h2>
+                <p>Plus de 500 clients accompagnés avec succès.</p>
             </div>
-
-            <div class="benefits-grid">
-                <div class="benefit-card reveal">
-                    <div class="benefit-icon">🎯</div>
-                    <h3 class="benefit-title">Expertise certifiée</h3>
-                    <p class="benefit-desc">Partenaire officiel Pôle Démarches, formés aux dernières réglementations.</p>
-                </div>
-                <div class="benefit-card reveal reveal-delay-1">
-                    <div class="benefit-icon">⏱️</div>
-                    <h3 class="benefit-title">Gain de temps</h3>
-                    <p class="benefit-desc">Nous gérons 100% des démarches. Vous fournissez les documents, on fait le reste.</p>
-                </div>
-                <div class="benefit-card reveal reveal-delay-2">
-                    <div class="benefit-icon">🤝</div>
-                    <h3 class="benefit-title">Accompagnement humain</h3>
-                    <p class="benefit-desc">Un interlocuteur dédié qui connaît votre dossier et vous tient informé.</p>
-                </div>
-                <div class="benefit-card reveal reveal-delay-3">
-                    <div class="benefit-icon">✅</div>
-                    <h3 class="benefit-title">Résultats prouvés</h3>
-                    <p class="benefit-desc">98% de taux de réussite grâce à notre rigueur et expertise.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         TESTIMONIALS
-         ═══════════════════════════════════════════════════════════ -->
-    <section class="testimonials section" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-tag">Avis clients</div>
-                <h2 class="section-title">Ils nous font confiance</h2>
-                <p class="section-desc">
-                    Découvrez les retours de nos clients satisfaits.
-                </p>
-            </div>
-
             <div class="testimonials-grid">
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="testimonial-text">
-                        "J'ai enfin pu obtenir mon titre de séjour sans stress. L'équipe a tout géré de A à Z, je n'ai eu qu'à fournir mes documents. Service impeccable et professionnel !"
-                    </p>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Service impeccable ! Mon titre de séjour a été obtenu en 3 semaines grâce à leur accompagnement. Je recommande vivement."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">S</div>
+                        <div class="testimonial-avatar">MK</div>
                         <div>
-                            <div class="testimonial-name">Sofia M.</div>
-                            <div class="testimonial-service">Titre de séjour vie privée</div>
-                        </div>
-                    </div>
-                </a>
-
-                <div class="testimonial-card reveal reveal-delay-1">
-                    <div class="testimonial-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="testimonial-text">
-                        "Formalita m'a réconcilié avec l'administration française. Mon dossier CAF bloqué depuis des mois a été débloqué en seulement 2 semaines. Merci infiniment !"
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">T</div>
-                        <div>
-                            <div class="testimonial-name">Thomas L.</div>
-                            <div class="testimonial-service">Aide au logement APL</div>
+                            <div class="testimonial-name">Maria K.</div>
+                            <div class="testimonial-service">Titre de séjour</div>
                         </div>
                     </div>
                 </div>
-
-                <div class="testimonial-card reveal reveal-delay-2">
-                    <div class="testimonial-stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                    </div>
-                    <p class="testimonial-text">
-                        "Le changement de statut étudiant vers salarié me semblait impossible. Grâce à leur expertise, j'ai obtenu ma carte en 3 mois. Professionnels et très réactifs."
-                    </p>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Après 2 refus en solo, j'ai fait appel à Formalita. Dossier accepté du premier coup. Un grand merci pour votre professionnalisme."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">K</div>
+                        <div class="testimonial-avatar">AD</div>
                         <div>
-                            <div class="testimonial-name">Karim B.</div>
-                            <div class="testimonial-service">Changement de statut</div>
+                            <div class="testimonial-name">Ahmed D.</div>
+                            <div class="testimonial-service">Naturalisation</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Équipe réactive et à l'écoute. Ils m'ont évité des heures de paperasse et de stress. Prix très correct pour le service rendu."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SL</div>
+                        <div>
+                            <div class="testimonial-name">Sophie L.</div>
+                            <div class="testimonial-service">Carte d'identité</div>
                         </div>
                     </div>
                 </div>
@@ -2265,293 +843,49 @@
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-         CONTACT
-         ═══════════════════════════════════════════════════════════ -->
-    <section class="contact section" id="contact">
+    <!-- CTA -->
+    <section class="cta" id="contact">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info reveal">
-                    <h2 class="contact-info-title">Parlons de votre projet</h2>
-                    <p class="contact-info-text">
-                        Premier entretien gratuit et sans engagement. Notre équipe analyse votre situation et vous propose la meilleure solution.
-                    </p>
-
-                    <div class="contact-item">
-                        <div class="contact-item-icon">📧</div>
-                        <div>
-                            <div class="contact-item-label">Email</div>
-                            <div class="contact-item-value">contact@formalita.fr</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-item-icon">📍</div>
-                        <div>
-                            <div class="contact-item-label">Agence</div>
-                            <div class="contact-item-value">Chambéry, Savoie (73)</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-item-icon">🕐</div>
-                        <div>
-                            <div class="contact-item-label">Disponibilité</div>
-                            <div class="contact-item-value">Lun-Ven : 9h-18h</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-badge">
-                        <span>🏛️</span>
-                        Partenaire certifié Pôle Démarches
-                    </div>
-                </div>
-
-                <div class="contact-form reveal reveal-delay-1">
-                    <h3 class="form-title">Demande de rappel</h3>
-                    <p class="form-subtitle">Nous vous recontactons sous 48h maximum</p>
-
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
-                        <input type="hidden" name="form-name" value="contact">
-                        <p style="display:none;">
-                            <label>Ne pas remplir : <input name="bot-field"></label>
-                        </p>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label" for="prenom">Prénom *</label>
-                                <input type="text" id="prenom" name="prenom" class="form-input" placeholder="Votre prénom" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="nom">Nom *</label>
-                                <input type="text" id="nom" name="nom" class="form-input" placeholder="Votre nom" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label" for="email">Email *</label>
-                                <input type="email" id="email" name="email" class="form-input" placeholder="votre@email.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="telephone">Téléphone *</label>
-                                <input type="tel" id="telephone" name="telephone" class="form-input" placeholder="06 XX XX XX XX" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label" for="besoin">Votre besoin *</label>
-                            <select id="besoin" name="besoin" class="form-select" required>
-                                <option value="">Sélectionnez un service...</option>
-                                <optgroup label="🛂 Immigration">
-                                    <option value="titre-sejour">Titre de séjour (1ère demande)</option>
-                                    <option value="renouvellement">Renouvellement titre de séjour</option>
-                                    <option value="changement-statut">Changement de statut</option>
-                                    <option value="passeport-talent">Passeport Talent</option>
-                                    <option value="autorisation-travail">Autorisation de travail</option>
-                                    <option value="naturalisation">Naturalisation française</option>
-                                    <option value="regroupement-familial">Regroupement familial</option>
-                                    <option value="recours-oqtf">Recours OQTF</option>
-                                </optgroup>
-                                <optgroup label="🤝 Aides sociales">
-                                    <option value="caf-cpam">Démarches CAF / CPAM</option>
-                                    <option value="rsa">RSA</option>
-                                    <option value="prime-activite">Prime d'activité</option>
-                                    <option value="aah">AAH</option>
-                                </optgroup>
-                                <optgroup label="🏠 Logement">
-                                    <option value="apl">Aide au logement APL</option>
-                                    <option value="hlm">Demande HLM</option>
-                                    <option value="dalo">DALO</option>
-                                </optgroup>
-                                <optgroup label="📄 Autres">
-                                    <option value="impots">Déclarations fiscales</option>
-                                    <option value="permis">Permis de conduire</option>
-                                    <option value="etat-civil">État civil</option>
-                                    <option value="autre">Autre demande</option>
-                                </optgroup>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label" for="message">Décrivez votre situation</label>
-                            <textarea id="message" name="message" class="form-textarea" placeholder="Quelques détails pour mieux vous accompagner..."></textarea>
-                        </div>
-
-                        <div class="form-submit">
-                            <button type="submit" class="btn btn-primary btn-lg">
-                                Demander un rappel gratuit
-                                <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                                </svg>
-                            </button>
-                        </div>
-
-                        <p class="form-legal">
-                            En soumettant ce formulaire, vous acceptez d'être recontacté par Formalita. Vos données sont traitées conformément au RGPD.
-                        </p>
-                    </form>
-                </div>
-            </div>
+            <h2>Prêt à simplifier vos démarches ?</h2>
+            <p>Consultation gratuite et sans engagement. Réponse sous 24h.</p>
+            <a href="tel:+33400000000" class="btn">Appelez-nous : 04 00 00 00 00</a>
         </div>
     </section>
 
-    <!-- ═══════════════════════════════════════════════════════════
-         CTA
-         ═══════════════════════════════════════════════════════════ -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Prêt à simplifier vos démarches ?</h2>
-                <p class="cta-text">
-                    Rejoignez les +1600 personnes accompagnées chaque année. Premier entretien gratuit et sans engagement.
-                </p>
-                <a href="#contact" class="btn btn-secondary btn-lg">
-                    Consultation gratuite
-                    <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         FOOTER
-         ═══════════════════════════════════════════════════════════ -->
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
+        <div class="footer-inner">
+            <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <div class="logo-mark">F</div>
-                        <div class="logo-text">Formal<span>ita</span></div>
-                    </a>
-                    <p class="footer-text">
-                        Votre partenaire de confiance pour toutes vos démarches administratives. Expertise, rigueur et bienveillance.
-                    </p>
+                    <a href="/" class="logo">Formal<span>ita</span></a>
+                    <p>Votre partenaire de confiance pour toutes vos démarches administratives en France.</p>
+                    <div class="footer-legal">Service privé indépendant, non affilié à l'administration publique. Partenaire certifié Pôle Démarches.</div>
                 </div>
-
-                <div>
-                    <h4 class="footer-heading">Immigration</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">Titre de séjour</a></li>
-                        <li><a href="#services">Renouvellement</a></li>
-                        <li><a href="#services">Changement de statut</a></li>
-                        <li><a href="#services">Passeport Talent</a></li>
-                        <li><a href="#services">Naturalisation</a></li>
-                    </ul>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="titre-sejour.html">Titre de séjour</a>
+                    <a href="#services">Naturalisation</a>
+                    <a href="#services">Carte d'identité</a>
+                    <a href="#services">Passeport</a>
                 </div>
-
-                <div>
-                    <h4 class="footer-heading">Aides & Logement</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">Démarches CAF</a></li>
-                        <li><a href="#services">RSA</a></li>
-                        <li><a href="#services">Prime d'activité</a></li>
-                        <li><a href="#services">APL / HLM</a></li>
-                        <li><a href="#services">DALO</a></li>
-                    </ul>
+                <div class="footer-col">
+                    <h4>Entreprises</h4>
+                    <a href="#contact">Gestion RH</a>
+                    <a href="#contact">Conformité</a>
+                    <a href="#contact">Dossiers OPCO</a>
                 </div>
-
-                <div>
-                    <h4 class="footer-heading">Contact</h4>
-                    <div class="footer-contact-item">
-                        <span class="footer-contact-icon">📧</span>
-                        contact@formalita.fr
-                    </div>
-                    <div class="footer-contact-item">
-                        <span class="footer-contact-icon">📍</span>
-                        Chambéry, Savoie (73)
-                    </div>
-                    <div class="footer-contact-item">
-                        <span class="footer-contact-icon">🕐</span>
-                        Lun-Ven : 9h-18h
-                    </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <a href="tel:+33400000000">04 00 00 00 00</a>
+                    <a href="mailto:contact@formalita.fr">contact@formalita.fr</a>
+                    <a href="#">Chambéry, Savoie</a>
                 </div>
             </div>
-
-            <div class="footer-legal">
-                <p>
-                    <strong>⚠️ Mention légale obligatoire :</strong> Formalita est un service privé indépendant, non affilié à l'administration publique. Partenaire certifié Pôle Démarches.
-                </p>
-            </div>
-
             <div class="footer-bottom">
-                <p>© 2025 Formalita — Groupe Yuki • YUEKI SAS — RCS Chambéry 919 778 167</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Confidentialité</a>
-                    <a href="#">CGV</a>
-                </div>
+                <span>© 2025 Formalita - Groupe Yuki. Tous droits réservés.</span>
+                <span>Mentions légales • Politique de confidentialité</span>
             </div>
         </div>
     </footer>
-
-    <!-- ═══════════════════════════════════════════════════════════
-         SCRIPTS
-         ═══════════════════════════════════════════════════════════ -->
-    <script>
-        // Header scroll
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        // Tabs
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabs = {
-            immigration: document.getElementById('tab-immigration'),
-            aides: document.getElementById('tab-aides'),
-            logement: document.getElementById('tab-logement'),
-            autres: document.getElementById('tab-autres')
-        };
-
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                tabBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                
-                const tab = btn.dataset.tab;
-                Object.entries(tabs).forEach(([key, el]) => {
-                    if (key === tab) {
-                        el.style.display = 'grid';
-                        el.querySelectorAll('.reveal').forEach(card => {
-                            card.classList.remove('visible');
-                            setTimeout(() => card.classList.add('visible'), 50);
-                        });
-                    } else {
-                        el.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Reveal animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '-50px' });
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offset = header.offsetHeight + 20;
-                    window.scrollTo({
-                        top: target.offsetTop - offset,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
