@@ -3,481 +3,1336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Formalita simplifie vos démarches administratives : titres de séjour, naturalisation, cartes d'identité, passeports. +500 dossiers traités, 98% de réussite.">
-    <meta name="keywords" content="démarches administratives, titre de séjour, naturalisation, carte identité, passeport, formalités France">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="Formalita - Vos démarches administratives en toute sérénité. Titres de séjour, naturalisation, état civil. Experts certifiés, 98% de réussite.">
+    <meta name="keywords" content="titre de séjour, naturalisation, démarches administratives, carte de séjour, visa France">
+    <title>Formalita | Vos Démarches Administratives en Toute Sérénité</title>
     
-    <!-- Open Graph -->
-    <meta property="og:title" content="Formalita | Vos démarches administratives simplifiées">
-    <meta property="og:description" content="Expert en démarches administratives. Titres de séjour, naturalisation, cartes d'identité. 98% de réussite.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://formalita.fr">
-    
-    <title>Formalita | Vos démarches administratives simplifiées</title>
-    
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟠</text></svg>">
+    
     <style>
-        /* ============================================
-           RESET & VARIABLES
-           ============================================ */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* ══════════════════════════════════════════════════════════════
+           DESIGN SYSTEM - TOKENS
+           ══════════════════════════════════════════════════════════════ */
         :root {
+            /* Colors - Primary */
             --orange-primary: #F97316;
             --orange-dark: #EA580C;
-            --orange-light: #FFF7ED;
-            --blue-secondary: #2B5F9E;
-            --blue-dark: #1E4A7A;
-            --success-green: #059669;
-            --danger-red: #EF4444;
-            --neutral-gray: #6B7280;
-            --neutral-dark: #374151;
-            --bg-light: #F9FAFB;
-            --white: #FFFFFF;
-            --black: #111827;
+            --orange-light: #FDBA74;
+            --orange-50: #FFF7ED;
+            --orange-100: #FFEDD5;
             
+            /* Colors - Secondary */
+            --blue-secondary: #2B5F9E;
+            --blue-dark: #1E4A7D;
+            --blue-light: #3B82F6;
+            
+            /* Colors - Neutral */
+            --gray-900: #111827;
+            --gray-800: #1F2937;
+            --gray-700: #374151;
+            --gray-600: #4B5563;
+            --gray-500: #6B7280;
+            --gray-400: #9CA3AF;
+            --gray-300: #D1D5DB;
+            --gray-200: #E5E7EB;
+            --gray-100: #F3F4F6;
+            --gray-50: #F9FAFB;
+            --white: #FFFFFF;
+            
+            /* Colors - Semantic */
+            --success: #10B981;
+            --success-light: #D1FAE5;
+            --warning: #F59E0B;
+            --error: #EF4444;
+            
+            /* Typography */
             --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+            --font-size-6xl: 3.75rem;
+            
+            /* Spacing */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            
+            /* Border Radius */
             --radius-sm: 8px;
             --radius-md: 12px;
             --radius-lg: 16px;
             --radius-xl: 24px;
+            --radius-2xl: 32px;
+            --radius-full: 9999px;
             
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+            --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.25);
+            --shadow-glow: 0 0 40px rgba(249, 115, 22, 0.3);
+            
+            /* Transitions */
+            --transition-fast: 0.15s ease;
+            --transition-base: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           ANIMATIONS
+           ══════════════════════════════════════════════════════════════ */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes pulse-cta {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+            }
+            50% {
+                box-shadow: 0 0 0 12px rgba(249, 115, 22, 0);
+            }
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+            }
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        @keyframes slideInNotification {
+            0% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            10% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            90% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+        }
+
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes scrollIndicator {
+            0%, 100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            50% {
+                opacity: 0.5;
+                transform: translateY(8px);
+            }
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes checkmark {
+            0% {
+                stroke-dashoffset: 100;
+            }
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        /* Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-left.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal-right.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal-scale.revealed {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Stagger delays */
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+
+        /* ══════════════════════════════════════════════════════════════
+           BASE STYLES
+           ══════════════════════════════════════════════════════════════ */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         html {
             scroll-behavior: smooth;
+            font-size: 16px;
         }
 
         body {
             font-family: var(--font-family);
+            font-size: var(--font-size-base);
             line-height: 1.6;
-            color: var(--black);
+            color: var(--gray-800);
             background-color: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        ul, ol {
+            list-style: none;
         }
 
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 var(--space-6);
         }
 
-        /* ============================================
-           HEADER / NAVBAR
-           ============================================ */
+        .section {
+            padding: var(--space-20) 0;
+        }
+
+        .section-lg {
+            padding: var(--space-24) 0;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--gray-900);
+        }
+
+        h1 {
+            font-size: clamp(2.25rem, 5vw, 3.75rem);
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(1.875rem, 4vw, 2.75rem);
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+
+        /* ══════════════════════════════════════════════════════════════
+           BUTTONS
+           ══════════════════════════════════════════════════════════════ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-dark) 100%);
+            color: var(--white);
+            box-shadow: var(--shadow-lg), 0 0 0 0 rgba(249, 115, 22, 0.4);
+            animation: pulse-cta 2s ease-in-out infinite;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+            animation: none;
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gray-800);
+            border: 2px solid var(--gray-200);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--orange-primary);
+            color: var(--orange-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--gray-700);
+            padding: var(--space-2) var(--space-4);
+        }
+
+        .btn-ghost:hover {
+            color: var(--orange-primary);
+            background: var(--orange-50);
+        }
+
+        .btn-lg {
+            padding: var(--space-5) var(--space-10);
+            font-size: var(--font-size-lg);
+            border-radius: var(--radius-xl);
+        }
+
+        .btn-sm {
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--font-size-sm);
+            border-radius: var(--radius-md);
+        }
+
+        .btn-icon {
+            width: 48px;
+            height: 48px;
+            padding: 0;
+            border-radius: var(--radius-full);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           SCROLL PROGRESS BAR
+           ══════════════════════════════════════════════════════════════ */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange-primary), var(--orange-dark));
+            z-index: 10000;
+            transition: width 0.1s ease-out;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 1: NAVBAR
+           ══════════════════════════════════════════════════════════════ */
         .navbar {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
             z-index: 1000;
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid transparent;
+            transition: all var(--transition-base);
         }
 
-        .navbar .container {
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom-color: var(--gray-200);
+            box-shadow: var(--shadow-md);
+        }
+
+        .navbar-inner {
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
+            height: 80px;
+            padding: 0 var(--space-6);
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        .logo {
+        .navbar-logo {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--orange-primary);
-            text-decoration: none;
+            gap: var(--space-3);
+            font-size: var(--font-size-xl);
+            font-weight: 800;
+            color: var(--gray-900);
+            transition: transform var(--transition-base);
         }
 
-        .logo-icon {
-            width: 40px;
-            height: 40px;
+        .navbar-logo:hover {
+            transform: scale(1.02);
+        }
+
+        .navbar-logo-icon {
+            width: 44px;
+            height: 44px;
             background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
-            border-radius: var(--radius-sm);
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: 800;
+            font-size: var(--font-size-lg);
+            box-shadow: var(--shadow-md);
         }
 
-        .nav-links {
+        .navbar-nav {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: var(--space-1);
         }
 
-        .nav-links a {
-            color: var(--neutral-dark);
-            text-decoration: none;
+        .navbar-link {
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--font-size-sm);
             font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--orange-primary);
-        }
-
-        .nav-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            background: var(--orange-primary);
-            color: white !important;
-            text-decoration: none;
-            font-weight: 600;
+            color: var(--gray-600);
             border-radius: var(--radius-md);
-            transition: all 0.3s ease;
+            transition: all var(--transition-fast);
         }
 
-        .nav-cta:hover {
-            background: var(--orange-dark);
-            transform: translateY(-2px);
+        .navbar-link:hover {
+            color: var(--orange-primary);
+            background: var(--orange-50);
         }
 
+        .navbar-cta {
+            margin-left: var(--space-4);
+        }
+
+        .navbar-mobile-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background: var(--gray-100);
+            border-radius: var(--radius-md);
+        }
+
+        .navbar-mobile-toggle span {
+            width: 20px;
+            height: 2px;
+            background: var(--gray-700);
+            border-radius: 2px;
+            transition: all var(--transition-fast);
+        }
+
+        /* Mobile Menu */
         .mobile-menu {
             display: none;
             position: fixed;
-            top: 72px;
+            top: 80px;
             left: 0;
             right: 0;
-            background: white;
-            padding: 1.5rem;
-            box-shadow: var(--shadow-lg);
-            flex-direction: column;
-            gap: 1rem;
+            bottom: 0;
+            background: var(--white);
+            padding: var(--space-6);
             z-index: 999;
+            animation: fadeIn 0.3s ease;
         }
 
         .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu-nav {
             display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
         }
 
-        .mobile-menu a {
-            color: var(--black);
-            text-decoration: none;
+        .mobile-menu-link {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-4);
+            font-size: var(--font-size-lg);
             font-weight: 500;
-            padding: 0.75rem;
-            border-radius: var(--radius-sm);
-            transition: all 0.3s ease;
+            color: var(--gray-800);
+            border-radius: var(--radius-md);
+            transition: all var(--transition-fast);
         }
 
-        .mobile-menu a:hover {
-            background: var(--orange-light);
+        .mobile-menu-link:hover {
+            background: var(--orange-50);
             color: var(--orange-primary);
         }
 
-        .mobile-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 0.5rem;
-            background: none;
-            border: none;
+        .mobile-menu-cta {
+            margin-top: var(--space-6);
         }
 
-        .mobile-toggle span {
-            width: 25px;
-            height: 3px;
-            background: var(--black);
-            border-radius: 2px;
-            transition: all 0.3s ease;
+        .mobile-menu-cta .btn {
+            width: 100%;
         }
 
-        /* ============================================
-           HERO SECTION
-           ============================================ */
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 2: HERO
+           ══════════════════════════════════════════════════════════════ */
         .hero {
+            position: relative;
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 8rem 0 4rem;
-            background: linear-gradient(135deg, var(--white) 0%, var(--orange-light) 100%);
-            position: relative;
+            padding-top: 80px;
+            overflow: hidden;
+            background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
+        .hero-bg-gradient {
             position: absolute;
             top: -50%;
             right: -20%;
             width: 80%;
             height: 150%;
-            background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, transparent 70%);
-            pointer-events: none;
+            background: radial-gradient(ellipse at center, rgba(249, 115, 22, 0.08) 0%, transparent 70%);
+            animation: gradientMove 15s ease infinite;
+            background-size: 200% 200%;
         }
 
-        .hero .container {
-            position: relative;
-            z-index: 1;
+        .hero-bg-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 1px 1px, var(--gray-200) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.5;
         }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+        .hero-bg-shape-1 {
+            position: absolute;
+            top: 20%;
+            left: 5%;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--orange-100) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-bg-shape-2 {
+            position: absolute;
+            bottom: 10%;
+            right: 10%;
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, rgba(43, 95, 158, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(50px);
+            animation: float 10s ease-in-out infinite reverse;
         }
 
         .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-16);
+            align-items: center;
+        }
+
+        .hero-text {
             max-width: 600px;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: linear-gradient(135deg, #FEF3C7, #FDE68A);
-            border: 1px solid #F59E0B;
-            border-radius: 50px;
-            font-size: 0.875rem;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: var(--success-light);
+            color: var(--success);
+            font-size: var(--font-size-sm);
             font-weight: 600;
-            color: #92400E;
-            margin-bottom: 1.5rem;
-            animation: pulse-badge 2s ease-in-out infinite;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-6);
+            animation: pulse-badge 3s ease-in-out infinite;
         }
 
-        @keyframes pulse-badge {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
-            50% { transform: scale(1.02); box-shadow: 0 0 20px 5px rgba(245, 158, 11, 0.2); }
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success);
+            border-radius: 50%;
+            animation: pulse-cta 2s ease-in-out infinite;
         }
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
+        .hero-title {
+            margin-bottom: var(--space-6);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-title-line {
+            display: block;
+        }
+
+        .hero-subtitle {
+            font-size: var(--font-size-xl);
+            color: var(--gray-600);
+            margin-bottom: var(--space-8);
+            line-height: 1.7;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+            margin-bottom: var(--space-10);
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: var(--space-10);
+            animation: fadeInUp 0.8s ease 0.6s forwards;
+            opacity: 0;
+        }
+
+        .hero-stat {
+            text-align: left;
+        }
+
+        .hero-stat-value {
+            font-size: var(--font-size-3xl);
             font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-            color: var(--black);
+            color: var(--gray-900);
+            line-height: 1;
+            margin-bottom: var(--space-1);
         }
 
-        .hero h1 .gradient {
-            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .hero-stat-value .counter {
+            display: inline-block;
         }
 
-        .hero-description {
-            font-size: 1.125rem;
-            color: var(--neutral-gray);
-            margin-bottom: 2rem;
-            line-height: 1.8;
+        .hero-stat-label {
+            font-size: var(--font-size-sm);
+            color: var(--gray-500);
+            font-weight: 500;
         }
 
-        .hero-buttons {
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 1s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .hero-card-main {
+            position: relative;
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-2xl);
+            border: 1px solid var(--gray-100);
+        }
+
+        .hero-card-header {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 2.5rem;
-            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: var(--space-6);
+            padding-bottom: var(--space-6);
+            border-bottom: 1px solid var(--gray-100);
         }
 
-        .btn-primary {
+        .hero-card-title {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+
+        .hero-card-badge {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
-            color: white;
-            text-decoration: none;
+            gap: var(--space-1);
+            padding: var(--space-1) var(--space-3);
+            background: var(--success-light);
+            color: var(--success);
+            font-size: var(--font-size-xs);
             font-weight: 600;
-            font-size: 1rem;
-            border-radius: var(--radius-md);
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
+            border-radius: var(--radius-full);
         }
 
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: transparent;
-            color: var(--blue-secondary);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            border: 2px solid var(--blue-secondary);
-            border-radius: var(--radius-md);
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: var(--blue-secondary);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .hero-trust {
+        .hero-card-steps {
             display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: var(--space-4);
         }
 
-        .trust-item {
+        .hero-card-step {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            color: var(--neutral-gray);
+            gap: var(--space-4);
+            padding: var(--space-4);
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
         }
 
-        .trust-item .icon {
+        .hero-card-step:hover {
+            background: var(--orange-50);
+            transform: translateX(4px);
+        }
+
+        .hero-card-step-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-xl);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .hero-card-step-content {
+            flex: 1;
+        }
+
+        .hero-card-step-title {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--space-1);
+        }
+
+        .hero-card-step-desc {
+            font-size: var(--font-size-xs);
+            color: var(--gray-500);
+        }
+
+        .hero-card-step-check {
             width: 24px;
             height: 24px;
-            background: linear-gradient(135deg, var(--success-green), #10B981);
+            background: var(--success);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 0.75rem;
+            font-size: 12px;
         }
 
-        .hero-image {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-image-main {
-            width: 100%;
-            max-width: 450px;
-            border-radius: var(--radius-xl);
-            box-shadow: var(--shadow-xl);
-            object-fit: cover;
-        }
-
-        .hero-float-card {
+        /* Floating Elements */
+        .hero-float-notification {
             position: absolute;
-            background: white;
-            border-radius: var(--radius-md);
-            padding: 1rem 1.25rem;
-            box-shadow: var(--shadow-lg);
+            top: -20px;
+            right: -20px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-3) var(--space-4);
+            box-shadow: var(--shadow-xl);
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            animation: float 3s ease-in-out infinite;
+            gap: var(--space-3);
+            animation: slideInNotification 5s ease infinite;
+            z-index: 10;
         }
 
-        .hero-float-card.card-1 {
-            top: 10%;
-            right: 0;
-            animation-delay: 0s;
+        .hero-float-notification-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--success-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-lg);
         }
 
-        .hero-float-card.card-2 {
-            bottom: 15%;
-            left: 5%;
-            animation-delay: 1.5s;
+        .hero-float-notification-text {
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            color: var(--gray-800);
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .hero-float-notification-time {
+            font-size: var(--font-size-xs);
+            color: var(--gray-500);
         }
 
-        .float-icon {
+        .hero-float-rating {
+            position: absolute;
+            bottom: 40px;
+            left: -40px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-4);
+            box-shadow: var(--shadow-xl);
+            animation: float 6s ease-in-out infinite;
+            z-index: 10;
+        }
+
+        .hero-float-rating-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: var(--space-1);
+            color: var(--warning);
+            font-size: var(--font-size-lg);
+        }
+
+        .hero-float-rating-text {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .hero-float-rating-source {
+            font-size: var(--font-size-xs);
+            color: var(--gray-500);
+        }
+
+        /* Scroll Indicator */
+        .hero-scroll {
+            position: absolute;
+            bottom: var(--space-8);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-2);
+            color: var(--gray-400);
+            font-size: var(--font-size-sm);
+            animation: scrollIndicator 2s ease-in-out infinite;
+        }
+
+        .hero-scroll-icon {
+            width: 24px;
+            height: 40px;
+            border: 2px solid var(--gray-300);
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .hero-scroll-icon::after {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 8px;
+            background: var(--orange-primary);
+            border-radius: 2px;
+            animation: scrollIndicator 2s ease-in-out infinite;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 3: TRUST BAR
+           ══════════════════════════════════════════════════════════════ */
+        .trust-bar {
+            background: var(--gray-900);
+            padding: var(--space-5) 0;
+            overflow: hidden;
+        }
+
+        .trust-bar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-12);
+            flex-wrap: wrap;
+        }
+
+        .trust-bar-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            color: var(--gray-400);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+        }
+
+        .trust-bar-item-icon {
             width: 40px;
             height: 40px;
-            background: var(--orange-light);
-            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
+            font-size: var(--font-size-lg);
         }
 
-        .float-content strong {
-            display: block;
-            font-size: 1.125rem;
-            color: var(--black);
+        .trust-bar-divider {
+            width: 1px;
+            height: 30px;
+            background: var(--gray-700);
         }
 
-        .float-content span {
-            font-size: 0.8rem;
-            color: var(--neutral-gray);
+        .trust-bar-rating {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
         }
 
-        /* ============================================
-           SERVICES SECTION
-           ============================================ */
-        .services {
-            padding: 6rem 0;
+        .trust-bar-stars {
+            display: flex;
+            gap: 2px;
+            color: var(--warning);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 4: PROBLEM/SOLUTION
+           ══════════════════════════════════════════════════════════════ */
+        .problem-solution {
             background: var(--white);
         }
 
-        .section-header {
+        .problem-solution-header {
             text-align: center;
-            margin-bottom: 4rem;
+            max-width: 700px;
+            margin: 0 auto var(--space-16);
         }
 
-        .section-tag {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: var(--orange-light);
+        .problem-solution-label {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: var(--orange-50);
             color: var(--orange-primary);
-            font-size: 0.875rem;
+            font-size: var(--font-size-sm);
             font-weight: 600;
-            border-radius: 50px;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-4);
         }
 
-        .section-header h2 {
-            font-size: clamp(1.75rem, 4vw, 2.5rem);
-            font-weight: 800;
-            color: var(--black);
-            margin-bottom: 1rem;
+        .problem-solution-title {
+            margin-bottom: var(--space-4);
         }
 
-        .section-header p {
-            font-size: 1.1rem;
-            color: var(--neutral-gray);
-            max-width: 600px;
-            margin: 0 auto;
+        .problem-solution-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--gray-600);
         }
 
+        .problem-solution-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: var(--space-8);
+            align-items: stretch;
+        }
+
+        .problem-solution-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--orange-primary);
+        }
+
+        .ps-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            height: 100%;
+        }
+
+        .ps-card-problem {
+            background: var(--gray-50);
+            border: 2px solid var(--gray-200);
+        }
+
+        .ps-card-solution {
+            background: linear-gradient(135deg, var(--orange-50) 0%, var(--white) 100%);
+            border: 2px solid var(--orange-200);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .ps-card-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: var(--space-6);
+        }
+
+        .ps-card-problem .ps-card-icon {
+            background: var(--gray-200);
+        }
+
+        .ps-card-solution .ps-card-icon {
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            color: white;
+        }
+
+        .ps-card-title {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            margin-bottom: var(--space-6);
+        }
+
+        .ps-card-problem .ps-card-title {
+            color: var(--gray-600);
+        }
+
+        .ps-card-solution .ps-card-title {
+            color: var(--gray-900);
+        }
+
+        .ps-card-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+
+        .ps-card-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-3);
+            font-size: var(--font-size-base);
+        }
+
+        .ps-card-item-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .ps-card-problem .ps-card-item-icon {
+            background: var(--error);
+            color: white;
+            font-size: 12px;
+        }
+
+        .ps-card-solution .ps-card-item-icon {
+            background: var(--success);
+            color: white;
+            font-size: 12px;
+        }
+
+        .ps-card-problem .ps-card-item {
+            color: var(--gray-600);
+        }
+
+        .ps-card-solution .ps-card-item {
+            color: var(--gray-800);
+            font-weight: 500;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 5: SERVICES
+           ══════════════════════════════════════════════════════════════ */
+        .services {
+            background: var(--gray-50);
+        }
+
+        .services-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--space-12);
+        }
+
+        .services-label {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: var(--blue-secondary);
+            color: var(--white);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-4);
+        }
+
+        .services-title {
+            margin-bottom: var(--space-4);
+        }
+
+        .services-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--gray-600);
+        }
+
+        /* Services Tabs */
+        .services-tabs {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-2);
+            margin-bottom: var(--space-10);
+            flex-wrap: wrap;
+        }
+
+        .services-tab {
+            padding: var(--space-3) var(--space-6);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--gray-600);
+            background: var(--white);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-full);
+            transition: all var(--transition-base);
+            cursor: pointer;
+        }
+
+        .services-tab:hover {
+            border-color: var(--orange-primary);
+            color: var(--orange-primary);
+        }
+
+        .services-tab.active {
+            background: var(--orange-primary);
+            border-color: var(--orange-primary);
+            color: white;
+        }
+
+        /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+
+        .services-panel {
+            display: none;
+        }
+
+        .services-panel.active {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+            animation: fadeIn 0.5s ease;
         }
 
         .service-card {
             background: var(--white);
-            border: 1px solid #E5E7EB;
-            border-radius: var(--radius-lg);
-            padding: 2rem 1.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            border: 1px solid var(--gray-200);
+            transition: all var(--transition-base);
+            cursor: pointer;
             position: relative;
             overflow: hidden;
         }
@@ -489,1211 +1344,2400 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            background: linear-gradient(90deg, var(--orange-primary), var(--orange-dark));
             transform: scaleX(0);
-            transition: transform 0.3s ease;
+            transition: transform var(--transition-base);
         }
 
         .service-card:hover {
-            border-color: var(--orange-primary);
-            box-shadow: 0 15px 40px rgba(249, 115, 22, 0.15);
             transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--orange-200);
         }
 
         .service-card:hover::before {
             transform: scaleX(1);
         }
 
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--orange-light), #FFEDD5);
-            border-radius: var(--radius-md);
+        .service-card-popular {
+            position: absolute;
+            top: var(--space-4);
+            right: var(--space-4);
+            padding: var(--space-1) var(--space-3);
+            background: var(--orange-primary);
+            color: white;
+            font-size: var(--font-size-xs);
+            font-weight: 700;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+        }
+
+        .service-card-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--orange-50);
+            border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.25rem;
             font-size: 1.75rem;
-            transition: all 0.3s ease;
+            margin-bottom: var(--space-4);
+            transition: all var(--transition-base);
         }
 
-        .service-card:hover .service-icon {
-            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
-            transform: scale(1.1) rotate(5deg);
+        .service-card:hover .service-card-icon {
+            background: var(--orange-100);
+            transform: scale(1.05);
         }
 
-        .service-card:hover .service-icon span {
-            filter: brightness(10);
-        }
-
-        .service-card h3 {
-            font-size: 1.1rem;
+        .service-card-title {
+            font-size: var(--font-size-lg);
             font-weight: 700;
-            color: var(--black);
-            margin-bottom: 0.75rem;
+            color: var(--gray-900);
+            margin-bottom: var(--space-2);
         }
 
-        .service-price {
-            font-size: 1.5rem;
-            font-weight: 800;
+        .service-card-desc {
+            font-size: var(--font-size-sm);
+            color: var(--gray-600);
+            margin-bottom: var(--space-4);
+            line-height: 1.6;
+        }
+
+        .service-card-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--gray-100);
+        }
+
+        .service-card-price {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
             color: var(--orange-primary);
-            margin-bottom: 1rem;
         }
 
-        .service-price span {
-            font-size: 0.9rem;
+        .service-card-price span {
+            font-size: var(--font-size-sm);
             font-weight: 500;
-            color: var(--neutral-gray);
+            color: var(--gray-500);
         }
 
-        .service-btn {
-            display: inline-block;
-            padding: 0.6rem 1.25rem;
-            background: transparent;
-            color: var(--orange-primary);
-            border: 2px solid var(--orange-primary);
-            border-radius: var(--radius-sm);
+        .service-card-link {
+            display: flex;
+            align-items: center;
+            gap: var(--space-1);
+            font-size: var(--font-size-sm);
             font-weight: 600;
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            color: var(--orange-primary);
+            transition: gap var(--transition-fast);
         }
 
-        .service-btn:hover {
-            background: var(--orange-primary);
-            color: white;
+        .service-card:hover .service-card-link {
+            gap: var(--space-2);
         }
 
-        /* ============================================
-           PROCESS SECTION
-           ============================================ */
-        .process {
-            padding: 6rem 0;
-            background: var(--bg-light);
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            position: relative;
-        }
-
-        .process-grid::before {
-            content: '';
-            position: absolute;
-            top: 50px;
-            left: 12%;
-            right: 12%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--orange-primary), var(--orange-light), var(--orange-primary));
-            z-index: 0;
-        }
-
-        .process-step {
+        .services-cta {
             text-align: center;
+            margin-top: var(--space-12);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 6: PROCESS
+           ══════════════════════════════════════════════════════════════ */
+        .process {
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-bg {
+            position: absolute;
+            top: 50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--orange-50) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
+
+        .process-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--space-16);
             position: relative;
             z-index: 1;
         }
 
-        .step-number {
-            width: 70px;
-            height: 70px;
-            background: var(--white);
-            border: 4px solid var(--orange-primary);
+        .process-label {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: var(--orange-50);
+            color: var(--orange-primary);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-4);
+        }
+
+        .process-title {
+            margin-bottom: var(--space-4);
+        }
+
+        .process-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--gray-600);
+        }
+
+        .process-timeline {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-6);
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 12.5%;
+            right: 12.5%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--orange-primary), var(--orange-dark));
+            border-radius: 2px;
+            z-index: 0;
+        }
+
+        .process-step {
+            position: relative;
+            text-align: center;
+        }
+
+        .process-step-number {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.75rem;
+            font-size: var(--font-size-xl);
             font-weight: 800;
-            color: var(--orange-primary);
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-md);
+            color: white;
+            margin: 0 auto var(--space-6);
+            position: relative;
+            z-index: 1;
+            box-shadow: var(--shadow-lg), 0 0 0 6px var(--white);
+            transition: all var(--transition-base);
         }
 
-        .process-step:hover .step-number {
-            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
-            color: white;
+        .process-step:hover .process-step-number {
             transform: scale(1.1);
+            box-shadow: var(--shadow-xl), 0 0 0 8px var(--white), var(--shadow-glow);
         }
 
-        .process-step h3 {
-            font-size: 1.1rem;
+        .process-step-icon {
+            font-size: 2rem;
+            margin-bottom: var(--space-3);
+        }
+
+        .process-step-title {
+            font-size: var(--font-size-lg);
             font-weight: 700;
-            color: var(--black);
-            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+            margin-bottom: var(--space-2);
         }
 
-        .process-step p {
-            font-size: 0.95rem;
-            color: var(--neutral-gray);
-            line-height: 1.6;
+        .process-step-desc {
+            font-size: var(--font-size-sm);
+            color: var(--gray-600);
+            margin-bottom: var(--space-3);
         }
 
-        /* ============================================
-           GUARANTEES SECTION
-           ============================================ */
-        .guarantees {
-            padding: 6rem 0;
-            background: linear-gradient(135deg, var(--black) 0%, #1F2937 100%);
-            color: white;
+        .process-step-time {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-1);
+            padding: var(--space-1) var(--space-3);
+            background: var(--gray-100);
+            color: var(--gray-600);
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            border-radius: var(--radius-full);
         }
 
-        .guarantees .section-tag {
-            background: rgba(249, 115, 22, 0.2);
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 7: STATS
+           ══════════════════════════════════════════════════════════════ */
+        .stats {
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-bg {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .stats-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .stats-header {
+            text-align: center;
+            margin-bottom: var(--space-12);
+            position: relative;
+            z-index: 1;
+        }
+
+        .stats-label {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--orange-light);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-4);
+        }
+
+        .stats-title {
+            color: var(--white);
+            margin-bottom: var(--space-4);
+        }
+
+        .stats-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--gray-400);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-8);
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: var(--space-8);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-xl);
+            transition: all var(--transition-base);
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+            border-color: var(--orange-primary);
+        }
+
+        .stat-card-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin: 0 auto var(--space-4);
+        }
+
+        .stat-card-value {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: var(--space-2);
+        }
+
+        .stat-card-value .counter {
+            display: inline-block;
+        }
+
+        .stat-card-label {
+            font-size: var(--font-size-base);
+            color: var(--gray-400);
+            font-weight: 500;
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 8: TESTIMONIALS
+           ══════════════════════════════════════════════════════════════ */
+        .testimonials {
+            background: var(--gray-50);
+        }
+
+        .testimonials-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--space-12);
+        }
+
+        .testimonials-label {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: var(--orange-50);
             color: var(--orange-primary);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-4);
         }
 
-        .guarantees .section-header h2 {
+        .testimonials-title {
+            margin-bottom: var(--space-4);
+        }
+
+        .testimonials-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--gray-600);
+        }
+
+        .testimonials-slider {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--gray-100);
+            transition: all var(--transition-base);
+            position: relative;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .testimonial-card-quote {
+            position: absolute;
+            top: var(--space-6);
+            right: var(--space-6);
+            font-size: 4rem;
+            color: var(--orange-100);
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-card-rating {
+            display: flex;
+            gap: 2px;
+            color: var(--warning);
+            margin-bottom: var(--space-4);
+        }
+
+        .testimonial-card-text {
+            font-size: var(--font-size-base);
+            color: var(--gray-700);
+            line-height: 1.7;
+            margin-bottom: var(--space-6);
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-card-author {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            padding-top: var(--space-6);
+            border-top: 1px solid var(--gray-100);
+        }
+
+        .testimonial-card-avatar {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
+            font-size: var(--font-size-xl);
+            font-weight: 700;
         }
 
-        .guarantees .section-header p {
-            color: #9CA3AF;
+        .testimonial-card-info {
+            flex: 1;
+        }
+
+        .testimonial-card-name {
+            font-size: var(--font-size-base);
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--space-1);
+        }
+
+        .testimonial-card-service {
+            font-size: var(--font-size-sm);
+            color: var(--gray-500);
+        }
+
+        .testimonial-card-verified {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-1);
+            padding: var(--space-1) var(--space-2);
+            background: var(--success-light);
+            color: var(--success);
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 9: GUARANTEES
+           ══════════════════════════════════════════════════════════════ */
+        .guarantees {
+            background: var(--white);
+        }
+
+        .guarantees-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--space-12);
+        }
+
+        .guarantees-label {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: var(--success-light);
+            color: var(--success);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-4);
+        }
+
+        .guarantees-title {
+            margin-bottom: var(--space-4);
+        }
+
+        .guarantees-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--gray-600);
         }
 
         .guarantees-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
+            gap: var(--space-6);
         }
 
         .guarantee-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-lg);
-            padding: 2rem 1.5rem;
             text-align: center;
-            transition: all 0.3s ease;
+            padding: var(--space-8);
+            background: var(--gray-50);
+            border-radius: var(--radius-xl);
+            border: 2px solid transparent;
+            transition: all var(--transition-base);
         }
 
         .guarantee-card:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--orange-primary);
-            transform: translateY(-5px);
-        }
-
-        .guarantee-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .guarantee-card h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .guarantee-card p {
-            font-size: 0.9rem;
-            color: #9CA3AF;
-            line-height: 1.6;
-        }
-
-        /* ============================================
-           TESTIMONIALS SECTION
-           ============================================ */
-        .testimonials {
-            padding: 6rem 0;
+            border-color: var(--orange-200);
             background: var(--white);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .testimonial-card {
-            background: var(--bg-light);
-            border-radius: var(--radius-lg);
-            padding: 2rem;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
+            transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
-            transform: translateY(-5px);
         }
 
-        .testimonial-quote {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            font-size: 3rem;
-            color: var(--orange-light);
-            line-height: 1;
-        }
-
-        .testimonial-stars {
-            color: #F59E0B;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            letter-spacing: 2px;
-        }
-
-        .testimonial-text {
-            font-size: 1rem;
-            color: var(--neutral-dark);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .testimonial-author {
+        .guarantee-card-icon {
+            width: 72px;
+            height: 72px;
+            background: var(--white);
+            border-radius: var(--radius-lg);
             display: flex;
             align-items: center;
-            gap: 1rem;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto var(--space-4);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
         }
 
-        .testimonial-avatar {
-            width: 50px;
-            height: 50px;
+        .guarantee-card:hover .guarantee-card-icon {
             background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            color: white;
+            transform: scale(1.05) rotate(-3deg);
+        }
+
+        .guarantee-card-title {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--space-2);
+        }
+
+        .guarantee-card-desc {
+            font-size: var(--font-size-sm);
+            color: var(--gray-600);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 10: FAQ
+           ══════════════════════════════════════════════════════════════ */
+        .faq {
+            background: var(--gray-50);
+        }
+
+        .faq-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto var(--space-12);
+        }
+
+        .faq-label {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: var(--blue-secondary);
+            color: var(--white);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-4);
+        }
+
+        .faq-title {
+            margin-bottom: var(--space-4);
+        }
+
+        .faq-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--gray-600);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-4);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            overflow: hidden;
+            transition: all var(--transition-base);
+        }
+
+        .faq-item:hover {
+            border-color: var(--orange-200);
+            box-shadow: var(--shadow-md);
+        }
+
+        .faq-item.active {
+            border-color: var(--orange-primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-5) var(--space-6);
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            color: var(--gray-900);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .faq-question:hover {
+            color: var(--orange-primary);
+        }
+
+        .faq-question-icon {
+            width: 28px;
+            height: 28px;
+            background: var(--gray-100);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: var(--font-size-lg);
+            color: var(--gray-500);
+            transition: all var(--transition-base);
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-question-icon {
+            background: var(--orange-primary);
             color: white;
-            font-weight: 700;
-            font-size: 1.1rem;
+            transform: rotate(45deg);
         }
 
-        .testimonial-info strong {
-            display: block;
-            font-weight: 600;
-            color: var(--black);
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-base);
         }
 
-        .testimonial-info span {
-            font-size: 0.85rem;
-            color: var(--neutral-gray);
+        .faq-item.active .faq-answer {
+            max-height: 300px;
         }
 
-        /* ============================================
-           CTA SECTION
-           ============================================ */
-        .cta-section {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+        .faq-answer-inner {
+            padding: 0 var(--space-6) var(--space-5);
+            font-size: var(--font-size-sm);
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        .faq-cta {
             text-align: center;
+            margin-top: var(--space-10);
+            padding: var(--space-8);
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            border: 2px dashed var(--gray-300);
+        }
+
+        .faq-cta-text {
+            font-size: var(--font-size-lg);
+            color: var(--gray-700);
+            margin-bottom: var(--space-4);
+        }
+
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 11: FINAL CTA
+           ══════════════════════════════════════════════════════════════ */
+        .final-cta {
+            background: linear-gradient(135deg, var(--orange-primary) 0%, var(--orange-dark) 100%);
             position: relative;
             overflow: hidden;
         }
 
-        .cta-section::before {
-            content: '';
+        .final-cta-bg {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            inset: 0;
+            background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .final-cta-shapes {
+            position: absolute;
+            inset: 0;
             pointer-events: none;
         }
 
-        .cta-section .container {
+        .final-cta-shape-1 {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .final-cta-shape-2 {
+            position: absolute;
+            bottom: -150px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .final-cta-content {
             position: relative;
             z-index: 1;
-        }
-
-        .cta-section h2 {
-            font-size: clamp(1.75rem, 4vw, 2.5rem);
-            font-weight: 800;
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-section .btn-primary {
-            background: white;
-            color: var(--orange-primary);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .cta-section .btn-primary:hover {
-            background: var(--black);
-            color: white;
-        }
-
-        /* ============================================
-           CONTACT SECTION
-           ============================================ */
-        .contact-section {
-            padding: 6rem 0;
-            background: var(--bg-light);
-        }
-
-        .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
+            gap: var(--space-16);
+            align-items: center;
         }
 
-        .contact-info h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--black);
-            margin-bottom: 1rem;
+        .final-cta-text {
+            color: white;
         }
 
-        .contact-info > p {
-            color: var(--neutral-gray);
-            margin-bottom: 2rem;
-            line-height: 1.8;
+        .final-cta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-6);
         }
 
-        .contact-details {
+        .final-cta-title {
+            color: white;
+            margin-bottom: var(--space-4);
+        }
+
+        .final-cta-subtitle {
+            font-size: var(--font-size-xl);
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: var(--space-8);
+            line-height: 1.6;
+        }
+
+        .final-cta-features {
             display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            flex-wrap: wrap;
+            gap: var(--space-4);
         }
 
-        .contact-item {
+        .final-cta-feature {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: var(--space-2);
+            font-size: var(--font-size-sm);
+            color: rgba(255, 255, 255, 0.9);
         }
 
-        .contact-item-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--orange-light);
-            border-radius: var(--radius-md);
+        .final-cta-feature-icon {
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
+            font-size: 12px;
         }
 
-        .contact-item-text strong {
-            display: block;
-            font-size: 0.9rem;
-            color: var(--neutral-gray);
-            font-weight: 500;
+        /* CTA Form */
+        .final-cta-form-card {
+            background: var(--white);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-2xl);
         }
 
-        .contact-item-text span {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--black);
+        .final-cta-form-header {
+            text-align: center;
+            margin-bottom: var(--space-6);
         }
 
-        .contact-item-text a {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--orange-primary);
-            text-decoration: none;
-        }
-
-        .contact-item-text a:hover {
-            text-decoration: underline;
-        }
-
-        .contact-form-wrapper {
-            background: white;
-            border-radius: var(--radius-xl);
-            padding: 2.5rem;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .contact-form-wrapper h3 {
-            font-size: 1.25rem;
+        .final-cta-form-title {
+            font-size: var(--font-size-xl);
             font-weight: 700;
-            color: var(--black);
-            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+            margin-bottom: var(--space-2);
         }
 
-        .contact-form-wrapper > p {
-            color: var(--neutral-gray);
-            font-size: 0.95rem;
-            margin-bottom: 2rem;
+        .final-cta-form-subtitle {
+            font-size: var(--font-size-sm);
+            color: var(--gray-600);
+        }
+
+        .final-cta-form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
         }
 
         .form-group {
-            margin-bottom: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2);
         }
 
-        .form-group label {
-            display: block;
+        .form-label {
+            font-size: var(--font-size-sm);
             font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--black);
-            margin-bottom: 0.5rem;
+            color: var(--gray-700);
         }
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.9rem 1rem;
-            border: 2px solid #E5E7EB;
-            border-radius: var(--radius-sm);
-            font-family: inherit;
-            font-size: 1rem;
-            transition: all 0.3s ease;
+        .form-input {
+            padding: var(--space-4);
+            font-size: var(--font-size-base);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius-md);
+            transition: all var(--transition-fast);
+            font-family: var(--font-family);
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        .form-input:focus {
             outline: none;
             border-color: var(--orange-primary);
-            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+            box-shadow: 0 0 0 3px var(--orange-100);
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
+        .form-input::placeholder {
+            color: var(--gray-400);
+        }
+
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
         }
 
         .form-submit {
+            margin-top: var(--space-2);
+        }
+
+        .form-submit .btn {
             width: 100%;
-            padding: 1rem;
-            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
-            color: white;
-            border: none;
-            border-radius: var(--radius-md);
-            font-family: inherit;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
         }
 
-        .form-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+        .form-disclaimer {
+            font-size: var(--font-size-xs);
+            color: var(--gray-500);
+            text-align: center;
+            margin-top: var(--space-4);
         }
 
-        .form-trust {
+        .form-urgency {
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-            font-size: 0.85rem;
-            color: var(--neutral-gray);
+            gap: var(--space-2);
+            padding: var(--space-3);
+            background: var(--orange-50);
+            color: var(--orange-dark);
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            margin-top: var(--space-4);
         }
 
-        .honey {
-            display: none;
-        }
-
-        /* ============================================
-           FOOTER
-           ============================================ */
+        /* ══════════════════════════════════════════════════════════════
+           SECTION 12: FOOTER
+           ══════════════════════════════════════════════════════════════ */
         .footer {
-            background: var(--black);
-            color: white;
-            padding: 4rem 0 2rem;
+            background: var(--gray-900);
+            color: var(--gray-400);
+            padding-top: var(--space-16);
         }
 
-        .footer-grid {
+        .footer-main {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: var(--space-12);
+            padding-bottom: var(--space-12);
+            border-bottom: 1px solid var(--gray-800);
         }
 
-        .footer-brand .logo {
-            margin-bottom: 1rem;
-            display: inline-flex;
+        .footer-brand {
+            max-width: 300px;
         }
 
-        .footer-brand p {
-            color: #9CA3AF;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            font-size: var(--font-size-xl);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: var(--space-4);
         }
 
-        .footer-legal-badge {
-            background: rgba(249, 115, 22, 0.1);
-            border: 1px solid rgba(249, 115, 22, 0.3);
-            border-radius: var(--radius-sm);
-            padding: 0.75rem 1rem;
-            font-size: 0.8rem;
-            color: #D1D5DB;
-        }
-
-        .footer-col h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 1.25rem;
+        .footer-logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
+            font-weight: 800;
         }
 
-        .footer-col a {
-            display: block;
-            color: #9CA3AF;
-            text-decoration: none;
-            font-size: 0.95rem;
-            margin-bottom: 0.75rem;
-            transition: color 0.3s ease;
+        .footer-desc {
+            font-size: var(--font-size-sm);
+            line-height: 1.7;
+            margin-bottom: var(--space-6);
         }
 
-        .footer-col a:hover {
+        .footer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-4);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--gray-800);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-sm);
+        }
+
+        .footer-badge-icon {
+            font-size: var(--font-size-lg);
+        }
+
+        .footer-nav-title {
+            font-size: var(--font-size-sm);
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--space-4);
+        }
+
+        .footer-nav-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+
+        .footer-nav-link {
+            font-size: var(--font-size-sm);
+            color: var(--gray-400);
+            transition: color var(--transition-fast);
+        }
+
+        .footer-nav-link:hover {
             color: var(--orange-primary);
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
+            padding: var(--space-6) 0;
             flex-wrap: wrap;
-            gap: 1rem;
-            font-size: 0.9rem;
-            color: #9CA3AF;
+            gap: var(--space-4);
         }
 
-        .footer-bottom a {
-            color: #9CA3AF;
-            text-decoration: none;
+        .footer-legal {
+            font-size: var(--font-size-sm);
         }
 
-        .footer-bottom a:hover {
+        .footer-legal-links {
+            display: flex;
+            gap: var(--space-6);
+        }
+
+        .footer-legal-link {
+            font-size: var(--font-size-sm);
+            color: var(--gray-500);
+            transition: color var(--transition-fast);
+        }
+
+        .footer-legal-link:hover {
             color: var(--orange-primary);
         }
 
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
-        @media (max-width: 1024px) {
-            .services-grid,
-            .guarantees-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .process-grid::before {
-                display: none;
-            }
-            
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+        .footer-disclaimer {
+            width: 100%;
+            text-align: center;
+            padding: var(--space-4);
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-xs);
+            color: var(--gray-500);
+            margin-top: var(--space-4);
         }
 
-        @media (max-width: 900px) {
-            .hero-grid {
+        /* ══════════════════════════════════════════════════════════════
+           RESPONSIVE STYLES
+           ══════════════════════════════════════════════════════════════ */
+        @media (max-width: 1024px) {
+            .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            
-            .hero-content {
+
+            .hero-text {
                 max-width: 100%;
             }
-            
-            .hero-buttons {
+
+            .hero-stats {
                 justify-content: center;
             }
-            
-            .hero-trust {
-                justify-content: center;
+
+            .hero-visual {
+                max-width: 500px;
+                margin: 0 auto;
             }
-            
-            .hero-image {
-                order: -1;
-                margin-bottom: 2rem;
+
+            .hero-float-notification {
+                top: -10px;
+                right: 0;
             }
-            
-            .hero-float-card {
+
+            .hero-float-rating {
+                left: 0;
+                bottom: 20px;
+            }
+
+            .problem-solution-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .problem-solution-arrow {
+                transform: rotate(90deg);
+                padding: var(--space-4) 0;
+            }
+
+            .services-panel.active {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-timeline {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-timeline::before {
                 display: none;
             }
-            
-            .testimonials-grid {
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-slider {
                 grid-template-columns: 1fr;
             }
-            
-            .contact-grid {
+
+            .guarantees-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .faq-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .final-cta-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .final-cta-features {
+                justify-content: center;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-brand {
+                grid-column: span 2;
+                max-width: 100%;
             }
         }
 
         @media (max-width: 768px) {
-            .nav-links {
+            :root {
+                --space-16: 3rem;
+                --space-20: 4rem;
+                --space-24: 5rem;
+            }
+
+            .navbar-nav {
                 display: none;
             }
-            
-            .mobile-toggle {
+
+            .navbar-cta {
+                display: none;
+            }
+
+            .navbar-mobile-toggle {
                 display: flex;
             }
-            
+
             .hero {
                 min-height: auto;
-                padding: 7rem 0 3rem;
+                padding-top: 100px;
+                padding-bottom: var(--space-12);
             }
-            
-            .hero h1 {
-                font-size: 2rem;
+
+            .hero-cta-group {
+                flex-direction: column;
             }
-            
-            .services-grid,
-            .guarantees-grid,
-            .process-grid {
-                grid-template-columns: 1fr;
+
+            .hero-cta-group .btn {
+                width: 100%;
             }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
+
+            .hero-stats {
+                flex-direction: column;
+                gap: var(--space-6);
+            }
+
+            .hero-stat {
                 text-align: center;
             }
-            
+
+            .hero-scroll {
+                display: none;
+            }
+
+            .trust-bar-inner {
+                flex-direction: column;
+                gap: var(--space-4);
+            }
+
+            .trust-bar-divider {
+                display: none;
+            }
+
+            .services-panel.active {
+                grid-template-columns: 1fr;
+            }
+
+            .process-timeline {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guarantees-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
             .footer-bottom {
                 flex-direction: column;
                 text-align: center;
             }
-            
-            .form-trust {
-                flex-direction: column;
-                gap: 0.5rem;
+
+            .footer-legal-links {
+                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- ============================================
-         NAVBAR
-         ============================================ -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="logo">
-                <div class="logo-icon">F</div>
-                Formalita
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 1: NAVBAR
+         ════════════════════════════════════════════════════════════════ -->
+    <header class="navbar" id="navbar">
+        <div class="navbar-inner">
+            <a href="/" class="navbar-logo">
+                <div class="navbar-logo-icon">F</div>
+                <span>Formalita</span>
             </a>
-            <div class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#process">Comment ça marche</a>
-                <a href="#testimonials">Avis clients</a>
-                <a href="#contact">Contact</a>
-                <a href="tel:+33400000000" class="nav-cta">📞 Appelez-nous</a>
+
+            <nav class="navbar-nav">
+                <a href="#services" class="navbar-link">Services</a>
+                <a href="#process" class="navbar-link">Comment ça marche</a>
+                <a href="#testimonials" class="navbar-link">Témoignages</a>
+                <a href="#faq" class="navbar-link">FAQ</a>
+                <a href="tel:+33456789012" class="navbar-link">📞 04 56 78 90 12</a>
+            </nav>
+
+            <div class="navbar-cta">
+                <a href="#contact" class="btn btn-primary">Démarrer mon dossier</a>
             </div>
-            <button class="mobile-toggle" onclick="toggleMenu()">
+
+            <button class="navbar-mobile-toggle" id="mobileToggle" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
-    </nav>
-    
+    </header>
+
+    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#services" onclick="toggleMenu()">Services</a>
-        <a href="#process" onclick="toggleMenu()">Comment ça marche</a>
-        <a href="#testimonials" onclick="toggleMenu()">Avis clients</a>
-        <a href="#contact" onclick="toggleMenu()">Contact</a>
-        <a href="tel:+33400000000" class="nav-cta" style="text-align:center;">📞 Appelez-nous</a>
+        <nav class="mobile-menu-nav">
+            <a href="#services" class="mobile-menu-link">📋 Services</a>
+            <a href="#process" class="mobile-menu-link">⚡ Comment ça marche</a>
+            <a href="#testimonials" class="mobile-menu-link">⭐ Témoignages</a>
+            <a href="#faq" class="mobile-menu-link">❓ FAQ</a>
+            <a href="tel:+33456789012" class="mobile-menu-link">📞 04 56 78 90 12</a>
+        </nav>
+        <div class="mobile-menu-cta">
+            <a href="#contact" class="btn btn-primary btn-lg">Démarrer mon dossier</a>
+        </div>
     </div>
 
-    <!-- ============================================
-         HERO SECTION
-         ============================================ -->
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 2: HERO
+         ════════════════════════════════════════════════════════════════ -->
     <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-bg-gradient"></div>
+            <div class="hero-bg-pattern"></div>
+            <div class="hero-bg-shape-1"></div>
+            <div class="hero-bg-shape-2"></div>
+        </div>
+
         <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content">
+            <div class="hero-content">
+                <div class="hero-text">
                     <div class="hero-badge">
-                        <span>🎯</span>
-                        <span>+500 dossiers traités avec succès</span>
+                        <span class="hero-badge-dot"></span>
+                        <span>Experts certifiés • Résultats garantis</span>
                     </div>
-                    
-                    <h1>
-                        Vos démarches<br>
-                        <span class="gradient">administratives,</span><br>
-                        notre expertise.
+
+                    <h1 class="hero-title">
+                        <span class="hero-title-line">Vos démarches</span>
+                        <span class="hero-title-line">administratives</span>
+                        <span class="hero-title-line text-gradient">en toute sérénité</span>
                     </h1>
-                    
-                    <p class="hero-description">
-                        Titre de séjour, naturalisation, carte d'identité, passeport... 
-                        Nous prenons en charge vos formalités de A à Z pour vous faire gagner 
-                        du temps et garantir l'acceptation de vos dossiers.
+
+                    <p class="hero-subtitle">
+                        Titres de séjour, naturalisation, état civil... Confiez vos formalités à nos experts et recevez votre dossier complet, prêt à déposer.
                     </p>
-                    
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn-primary">
-                            Consultation gratuite →
+
+                    <div class="hero-cta-group">
+                        <a href="#contact" class="btn btn-primary btn-lg">
+                            Démarrer mon dossier
+                            <span>→</span>
                         </a>
-                        <a href="#services" class="btn-secondary">
-                            Voir nos services
+                        <a href="tel:+33456789012" class="btn btn-secondary btn-lg">
+                            <span>📞</span>
+                            Appeler un conseiller
                         </a>
                     </div>
-                    
-                    <div class="hero-trust">
-                        <div class="trust-item">
-                            <div class="icon">✓</div>
-                            <span>98% de réussite</span>
+
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">
+                                <span class="counter" data-target="1600">0</span>+
+                            </div>
+                            <div class="hero-stat-label">Dossiers traités</div>
                         </div>
-                        <div class="trust-item">
-                            <div class="icon">✓</div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">
+                                <span class="counter" data-target="98">0</span>%
+                            </div>
+                            <div class="hero-stat-label">Taux de réussite</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">
+                                <span class="counter" data-target="48">0</span>h
+                            </div>
+                            <div class="hero-stat-label">Délai de réponse</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <!-- Floating Notification -->
+                    <div class="hero-float-notification">
+                        <div class="hero-float-notification-icon">✅</div>
+                        <div>
+                            <div class="hero-float-notification-text">Dossier accepté !</div>
+                            <div class="hero-float-notification-time">Il y a 3 min</div>
+                        </div>
+                    </div>
+
+                    <!-- Main Card -->
+                    <div class="hero-card-main">
+                        <div class="hero-card-header">
+                            <div class="hero-card-title">Votre dossier en cours</div>
+                            <div class="hero-card-badge">
+                                <span>✓</span> En bonne voie
+                            </div>
+                        </div>
+
+                        <div class="hero-card-steps">
+                            <div class="hero-card-step">
+                                <div class="hero-card-step-icon">📝</div>
+                                <div class="hero-card-step-content">
+                                    <div class="hero-card-step-title">Documents collectés</div>
+                                    <div class="hero-card-step-desc">Tous vos documents sont vérifiés</div>
+                                </div>
+                                <div class="hero-card-step-check">✓</div>
+                            </div>
+
+                            <div class="hero-card-step">
+                                <div class="hero-card-step-icon">🔍</div>
+                                <div class="hero-card-step-content">
+                                    <div class="hero-card-step-title">Dossier vérifié</div>
+                                    <div class="hero-card-step-desc">Conformité contrôlée par nos experts</div>
+                                </div>
+                                <div class="hero-card-step-check">✓</div>
+                            </div>
+
+                            <div class="hero-card-step">
+                                <div class="hero-card-step-icon">📬</div>
+                                <div class="hero-card-step-content">
+                                    <div class="hero-card-step-title">Prêt à déposer</div>
+                                    <div class="hero-card-step-desc">Votre dossier complet vous attend</div>
+                                </div>
+                                <div class="hero-card-step-check">✓</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Rating -->
+                    <div class="hero-float-rating">
+                        <div class="hero-float-rating-stars">★★★★★</div>
+                        <div class="hero-float-rating-text">4.9/5 sur Google</div>
+                        <div class="hero-float-rating-source">+200 avis vérifiés</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="hero-scroll">
+            <div class="hero-scroll-icon"></div>
+            <span>Défiler</span>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 3: TRUST BAR
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-bar-inner">
+                <div class="trust-bar-item">
+                    <div class="trust-bar-item-icon">🏛️</div>
+                    <span>Partenaire certifié <strong style="color: white;">Pôle Démarches</strong></span>
+                </div>
+
+                <div class="trust-bar-divider"></div>
+
+                <div class="trust-bar-item">
+                    <div class="trust-bar-rating">
+                        <div class="trust-bar-stars">★★★★★</div>
+                        <span><strong style="color: white;">4.9/5</strong> sur Google</span>
+                    </div>
+                </div>
+
+                <div class="trust-bar-divider"></div>
+
+                <div class="trust-bar-item">
+                    <div class="trust-bar-item-icon">🔒</div>
+                    <span>Données <strong style="color: white;">100% sécurisées</strong> (RGPD)</span>
+                </div>
+
+                <div class="trust-bar-divider"></div>
+
+                <div class="trust-bar-item">
+                    <div class="trust-bar-item-icon">🇫🇷</div>
+                    <span>Équipe <strong style="color: white;">100% française</strong></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 4: PROBLEM/SOLUTION
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="problem-solution section-lg" id="why">
+        <div class="container">
+            <div class="problem-solution-header reveal">
+                <div class="problem-solution-label">
+                    <span>💡</span>
+                    <span>Pourquoi nous choisir</span>
+                </div>
+                <h2 class="problem-solution-title">Finis les casse-têtes administratifs</h2>
+                <p class="problem-solution-subtitle">
+                    Nous transformons vos démarches complexes en parcours simples et sereins.
+                </p>
+            </div>
+
+            <div class="problem-solution-grid">
+                <div class="ps-card ps-card-problem reveal stagger-1">
+                    <div class="ps-card-icon">😰</div>
+                    <h3 class="ps-card-title">Sans Formalita</h3>
+                    <ul class="ps-card-list">
+                        <li class="ps-card-item">
+                            <span class="ps-card-item-icon">✕</span>
+                            <span>Files d'attente interminables en préfecture</span>
+                        </li>
+                        <li class="ps-card-item">
+                            <span class="ps-card-item-icon">✕</span>
+                            <span>Documents manquants ou mal remplis</span>
+                        </li>
+                        <li class="ps-card-item">
+                            <span class="ps-card-item-icon">✕</span>
+                            <span>Dossiers refusés pour erreurs techniques</span>
+                        </li>
+                        <li class="ps-card-item">
+                            <span class="ps-card-item-icon">✕</span>
+                            <span>Stress et incertitude permanents</span>
+                        </li>
+                        <li class="ps-card-item">
+                            <span class="ps-card-item-icon">✕</span>
+                            <span>Temps perdu à chercher les bonnes informations</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="problem-solution-arrow reveal stagger-2">➜</div>
+
+                <div class="ps-card ps-card-solution reveal stagger-3">
+                    <div class="ps-card-icon">😊</div>
+                    <h3 class="ps-card-title">Avec Formalita</h3>
+                    <ul class="ps-card-list">
+                        <li class="ps-card-item">
+                            <span class="ps-card-item-icon">✓</span>
+                            <span>Un expert dédié gère tout pour vous</span>
+                        </li>
+                        <li class="ps-card-item">
+                            <span class="ps-card-item-icon">✓</span>
+                            <span>Dossier complet et conforme garanti</span>
+                        </li>
+                        <li class="ps-card-item">
+                            <span class="ps-card-item-icon">✓</span>
+                            <span>98% de taux d'acceptation</span>
+                        </li>
+                        <li class="ps-card-item">
+                            <span class="ps-card-item-icon">✓</span>
+                            <span>Suivi en temps réel de votre dossier</span>
+                        </li>
+                        <li class="ps-card-item">
+                            <span class="ps-card-item-icon">✓</span>
+                            <span>Accompagnement jusqu'à l'obtention</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 5: SERVICES
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="services section-lg" id="services">
+        <div class="container">
+            <div class="services-header reveal">
+                <div class="services-label">
+                    <span>📋</span>
+                    <span>Nos expertises</span>
+                </div>
+                <h2 class="services-title">Des solutions pour toutes vos démarches</h2>
+                <p class="services-subtitle">
+                    Particuliers ou professionnels, nous vous accompagnons dans vos formalités administratives.
+                </p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="services-tabs reveal">
+                <button class="services-tab active" data-tab="immigration">🛂 Immigration</button>
+                <button class="services-tab" data-tab="etatcivil">📄 État civil</button>
+                <button class="services-tab" data-tab="social">🏠 Social</button>
+                <button class="services-tab" data-tab="pro">💼 Entreprises</button>
+            </div>
+
+            <!-- Immigration Panel -->
+            <div class="services-panel active" id="panel-immigration">
+                <div class="service-card reveal stagger-1">
+                    <span class="service-card-popular">★ Plus demandé</span>
+                    <div class="service-card-icon">🛂</div>
+                    <h3 class="service-card-title">Titre de séjour</h3>
+                    <p class="service-card-desc">Première demande, renouvellement, changement de statut. Dossier complet et conforme.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">À partir de 149€</div>
+                        <a href="/titre-sejour" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card reveal stagger-2">
+                    <div class="service-card-icon">🇫🇷</div>
+                    <h3 class="service-card-title">Naturalisation</h3>
+                    <p class="service-card-desc">Accompagnement complet pour votre demande de nationalité française.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">À partir de 299€</div>
+                        <a href="/naturalisation" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card reveal stagger-3">
+                    <div class="service-card-icon">👨‍👩‍👧</div>
+                    <h3 class="service-card-title">Regroupement familial</h3>
+                    <p class="service-card-desc">Réunissez votre famille en France avec un dossier solide et complet.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">À partir de 249€</div>
+                        <a href="/regroupement-familial" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- État civil Panel -->
+            <div class="services-panel" id="panel-etatcivil">
+                <div class="service-card reveal stagger-1">
+                    <div class="service-card-icon">🪪</div>
+                    <h3 class="service-card-title">Carte d'identité</h3>
+                    <p class="service-card-desc">Première demande ou renouvellement de votre CNI en toute simplicité.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">À partir de 49€</div>
+                        <a href="/carte-identite" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card reveal stagger-2">
+                    <div class="service-card-icon">🛫</div>
+                    <h3 class="service-card-title">Passeport</h3>
+                    <p class="service-card-desc">Obtenez votre passeport rapidement avec notre accompagnement.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">À partir de 59€</div>
+                        <a href="/passeport" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card reveal stagger-3">
+                    <div class="service-card-icon">📜</div>
+                    <h3 class="service-card-title">Actes d'état civil</h3>
+                    <p class="service-card-desc">Naissance, mariage, décès. Obtenez vos actes officiels.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">À partir de 29€</div>
+                        <a href="/actes-etat-civil" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Panel -->
+            <div class="services-panel" id="panel-social">
+                <div class="service-card reveal stagger-1">
+                    <div class="service-card-icon">🏠</div>
+                    <h3 class="service-card-title">Logement social</h3>
+                    <p class="service-card-desc">Demande de logement HLM et suivi de votre dossier.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">À partir de 79€</div>
+                        <a href="/logement-social" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card reveal stagger-2">
+                    <div class="service-card-icon">🚗</div>
+                    <h3 class="service-card-title">Permis de conduire</h3>
+                    <p class="service-card-desc">Échange, renouvellement ou demande de permis international.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">À partir de 69€</div>
+                        <a href="/permis-conduire" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card reveal stagger-3">
+                    <div class="service-card-icon">👴</div>
+                    <h3 class="service-card-title">Retraite</h3>
+                    <p class="service-card-desc">Demande de pension et démarches auprès des caisses de retraite.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">À partir de 99€</div>
+                        <a href="/retraite" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pro Panel -->
+            <div class="services-panel" id="panel-pro">
+                <div class="service-card reveal stagger-1">
+                    <div class="service-card-icon">👥</div>
+                    <h3 class="service-card-title">Gestion RH externalisée</h3>
+                    <p class="service-card-desc">Titres de séjour salariés, autorisations de travail, conformité.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">Sur devis</div>
+                        <a href="/entreprises" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card reveal stagger-2">
+                    <div class="service-card-icon">✅</div>
+                    <h3 class="service-card-title">Conformité réglementaire</h3>
+                    <p class="service-card-desc">Audit et mise en conformité de vos processus administratifs.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">Sur devis</div>
+                        <a href="/entreprises" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card reveal stagger-3">
+                    <div class="service-card-icon">📊</div>
+                    <h3 class="service-card-title">Formalités entreprises</h3>
+                    <p class="service-card-desc">Déclarations, immatriculations, modifications statutaires.</p>
+                    <div class="service-card-meta">
+                        <div class="service-card-price">Sur devis</div>
+                        <a href="/entreprises" class="service-card-link">
+                            En savoir plus <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-cta reveal">
+                <a href="#contact" class="btn btn-primary btn-lg">
+                    Voir tous nos services
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 6: PROCESS
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="process section-lg" id="process">
+        <div class="process-bg"></div>
+        <div class="container">
+            <div class="process-header reveal">
+                <div class="process-label">
+                    <span>⚡</span>
+                    <span>Simple et rapide</span>
+                </div>
+                <h2 class="process-title">Comment ça marche ?</h2>
+                <p class="process-subtitle">
+                    Un processus clair en 4 étapes pour un dossier parfait.
+                </p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step reveal stagger-1">
+                    <div class="process-step-number">1</div>
+                    <div class="process-step-icon">📞</div>
+                    <h3 class="process-step-title">Contactez-nous</h3>
+                    <p class="process-step-desc">Échange gratuit pour comprendre votre situation et vos besoins.</p>
+                    <span class="process-step-time">⏱️ 15 min</span>
+                </div>
+
+                <div class="process-step reveal stagger-2">
+                    <div class="process-step-number">2</div>
+                    <div class="process-step-icon">📋</div>
+                    <h3 class="process-step-title">Envoyez vos pièces</h3>
+                    <p class="process-step-desc">Liste personnalisée des documents. Upload sécurisé en ligne.</p>
+                    <span class="process-step-time">⏱️ 24-48h</span>
+                </div>
+
+                <div class="process-step reveal stagger-3">
+                    <div class="process-step-number">3</div>
+                    <div class="process-step-icon">🔍</div>
+                    <h3 class="process-step-title">On vérifie tout</h3>
+                    <p class="process-step-desc">Nos experts contrôlent et optimisent votre dossier.</p>
+                    <span class="process-step-time">⏱️ 3-5 jours</span>
+                </div>
+
+                <div class="process-step reveal stagger-4">
+                    <div class="process-step-number">4</div>
+                    <div class="process-step-icon">✅</div>
+                    <h3 class="process-step-title">Dossier prêt !</h3>
+                    <p class="process-step-desc">Recevez votre dossier complet, prêt à déposer.</p>
+                    <span class="process-step-time">⏱️ Livré !</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 7: STATS
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="stats section-lg">
+        <div class="stats-bg"></div>
+        <div class="stats-glow"></div>
+        <div class="container">
+            <div class="stats-header reveal">
+                <div class="stats-label">
+                    <span>📊</span>
+                    <span>Nos résultats parlent</span>
+                </div>
+                <h2 class="stats-title">La confiance de centaines de clients</h2>
+                <p class="stats-subtitle">
+                    Des chiffres qui témoignent de notre engagement et de notre expertise.
+                </p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card reveal stagger-1">
+                    <div class="stat-card-icon">📁</div>
+                    <div class="stat-card-value">
+                        <span class="counter" data-target="1600">0</span>+
+                    </div>
+                    <div class="stat-card-label">Dossiers traités</div>
+                </div>
+
+                <div class="stat-card reveal stagger-2">
+                    <div class="stat-card-icon">✅</div>
+                    <div class="stat-card-value">
+                        <span class="counter" data-target="98">0</span>%
+                    </div>
+                    <div class="stat-card-label">Taux de réussite</div>
+                </div>
+
+                <div class="stat-card reveal stagger-3">
+                    <div class="stat-card-icon">⚡</div>
+                    <div class="stat-card-value">
+                        <span class="counter" data-target="48">0</span>h
+                    </div>
+                    <div class="stat-card-label">Délai de réponse</div>
+                </div>
+
+                <div class="stat-card reveal stagger-4">
+                    <div class="stat-card-icon">📅</div>
+                    <div class="stat-card-value">
+                        <span class="counter" data-target="21">0</span>j
+                    </div>
+                    <div class="stat-card-label">Délai moyen traitement</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 8: TESTIMONIALS
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="testimonials section-lg" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header reveal">
+                <div class="testimonials-label">
+                    <span>⭐</span>
+                    <span>Ils nous font confiance</span>
+                </div>
+                <h2 class="testimonials-title">Ce que disent nos clients</h2>
+                <p class="testimonials-subtitle">
+                    +200 avis positifs sur Google. Découvrez leurs témoignages.
+                </p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card reveal stagger-1">
+                    <span class="testimonial-card-quote">"</span>
+                    <div class="testimonial-card-rating">★★★★★</div>
+                    <p class="testimonial-card-text">
+                        "Service exceptionnel ! Mon titre de séjour a été renouvelé sans aucun problème. L'équipe est très réactive et professionnelle. Je recommande à 100%."
+                    </p>
+                    <div class="testimonial-card-author">
+                        <div class="testimonial-card-avatar">A</div>
+                        <div class="testimonial-card-info">
+                            <div class="testimonial-card-name">Amir K.</div>
+                            <div class="testimonial-card-service">Renouvellement titre de séjour</div>
+                        </div>
+                        <div class="testimonial-card-verified">
+                            <span>✓</span> Vérifié
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal stagger-2">
+                    <span class="testimonial-card-quote">"</span>
+                    <div class="testimonial-card-rating">★★★★★</div>
+                    <p class="testimonial-card-text">
+                        "Après 2 refus en préfecture, j'ai fait appel à Formalita. Dossier accepté du premier coup ! Ils savent exactement ce qu'il faut. Merci infiniment."
+                    </p>
+                    <div class="testimonial-card-author">
+                        <div class="testimonial-card-avatar">S</div>
+                        <div class="testimonial-card-info">
+                            <div class="testimonial-card-name">Sophie M.</div>
+                            <div class="testimonial-card-service">Naturalisation</div>
+                        </div>
+                        <div class="testimonial-card-verified">
+                            <span>✓</span> Vérifié
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal stagger-3">
+                    <span class="testimonial-card-quote">"</span>
+                    <div class="testimonial-card-rating">★★★★★</div>
+                    <p class="testimonial-card-text">
+                        "En tant qu'employeur, gérer les titres de séjour de mes salariés était un cauchemar. Formalita a tout pris en charge. Gain de temps énorme !"
+                    </p>
+                    <div class="testimonial-card-author">
+                        <div class="testimonial-card-avatar">P</div>
+                        <div class="testimonial-card-info">
+                            <div class="testimonial-card-name">Pierre D.</div>
+                            <div class="testimonial-card-service">Client entreprise</div>
+                        </div>
+                        <div class="testimonial-card-verified">
+                            <span>✓</span> Vérifié
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 9: GUARANTEES
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="guarantees section-lg">
+        <div class="container">
+            <div class="guarantees-header reveal">
+                <div class="guarantees-label">
+                    <span>🛡️</span>
+                    <span>Nos engagements</span>
+                </div>
+                <h2 class="guarantees-title">Votre tranquillité, notre priorité</h2>
+                <p class="guarantees-subtitle">
+                    Des garanties concrètes pour vous accompagner en toute confiance.
+                </p>
+            </div>
+
+            <div class="guarantees-grid">
+                <div class="guarantee-card reveal stagger-1">
+                    <div class="guarantee-card-icon">🎯</div>
+                    <h3 class="guarantee-card-title">98% de réussite</h3>
+                    <p class="guarantee-card-desc">Nos experts optimisent chaque dossier pour maximiser vos chances.</p>
+                </div>
+
+                <div class="guarantee-card reveal stagger-2">
+                    <div class="guarantee-card-icon">🔒</div>
+                    <h3 class="guarantee-card-title">100% sécurisé</h3>
+                    <p class="guarantee-card-desc">Vos données sont protégées et traitées selon le RGPD.</p>
+                </div>
+
+                <div class="guarantee-card reveal stagger-3">
+                    <div class="guarantee-card-icon">⚡</div>
+                    <h3 class="guarantee-card-title">Réponse en 48h</h3>
+                    <p class="guarantee-card-desc">Une équipe réactive qui répond à toutes vos questions.</p>
+                </div>
+
+                <div class="guarantee-card reveal stagger-4">
+                    <div class="guarantee-card-icon">👤</div>
+                    <h3 class="guarantee-card-title">Expert dédié</h3>
+                    <p class="guarantee-card-desc">Un interlocuteur unique qui suit votre dossier de A à Z.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 10: FAQ
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="faq section-lg" id="faq">
+        <div class="container">
+            <div class="faq-header reveal">
+                <div class="faq-label">
+                    <span>❓</span>
+                    <span>Questions fréquentes</span>
+                </div>
+                <h2 class="faq-title">Vous avez des questions ?</h2>
+                <p class="faq-subtitle">
+                    Retrouvez les réponses aux questions les plus posées par nos clients.
+                </p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item reveal stagger-1" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" itemprop="name">
+                        <span>Êtes-vous un service officiel ?</span>
+                        <span class="faq-question-icon">+</span>
+                    </div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div class="faq-answer-inner" itemprop="text">
+                            Non, Formalita est un service privé indépendant, non affilié à l'administration publique. Nous sommes partenaires certifiés Pôle Démarches et nous vous accompagnons dans la constitution de vos dossiers administratifs.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal stagger-2" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" itemprop="name">
+                        <span>Quels sont vos tarifs ?</span>
+                        <span class="faq-question-icon">+</span>
+                    </div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div class="faq-answer-inner" itemprop="text">
+                            Nos tarifs varient selon le type de démarche. Un titre de séjour démarre à 149€, une naturalisation à 299€. Nous établissons un devis gratuit et personnalisé après étude de votre situation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal stagger-3" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" itemprop="name">
+                        <span>Combien de temps prend le traitement ?</span>
+                        <span class="faq-question-icon">+</span>
+                    </div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div class="faq-answer-inner" itemprop="text">
+                            En moyenne, nous préparons votre dossier en 3 à 5 jours ouvrés une fois tous vos documents reçus. Les délais administratifs (préfecture, mairie) sont ensuite indépendants de notre service.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal stagger-4" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" itemprop="name">
+                        <span>Que se passe-t-il si mon dossier est refusé ?</span>
+                        <span class="faq-question-icon">+</span>
+                    </div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div class="faq-answer-inner" itemprop="text">
+                            Notre taux de réussite est de 98%. En cas de refus, nous analysons les motifs avec vous et vous accompagnons gratuitement dans la constitution d'un nouveau dossier ou d'un recours.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal stagger-5" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" itemprop="name">
+                        <span>Mes données sont-elles sécurisées ?</span>
+                        <span class="faq-question-icon">+</span>
+                    </div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div class="faq-answer-inner" itemprop="text">
+                            Absolument. Vos données sont hébergées en France et traitées conformément au RGPD. Nous ne partageons jamais vos informations avec des tiers sans votre consentement explicite.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal stagger-6" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-question" itemprop="name">
+                        <span>Proposez-vous un accompagnement en agence ?</span>
+                        <span class="faq-question-icon">+</span>
+                    </div>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div class="faq-answer-inner" itemprop="text">
+                            Oui ! En plus de notre service en ligne disponible partout en France, nous avons une agence physique en Savoie (Chambéry et alentours) pour un accompagnement de proximité.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-cta reveal">
+                <p class="faq-cta-text">Vous n'avez pas trouvé la réponse à votre question ?</p>
+                <a href="#contact" class="btn btn-primary">Contactez-nous</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 11: FINAL CTA
+         ════════════════════════════════════════════════════════════════ -->
+    <section class="final-cta section-lg" id="contact">
+        <div class="final-cta-bg"></div>
+        <div class="final-cta-shapes">
+            <div class="final-cta-shape-1"></div>
+            <div class="final-cta-shape-2"></div>
+        </div>
+
+        <div class="container">
+            <div class="final-cta-content">
+                <div class="final-cta-text reveal">
+                    <div class="final-cta-badge">
+                        <span>🚀</span>
+                        <span>Démarrez maintenant</span>
+                    </div>
+                    <h2 class="final-cta-title">Prêt à simplifier vos démarches ?</h2>
+                    <p class="final-cta-subtitle">
+                        Confiez-nous votre dossier et concentrez-vous sur l'essentiel. Nos experts s'occupent de tout.
+                    </p>
+                    <div class="final-cta-features">
+                        <div class="final-cta-feature">
+                            <span class="final-cta-feature-icon">✓</span>
+                            <span>Devis gratuit</span>
+                        </div>
+                        <div class="final-cta-feature">
+                            <span class="final-cta-feature-icon">✓</span>
+                            <span>Sans engagement</span>
+                        </div>
+                        <div class="final-cta-feature">
+                            <span class="final-cta-feature-icon">✓</span>
                             <span>Réponse sous 48h</span>
                         </div>
-                        <div class="trust-item">
-                            <div class="icon">✓</div>
-                            <span>Paiement en 3x</span>
-                        </div>
                     </div>
                 </div>
-                
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=700&fit=crop&crop=face" alt="Conseillère Formalita" class="hero-image-main">
-                    
-                    <div class="hero-float-card card-1">
-                        <div class="float-icon">✅</div>
-                        <div class="float-content">
-                            <strong>98%</strong>
-                            <span>Taux de réussite</span>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-float-card card-2">
-                        <div class="float-icon">⚡</div>
-                        <div class="float-content">
-                            <strong>48h</strong>
-                            <span>Temps de réponse</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ============================================
-         SERVICES SECTION
-         ============================================ -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Nos Services</span>
-                <h2>Toutes vos démarches, un seul interlocuteur</h2>
-                <p>Des tarifs clairs, un accompagnement personnalisé du début à la fin.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><span>🛂</span></div>
-                    <h3>Titre de séjour</h3>
-                    <div class="service-price">850€ <span>TTC</span></div>
-                    <a href="titre-sejour.html" class="service-btn">En savoir plus</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"><span>🇫🇷</span></div>
-                    <h3>Naturalisation</h3>
-                    <div class="service-price">1 200€ <span>TTC</span></div>
-                    <a href="#contact" class="service-btn">En savoir plus</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"><span>🪪</span></div>
-                    <h3>Carte d'identité</h3>
-                    <div class="service-price">150€ <span>TTC</span></div>
-                    <a href="#contact" class="service-btn">En savoir plus</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"><span>📘</span></div>
-                    <h3>Passeport</h3>
-                    <div class="service-price">150€ <span>TTC</span></div>
-                    <a href="#contact" class="service-btn">En savoir plus</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"><span>📜</span></div>
-                    <h3>Actes d'état civil</h3>
-                    <div class="service-price">80€ <span>TTC</span></div>
-                    <a href="#contact" class="service-btn">En savoir plus</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"><span>🏠</span></div>
-                    <h3>Logement social</h3>
-                    <div class="service-price">200€ <span>TTC</span></div>
-                    <a href="#contact" class="service-btn">En savoir plus</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"><span>🚗</span></div>
-                    <h3>Permis de conduire</h3>
-                    <div class="service-price">120€ <span>TTC</span></div>
-                    <a href="#contact" class="service-btn">En savoir plus</a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon"><span>🏢</span></div>
-                    <h3>Entreprises</h3>
-                    <div class="service-price">Sur devis</div>
-                    <a href="#contact" class="service-btn">Nous contacter</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         PROCESS SECTION
-         ============================================ -->
-    <section class="process" id="process">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Simple & Rapide</span>
-                <h2>Comment ça marche ?</h2>
-                <p>Un processus clair en 4 étapes pour vos démarches.</p>
-            </div>
-            
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Contact</h3>
-                    <p>Appelez-nous ou remplissez le formulaire pour une première consultation gratuite.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Analyse</h3>
-                    <p>Nous étudions votre situation et définissons ensemble la meilleure stratégie.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Constitution</h3>
-                    <p>Nous préparons votre dossier complet et vérifions chaque document.</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Suivi</h3>
-                    <p>Nous déposons votre dossier et assurons le suivi jusqu'à l'obtention.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         GUARANTEES SECTION
-         ============================================ -->
-    <section class="guarantees">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Nos Engagements</span>
-                <h2>Pourquoi nous faire confiance ?</h2>
-                <p>Des garanties concrètes pour votre tranquillité d'esprit.</p>
-            </div>
-            
-            <div class="guarantees-grid">
-                <div class="guarantee-card">
-                    <div class="guarantee-icon">🎯</div>
-                    <h4>98% de réussite</h4>
-                    <p>Notre expertise garantit des dossiers acceptés du premier coup.</p>
-                </div>
-                
-                <div class="guarantee-card">
-                    <div class="guarantee-icon">🔒</div>
-                    <h4>Données sécurisées</h4>
-                    <p>Vos documents sont protégés et traités en toute confidentialité RGPD.</p>
-                </div>
-                
-                <div class="guarantee-card">
-                    <div class="guarantee-icon">⚡</div>
-                    <h4>Réponse 48h</h4>
-                    <p>Analyse de votre situation et retour sous 48h maximum garantie.</p>
-                </div>
-                
-                <div class="guarantee-card">
-                    <div class="guarantee-icon">👤</div>
-                    <h4>Expert dédié</h4>
-                    <p>Un interlocuteur unique qui suit votre dossier de A à Z.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         TESTIMONIALS SECTION
-         ============================================ -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Avis Clients</span>
-                <h2>Ils nous font confiance</h2>
-                <p>Découvrez les témoignages de nos clients satisfaits.</p>
-            </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        Service impeccable ! Mon titre de séjour a été obtenu en 3 semaines 
-                        grâce à leur accompagnement. Je recommande vivement.
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MK</div>
-                        <div class="testimonial-info">
-                            <strong>Maria K.</strong>
-                            <span>Titre de séjour</span>
-                        </div>
+                <div class="final-cta-form-card reveal stagger-2">
+                    <div class="final-cta-form-header">
+                        <h3 class="final-cta-form-title">Demandez votre devis gratuit</h3>
+                        <p class="final-cta-form-subtitle">Un conseiller vous recontacte sous 48h</p>
                     </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        Après 2 refus en solo, j'ai fait appel à Formalita. 
-                        Dossier accepté du premier coup. Un grand merci pour votre professionnalisme.
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">AD</div>
-                        <div class="testimonial-info">
-                            <strong>Ahmed D.</strong>
-                            <span>Naturalisation</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        Équipe réactive et à l'écoute. Ils m'ont évité des heures de paperasse 
-                        et de stress. Prix très correct pour le service rendu.
-                    </p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SL</div>
-                        <div class="testimonial-info">
-                            <strong>Sophie L.</strong>
-                            <span>Carte d'identité</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ============================================
-         CTA SECTION
-         ============================================ -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Prêt à simplifier vos démarches ?</h2>
-            <p>
-                Consultation gratuite et sans engagement. 
-                Nos experts vous rappellent sous 48h.
-            </p>
-            <a href="#contact" class="btn-primary">
-                Obtenir mon analyse gratuite →
-            </a>
-        </div>
-    </section>
-
-    <!-- ============================================
-         CONTACT SECTION
-         ============================================ -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Parlons de votre projet</h3>
-                    <p>
-                        Vous avez des questions sur nos services ou souhaitez démarrer 
-                        une démarche ? Notre équipe est là pour vous accompagner.
-                    </p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📞</div>
-                            <div class="contact-item-text">
-                                <strong>Téléphone</strong>
-                                <a href="tel:+33400000000">04 00 00 00 00</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-item-icon">✉️</div>
-                            <div class="contact-item-text">
-                                <strong>Email</strong>
-                                <a href="mailto:contact@formalita.fr">contact@formalita.fr</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-item-icon">📍</div>
-                            <div class="contact-item-text">
-                                <strong>Adresse</strong>
-                                <span>Chambéry, Savoie (73)</span>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-item-icon">🕐</div>
-                            <div class="contact-item-text">
-                                <strong>Horaires</strong>
-                                <span>Lun-Ven : 9h-18h</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form-wrapper">
-                    <h3>Demande de rappel gratuit</h3>
-                    <p>Remplissez ce formulaire, un expert vous rappelle sous 48h.</p>
-                    
-                    <form 
-                        name="contact-general" 
-                        method="POST" 
-                        data-netlify="true" 
-                        netlify-honeypot="bot-field"
-                        action="/merci"
-                    >
-                        <p class="honey">
-                            <label>Ne pas remplir : <input name="bot-field"></label>
+                    <form class="final-cta-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p style="display:none;">
+                            <label>Ne pas remplir si vous êtes humain : <input name="bot-field"></label>
                         </p>
-                        <input type="hidden" name="form-name" value="contact-general">
-                        
-                        <div class="form-group">
-                            <label for="nom">Nom complet *</label>
-                            <input type="text" id="nom" name="nom" required placeholder="Votre nom et prénom">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="prenom">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" class="form-input" placeholder="Votre prénom" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="nom">Nom *</label>
+                                <input type="text" id="nom" name="nom" class="form-input" placeholder="Votre nom" required>
+                            </div>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                            <label class="form-label" for="email">Email *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="votre@email.com" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="telephone">Téléphone *</label>
-                            <input type="tel" id="telephone" name="telephone" required placeholder="06 XX XX XX XX">
+                            <label class="form-label" for="telephone">Téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" class="form-input" placeholder="06 12 34 56 78" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="service">Service souhaité *</label>
-                            <select id="service" name="service" required>
-                                <option value="">Sélectionnez un service...</option>
-                                <option value="titre-sejour">Titre de séjour</option>
-                                <option value="naturalisation">Naturalisation</option>
-                                <option value="carte-identite">Carte d'identité</option>
-                                <option value="passeport">Passeport</option>
-                                <option value="etat-civil">Actes d'état civil</option>
-                                <option value="logement-social">Logement social</option>
-                                <option value="permis-conduire">Permis de conduire</option>
-                                <option value="entreprise">Services aux entreprises</option>
-                                <option value="autre">Autre demande</option>
+                            <label class="form-label" for="service">Type de démarche *</label>
+                            <select id="service" name="service" class="form-input form-select" required>
+                                <option value="">Sélectionnez une démarche</option>
+                                <optgroup label="Immigration">
+                                    <option value="titre-sejour">Titre de séjour</option>
+                                    <option value="naturalisation">Naturalisation</option>
+                                    <option value="regroupement-familial">Regroupement familial</option>
+                                </optgroup>
+                                <optgroup label="État civil">
+                                    <option value="carte-identite">Carte d'identité</option>
+                                    <option value="passeport">Passeport</option>
+                                    <option value="acte-etat-civil">Acte d'état civil</option>
+                                </optgroup>
+                                <optgroup label="Autres">
+                                    <option value="logement-social">Logement social</option>
+                                    <option value="permis-conduire">Permis de conduire</option>
+                                    <option value="entreprise">Service entreprise</option>
+                                    <option value="autre">Autre demande</option>
+                                </optgroup>
                             </select>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message (optionnel)</label>
-                            <textarea id="message" name="message" placeholder="Décrivez brièvement votre situation..."></textarea>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                Envoyer ma demande
+                                <span>→</span>
+                            </button>
                         </div>
-                        
-                        <button type="submit" class="form-submit">
-                            Obtenir mon rappel gratuit →
-                        </button>
+
+                        <p class="form-disclaimer">
+                            En soumettant ce formulaire, vous acceptez d'être recontacté par nos services. 
+                            Vos données sont protégées conformément au RGPD.
+                        </p>
+
+                        <div class="form-urgency">
+                            <span>🔥</span>
+                            <span>Plus de 50 demandes cette semaine</span>
+                        </div>
                     </form>
-                    
-                    <div class="form-trust">
-                        <span>✓ Sans engagement</span>
-                        <span>✓ Réponse 48h</span>
-                        <span>✓ Données RGPD</span>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============================================
-         FOOTER
-         ============================================ -->
+    <!-- ════════════════════════════════════════════════════════════════
+         SECTION 12: FOOTER
+         ════════════════════════════════════════════════════════════════ -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-main">
                 <div class="footer-brand">
-                    <a href="/" class="logo">
-                        <div class="logo-icon">F</div>
-                        Formalita
-                    </a>
-                    <p>
-                        Votre partenaire de confiance pour toutes vos démarches 
-                        administratives en France. Expertise, réactivité et accompagnement 
-                        personnalisé.
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">F</div>
+                        <span>Formalita</span>
+                    </div>
+                    <p class="footer-desc">
+                        Votre partenaire de confiance pour toutes vos démarches administratives. Experts certifiés, résultats garantis.
                     </p>
-                    <div class="footer-legal-badge">
-                        ⚠️ Service privé indépendant, non affilié à l'administration publique. 
-                        Partenaire certifié Pôle Démarches.
+                    <div class="footer-badge">
+                        <span class="footer-badge-icon">🏛️</span>
+                        <span>Partenaire certifié Pôle Démarches</span>
                     </div>
                 </div>
-                
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="titre-sejour.html">Titre de séjour</a>
-                    <a href="#contact">Naturalisation</a>
-                    <a href="#contact">Carte d'identité</a>
-                    <a href="#contact">Passeport</a>
-                    <a href="#contact">État civil</a>
+
+                <div class="footer-nav">
+                    <h4 class="footer-nav-title">Services</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="/titre-sejour" class="footer-nav-link">Titre de séjour</a></li>
+                        <li><a href="/naturalisation" class="footer-nav-link">Naturalisation</a></li>
+                        <li><a href="/carte-identite" class="footer-nav-link">Carte d'identité</a></li>
+                        <li><a href="/passeport" class="footer-nav-link">Passeport</a></li>
+                        <li><a href="/logement-social" class="footer-nav-link">Logement social</a></li>
+                    </ul>
                 </div>
-                
-                <div class="footer-col">
-                    <h4>Entreprises</h4>
-                    <a href="#contact">Gestion RH</a>
-                    <a href="#contact">Conformité</a>
-                    <a href="#contact">Dossiers OPCO</a>
-                    <a href="#contact">Sur mesure</a>
+
+                <div class="footer-nav">
+                    <h4 class="footer-nav-title">Entreprises</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="/entreprises" class="footer-nav-link">Gestion RH</a></li>
+                        <li><a href="/entreprises" class="footer-nav-link">Conformité</a></li>
+                        <li><a href="/entreprises" class="footer-nav-link">Formalités</a></li>
+                        <li><a href="/entreprises" class="footer-nav-link">Demander un devis</a></li>
+                    </ul>
                 </div>
-                
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <a href="tel:+33400000000">04 00 00 00 00</a>
-                    <a href="mailto:contact@formalita.fr">contact@formalita.fr</a>
-                    <a href="#">Chambéry, Savoie</a>
-                    <a href="#">Lun-Ven : 9h-18h</a>
+
+                <div class="footer-nav">
+                    <h4 class="footer-nav-title">Contact</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="tel:+33456789012" class="footer-nav-link">📞 04 56 78 90 12</a></li>
+                        <li><a href="/cdn-cgi/l/email-protection#c6a5a9a8b2a7a5b286a0a9b4aba7aaafb2a7e8a0b4" class="footer-nav-link">📧 <span class="__cf_email__" data-cfemail="b5d6dadbc1d4d6c1f5d3dac7d8d4d9dcc1d49bd3c7">[email&#160;protected]</span></a></li>
+                        <li><span class="footer-nav-link">📍 Chambéry, Savoie</span></li>
+                        <li><span class="footer-nav-link">🕐 Lun-Ven 9h-18h</span></li>
+                    </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <span>© 2025 Formalita — Groupe Yuki • YUEKI SAS — RCS Chambéry 919 778 167</span>
-                <span>
-                    <a href="#">Mentions légales</a> • 
-                    <a href="#">Politique de confidentialité</a> • 
-                    <a href="#">CGV</a>
-                </span>
+                <p class="footer-legal">© 2025 Formalita - Groupe Yuki. Tous droits réservés.</p>
+                <div class="footer-legal-links">
+                    <a href="/mentions-legales" class="footer-legal-link">Mentions légales</a>
+                    <a href="/cgv" class="footer-legal-link">CGV</a>
+                    <a href="/confidentialite" class="footer-legal-link">Politique de confidentialité</a>
+                </div>
+            </div>
+
+            <div class="footer-disclaimer">
+                ⚠️ Service privé indépendant, non affilié à l'administration publique. Partenaire certifié Pôle Démarches.
             </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            document.getElementById('mobileMenu').classList.toggle('active');
-        }
+    <!-- ════════════════════════════════════════════════════════════════
+         JAVASCRIPT
+         ════════════════════════════════════════════════════════════════ -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // ═══════════════════════════════════════════════════════════════
+        // SCROLL PROGRESS BAR
+        // ═══════════════════════════════════════════════════════════════
+        const scrollProgress = document.getElementById('scrollProgress');
         
-        // Smooth scroll
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // ═══════════════════════════════════════════════════════════════
+        // NAVBAR SCROLL EFFECT
+        // ═══════════════════════════════════════════════════════════════
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ═══════════════════════════════════════════════════════════════
+        // MOBILE MENU
+        // ═══════════════════════════════════════════════════════════════
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-menu-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ═══════════════════════════════════════════════════════════════
+        // REVEAL ON SCROLL (Intersection Observer)
+        // ═══════════════════════════════════════════════════════════════
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ═══════════════════════════════════════════════════════════════
+        // COUNTER ANIMATION
+        // ═══════════════════════════════════════════════════════════════
+        const counters = document.querySelectorAll('.counter');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    animateCounter(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        function animateCounter(counter) {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000;
+            const start = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - start;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Easing function (ease-out)
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(easeOut * target);
+                
+                counter.textContent = current;
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    counter.textContent = target;
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // SERVICES TABS
+        // ═══════════════════════════════════════════════════════════════
+        const tabs = document.querySelectorAll('.services-tab');
+        const panels = document.querySelectorAll('.services-panel');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+
+                // Update tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Update panels
+                panels.forEach(panel => {
+                    panel.classList.remove('active');
+                    if (panel.id === `panel-${tabId}`) {
+                        panel.classList.add('active');
+                        // Trigger reveal animations for new panel
+                        panel.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+                            el.classList.add('revealed');
+                        });
+                    }
+                });
+            });
+        });
+
+        // ═══════════════════════════════════════════════════════════════
+        // FAQ ACCORDION
+        // ═══════════════════════════════════════════════════════════════
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                faqItems.forEach(i => i.classList.remove('active'));
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // ═══════════════════════════════════════════════════════════════
+        // SMOOTH SCROLL FOR ANCHOR LINKS
+        // ═══════════════════════════════════════════════════════════════
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
         });
-    </script>
-</body>
-</html>
+
+        // ═══════════════════════════════════════════════════════════════
+        // LIVE NOTIFICATION ROTATION
+        // ═══════════════════════════════════════════════════════════════
+        const notifications = [
+            { text: 'Dossier accepté !', time: 'Il y a 3 min', icon: '✅' },
+            { text: 'Titre de séjour obtenu', time: 'Il y a 12 min', icon: '🎉' },
+            { text: 'Naturalisation validée', time: 'Il y a 28 min', icon: '🇫🇷' },
+            { text: 'Nouveau client inscrit', time: 'Il y a 45 min', icon: '👋' }
+        ];
+
+        let notifIndex = 0;
+        const notifElement = document.querySelector('.hero-float-notification');
+
+        if (notifElement) {
+            setInterval(() => {
+                notifIndex = (notifIndex + 1) % notifications.length;
+                const notif = notifications[notifIndex];
+                
+                notifElement.querySelector('.hero-float-notification-icon').textContent = notif.icon;
+                notifElement.querySelector('.hero-float-notification-text').textContent = notif.text;
+                notifElement.querySelector('.hero-float-notification-time').textContent = notif.time;
+            }, 5000);
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // FORM VALIDATION FEEDBACK
+        // ═══════════════════════════════════════════════════════════════
+        const form = document.querySelector('.final-cta-form');
+        
+        if (form) {
+            form.addEventListener('submit', function(e) {
+     
