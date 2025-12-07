@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Obtenez votre titre de séjour en France. Constitution de dossier, dépôt préfecture, suivi complet. 850€ TTC - 98% de réussite - Paiement en 3x possible.">
+    <meta name="keywords" content="titre de séjour, carte de séjour, renouvellement titre séjour, changement statut, visa France, préfecture">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Titre de Séjour France | Formalita - 98% de réussite">
+    <meta property="og:description" content="Obtenez votre titre de séjour sans stress. Dossier complet + dépôt préfecture + suivi. 850€ TTC tout inclus.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://formalita.fr/titre-sejour">
+    
+    <title>Titre de Séjour | Formalita - Expert Démarches Administratives</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ============================================
+           RESET & VARIABLES
+           ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --orange-primary: #F97316;
+            --orange-dark: #EA580C;
+            --orange-light: #FFF7ED;
+            --blue-secondary: #2B5F9E;
+            --blue-dark: #1E4A7A;
+            --success-green: #059669;
+            --danger-red: #EF4444;
+            --neutral-gray: #6B7280;
+            --neutral-dark: #374151;
+            --bg-light: #F9FAFB;
+            --white: #FFFFFF;
+            --black: #111827;
+            
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--black);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ============================================
+           HEADER / NAVBAR
+           ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--orange-primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--orange-primary);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--orange-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--white) 0%, var(--orange-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Badge Urgence Animé */
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+            border: 1px solid #F59E0B;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #92400E;
+            margin-bottom: 1.5rem;
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+            50% { transform: scale(1.02); box-shadow: 0 0 20px 5px rgba(245, 158, 11, 0.2); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--black);
+        }
+
+        .hero h1 .gradient {
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--neutral-dark);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-price {
+            font-weight: 700;
+            color: var(--orange-primary);
+        }
+
+        /* CTA Principal avec Pulse */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.25rem 2.5rem;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            color: white;
+            text-decoration: none;
+            font-size: 1.125rem;
+            font-weight: 700;
+            border-radius: var(--radius-lg);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: pulse-cta 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-cta {
+            0%, 100% { box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4); }
+            50% { box-shadow: 0 4px 30px rgba(249, 115, 22, 0.6); }
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(249, 115, 22, 0.5);
+        }
+
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            font-size: 0.875rem;
+            color: var(--neutral-gray);
+        }
+
+        .hero-trust span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .hero-trust .check {
+            color: var(--success-green);
+        }
+
+        /* Trust Bar Stats */
+        .trust-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--orange-primary);
+        }
+
+        .trust-label {
+            font-size: 0.875rem;
+            color: var(--neutral-gray);
+            margin-top: 0.25rem;
+        }
+
+        /* ============================================
+           PREUVE SOCIALE / TÉMOIGNAGE
+           ============================================ */
+        .testimonial-featured {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .testimonial-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .testimonial-stars {
+            color: #FBBF24;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--neutral-dark);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        .author-info h4 {
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .author-info p {
+            font-size: 0.875rem;
+            color: var(--neutral-gray);
+        }
+
+        .testimonial-result {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            padding: 0.5rem 1rem;
+            background: #ECFDF5;
+            color: var(--success-green);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        /* ============================================
+           SITUATIONS COUVERTES
+           ============================================ */
+        .situations {
+            padding: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--neutral-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .situations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .situation-card {
+            padding: 2rem;
+            background: var(--white);
+            border: 2px solid #E5E7EB;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .situation-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--orange-primary);
+            box-shadow: 0 15px 30px rgba(249, 115, 22, 0.15);
+        }
+
+        .situation-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .situation-card h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .situation-card p {
+            font-size: 0.875rem;
+            color: var(--neutral-gray);
+        }
+
+        /* ============================================
+           CE QUI EST INCLUS
+           ============================================ */
+        .included {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .included-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .included-check {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: #ECFDF5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--success-green);
+            font-weight: 700;
+        }
+
+        .included-content h4 {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+            color: var(--black);
+        }
+
+        .included-content p {
+            font-size: 0.875rem;
+            color: var(--neutral-gray);
+        }
+
+        /* Box Prix */
+        .price-box {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            border-radius: var(--radius-xl);
+            text-align: center;
+            color: white;
+            box-shadow: 0 20px 40px rgba(249, 115, 22, 0.3);
+        }
+
+        .price-main {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-sub {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-box .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--orange-dark);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+        }
+
+        .price-box .btn-white:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* ============================================
+           PROCESSUS 4 ÉTAPES
+           ============================================ */
+        .process {
+            padding: 5rem 0;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .process-step h3 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .process-step p {
+            font-size: 0.875rem;
+            color: var(--neutral-gray);
+        }
+
+        /* ============================================
+           GARANTIES
+           ============================================ */
+        .guarantees {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .guarantees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .guarantee-card {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .guarantee-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--orange-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+
+        .guarantee-card h4 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .guarantee-card p {
+            font-size: 0.875rem;
+            color: var(--neutral-gray);
+        }
+
+        /* ============================================
+           FORMULAIRE
+           ============================================ */
+        .form-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--blue-secondary), var(--blue-dark));
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-header h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .form-header p {
+            color: var(--neutral-gray);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #E5E7EB;
+            border-radius: var(--radius-md);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--orange-primary);
+            box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            color: white;
+            border: none;
+            border-radius: var(--radius-md);
+            font-size: 1.125rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+        }
+
+        .form-trust {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+            color: var(--neutral-gray);
+        }
+
+        .form-trust span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        /* Honeypot */
+        .honey {
+            display: none !important;
+        }
+
+        /* ============================================
+           FAQ
+           ============================================ */
+        .faq {
+            padding: 5rem 0;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #E5E7EB;
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .faq-question::before {
+            content: '❓';
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            color: var(--neutral-dark);
+            line-height: 1.8;
+            padding-left: 2rem;
+        }
+
+        /* ============================================
+           CTA FINAL
+           ============================================ */
+        .cta-final {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--orange-light), #FEF3C7);
+            text-align: center;
+        }
+
+        .cta-final h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--black);
+        }
+
+        .cta-final p {
+            font-size: 1.125rem;
+            color: var(--neutral-dark);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .footer {
+            padding: 3rem 0;
+            background: var(--black);
+            color: white;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--orange-primary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-mention {
+            font-size: 0.75rem;
+            color: #9CA3AF;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-sm);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #9CA3AF;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--orange-primary);
+        }
+
+        .footer-copyright {
+            font-size: 0.75rem;
+            color: #6B7280;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .trust-bar {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .btn-primary {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
+            .testimonial-card {
+                padding: 2rem;
+            }
+
+            .form-wrapper {
+                padding: 2rem;
+            }
+
+            .form-trust {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         NAVBAR
+         ============================================ -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="https://formalita.fr" class="logo">
+                <span class="logo-icon">F</span>
+                Formalita
+            </a>
+            <a href="#formulaire" class="nav-cta">
+                Analyse gratuite →
+            </a>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Badge Urgence -->
+                <div class="hero-badge">
+                    ⏰ Votre titre expire bientôt ? Analyse express 48h
+                </div>
+
+                <!-- H1 -->
+                <h1>
+                    Obtenez votre titre de séjour<br>
+                    <span class="gradient">sans stress ni erreur</span>
+                </h1>
+
+                <!-- Sous-titre -->
+                <p class="hero-subtitle">
+                    Dossier complet + dépôt préfecture + suivi jusqu'à l'obtention.<br>
+                    <span class="hero-price">850€ TTC tout inclus</span> · 98% de réussite · Paiement en 3x possible
+                </p>
+
+                <!-- CTA Principal -->
+                <a href="#formulaire" class="btn-primary">
+                    Analyse gratuite en 48h →
+                </a>
+
+                <!-- Trust sous CTA -->
+                <div class="hero-trust">
+                    <span><span class="check">✓</span> Sans engagement</span>
+                    <span><span class="check">✓</span> Réponse en 48h</span>
+                    <span><span class="check">✓</span> 100% confidentiel</span>
+                </div>
+
+                <!-- Trust Bar Stats -->
+                <div class="trust-bar">
+                    <div class="trust-item">
+                        <div class="trust-number">987+</div>
+                        <div class="trust-label">Titres obtenus</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-number">98%</div>
+                        <div class="trust-label">Taux de réussite</div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-number">21j</div>
+                        <div class="trust-label">Délai moyen</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PREUVE SOCIALE / TÉMOIGNAGE
+         ============================================ -->
+    <section class="testimonial-featured">
+        <div class="container">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">
+                    "J'ai obtenu mon titre de séjour salarié en 3 semaines grâce à Formalita. 
+                    Dossier parfait du premier coup, aucun document refusé. 
+                    Je recommande à 200% !"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">S</div>
+                    <div class="author-info">
+                        <h4>Sofia M.</h4>
+                        <p>Titre de séjour salarié</p>
+                    </div>
+                </div>
+                <div class="testimonial-result">
+                    ✓ Titre obtenu en 21 jours
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SITUATIONS COUVERTES
+         ============================================ -->
+    <section class="situations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Toutes les situations couvertes</h2>
+                <p>Quel que soit votre profil, nous avons l'expertise pour vous accompagner.</p>
+            </div>
+
+            <div class="situations-grid">
+                <div class="situation-card">
+                    <div class="situation-icon">🎓</div>
+                    <h3>Étudiant → Salarié</h3>
+                    <p>Changement de statut après diplôme</p>
+                </div>
+
+                <div class="situation-card">
+                    <div class="situation-icon">💼</div>
+                    <h3>Salarié (1ère demande)</h3>
+                    <p>Première carte de séjour salarié</p>
+                </div>
+
+                <div class="situation-card">
+                    <div class="situation-icon">👨‍👩‍👧</div>
+                    <h3>Vie privée et familiale</h3>
+                    <p>Liens personnels et familiaux en France</p>
+                </div>
+
+                <div class="situation-card">
+                    <div class="situation-icon">⭐</div>
+                    <h3>Passeport Talent</h3>
+                    <p>Profils qualifiés et entrepreneurs</p>
+                </div>
+
+                <div class="situation-card">
+                    <div class="situation-icon">🔄</div>
+                    <h3>Renouvellement urgent</h3>
+                    <p>Expiration dans moins de 3 mois</p>
+                </div>
+
+                <div class="situation-card">
+                    <div class="situation-icon">⚖️</div>
+                    <h3>Cas complexe</h3>
+                    <p>Refus antérieur ou situation atypique</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CE QUI EST INCLUS
+         ============================================ -->
+    <section class="included">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ce qui est inclus dans nos 850€</h2>
+                <p>Un accompagnement complet, de l'analyse à l'obtention de votre titre.</p>
+            </div>
+
+            <div class="included-grid">
+                <div class="included-item">
+                    <div class="included-check">✓</div>
+                    <div class="included-content">
+                        <h4>Analyse gratuite éligibilité</h4>
+                        <p>Étude approfondie de votre situation sous 48h</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-check">✓</div>
+                    <div class="included-content">
+                        <h4>Check-list personnalisée</h4>
+                        <p>Liste exacte des pièces à fournir selon votre profil</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-check">✓</div>
+                    <div class="included-content">
+                        <h4>Constitution complète du dossier</h4>
+                        <p>Vérification, traduction, mise en conformité</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-check">✓</div>
+                    <div class="included-content">
+                        <h4>Prise de RDV préfecture</h4>
+                        <p>Nous gérons la prise de RDV (souvent 2-3 mois d'attente)</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-check">✓</div>
+                    <div class="included-content">
+                        <h4>Dépôt du dossier</h4>
+                        <p>Remise en main propre ou accompagnement sur place</p>
+                    </div>
+                </div>
+
+                <div class="included-item">
+                    <div class="included-check">✓</div>
+                    <div class="included-content">
+                        <h4>Suivi jusqu'à l'obtention</h4>
+                        <p>Relances préfecture, gestion pièces complémentaires</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box Prix -->
+            <div class="price-box">
+                <div class="price-main">850€ TTC</div>
+                <div class="price-sub">ou 3x 283€ sans frais</div>
+                <a href="#formulaire" class="btn-white">
+                    Commencer mon dossier →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROCESSUS 4 ÉTAPES
+         ============================================ -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Un processus simple en 4 étapes</h2>
+                <p>De votre demande à l'obtention de votre titre, on s'occupe de tout.</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📝</div>
+                    <h3>Décrivez votre besoin</h3>
+                    <p>Formulaire rapide en 2 minutes pour nous expliquer votre situation.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">📞</div>
+                    <h3>On vous rappelle</h3>
+                    <p>Un expert analyse votre dossier gratuitement sous 48h.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">📋</div>
+                    <h3>On s'occupe de tout</h3>
+                    <p>Constitution du dossier et démarches effectuées pour vous.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">🎉</div>
+                    <h3>Dossier validé !</h3>
+                    <p>Recevez votre titre de séjour en toute sérénité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         GARANTIES
+         ============================================ -->
+    <section class="guarantees">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos garanties</h2>
+                <p>Votre tranquillité d'esprit est notre priorité.</p>
+            </div>
+
+            <div class="guarantees-grid">
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">🏆</div>
+                    <h4>98% de réussite</h4>
+                    <p>Notre expertise garantit des dossiers acceptés du premier coup.</p>
+                </div>
+
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">🔒</div>
+                    <h4>Données RGPD sécurisées</h4>
+                    <p>Vos documents sont protégés et traités en toute confidentialité.</p>
+                </div>
+
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">⚡</div>
+                    <h4>Réponse 48h garantie</h4>
+                    <p>Analyse de votre situation et retour sous 48h maximum.</p>
+                </div>
+
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">👤</div>
+                    <h4>Interlocuteur dédié</h4>
+                    <p>Un expert unique qui suit votre dossier de A à Z.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FORMULAIRE
+         ============================================ -->
+    <section class="form-section" id="formulaire">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2>Analyse gratuite en 48h</h2>
+                    <p>Remplissez ce formulaire, un expert vous rappelle sous 48h maximum.</p>
+                </div>
+
+                <form 
+                    name="titre-sejour" 
+                    method="POST" 
+                    data-netlify="true" 
+                    netlify-honeypot="bot-field"
+                    action="/merci-titre-sejour"
+                >
+                    <!-- Honeypot anti-spam -->
+                    <p class="honey">
+                        <label>Ne pas remplir : <input name="bot-field"></label>
+                    </p>
+
+                    <!-- Hidden fields -->
+                    <input type="hidden" name="form-name" value="titre-sejour">
+                    <input type="hidden" name="service" value="Titre de séjour">
+                    <input type="hidden" name="landing_page" value="/titre-sejour">
+
+                    <div class="form-group">
+                        <label for="nom">Nom complet *</label>
+                        <input type="text" id="nom" name="nom" required placeholder="Votre nom et prénom">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone">Téléphone *</label>
+                        <input type="tel" id="telephone" name="telephone" required placeholder="06 XX XX XX XX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="situation">Votre situation *</label>
+                        <select id="situation" name="situation" required>
+                            <option value="">Sélectionnez votre situation...</option>
+                            <option value="etudiant-salarie">Étudiant → Salarié</option>
+                            <option value="salarie-1ere">Salarié (1ère demande)</option>
+                            <option value="salarie-renouvellement">Salarié (renouvellement)</option>
+                            <option value="vie-privee">Vie privée et familiale</option>
+                            <option value="passeport-talent">Passeport Talent</option>
+                            <option value="renouvellement-urgent">Renouvellement urgent (< 3 mois)</option>
+                            <option value="cas-complexe">Cas complexe / Refus antérieur</option>
+                            <option value="autre">Autre situation</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="form-submit">
+                        Obtenir mon analyse gratuite →
+                    </button>
+                </form>
+
+                <div class="form-trust">
+                    <span>✓ Sans engagement</span>
+                    <span>✓ Réponse 48h</span>
+                    <span>✓ Données RGPD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FAQ
+         ============================================ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions fréquentes</h2>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Combien de temps pour obtenir mon titre de séjour ?</div>
+                    <div class="faq-answer">
+                        Le délai moyen est de 21 jours après dépôt du dossier complet. Cela inclut le délai de prise de RDV préfecture (2-3 mois en général) que nous anticipons pour vous, puis l'instruction par la préfecture (2-4 semaines). Notre accompagnement accélère significativement ce processus.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Que se passe-t-il si mon dossier est refusé ?</div>
+                    <div class="faq-answer">
+                        Avec notre taux de réussite de 98%, les refus sont très rares. Si cela arrive malgré tout, nous analysons gratuitement les motifs du refus et vous conseillons sur les recours possibles (recours gracieux, hiérarchique ou contentieux).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Puis-je payer en plusieurs fois ?</div>
+                    <div class="faq-answer">
+                        Oui, absolument ! Nous proposons un paiement en 3 fois sans frais : 3 x 283€. Le premier versement est demandé à la signature, les deux suivants sont échelonnés pendant l'accompagnement.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Faut-il venir à Chambéry ?</div>
+                    <div class="faq-answer">
+                        Non, tout se fait à distance ! Nous gérons 100% des démarches en ligne et par téléphone. Seul le rendez-vous préfecture nécessite votre présence physique. Si vous êtes en Savoie, nous pouvons vous accompagner sur place (option).
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Quels documents dois-je fournir ?</div>
+                    <div class="faq-answer">
+                        Après notre analyse gratuite, nous vous envoyons une check-list personnalisée selon votre situation exacte. En général : passeport, justificatifs de domicile, photos d'identité, et documents spécifiques à votre statut (contrat de travail, diplômes, etc.).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA FINAL
+         ============================================ -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Prêt à obtenir votre titre de séjour ?</h2>
+            <p>
+                Rejoignez les 987+ personnes qui ont obtenu leur titre grâce à Formalita. 
+                Premier entretien gratuit et sans engagement.
+            </p>
+            <a href="#formulaire" class="btn-primary">
+                Commencer maintenant →
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Formalita</div>
+            
+            <div class="footer-mention">
+                ⚠️ <strong>Mention légale obligatoire :</strong> Formalita est un service privé indépendant, non affilié à l'administration publique. Partenaire certifié Pôle Démarches.
+            </div>
+
+            <div class="footer-links">
+                <a href="https://formalita.fr">Accueil</a>
+                <a href="mailto:contact@formalita.fr">contact@formalita.fr</a>
+                <a href="https://formalita.fr#contact">Contact</a>
+            </div>
+
+            <div class="footer-copyright">
+                © 2025 Formalita — Groupe Yuki • YUEKI SAS — RCS Chambéry 919 778 167
+            </div>
+        </div>
+    </footer>
+
+    <!-- Smooth scroll for anchor links -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
