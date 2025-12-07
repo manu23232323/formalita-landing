@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Merci ! | Formalita - Votre demande a été envoyée</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --orange-primary: #F97316;
+            --orange-dark: #EA580C;
+            --orange-light: #FFF7ED;
+            --blue-secondary: #2B5F9E;
+            --success-green: #059669;
+            --neutral-gray: #6B7280;
+            --neutral-dark: #374151;
+            --bg-light: #F9FAFB;
+            --white: #FFFFFF;
+            --black: #111827;
+            
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--black);
+            background: linear-gradient(135deg, var(--white) 0%, var(--orange-light) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .success-card {
+            background: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--success-green), #10B981);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: pop 0.5s ease-out;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .success-icon svg {
+            width: 50px;
+            height: 50px;
+            color: white;
+        }
+
+        .success-card h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 1rem;
+        }
+
+        .success-card .highlight {
+            color: var(--orange-primary);
+        }
+
+        .success-message {
+            font-size: 1.125rem;
+            color: var(--neutral-dark);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .next-steps {
+            background: var(--bg-light);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .next-steps h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-list {
+            list-style: none;
+        }
+
+        .step-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.9375rem;
+            color: var(--neutral-dark);
+        }
+
+        .step-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--orange-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--orange-light);
+            border-radius: var(--radius-md);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--neutral-dark);
+        }
+
+        .contact-item a {
+            color: var(--orange-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+        }
+
+        .btn-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+        }
+
+        .footer-text {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: var(--neutral-gray);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--orange-primary);
+            text-decoration: none;
+            margin-bottom: 2rem;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--orange-primary), var(--orange-dark));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+        }
+
+        @media (max-width: 480px) {
+            .success-card {
+                padding: 2rem;
+            }
+
+            .success-card h1 {
+                font-size: 1.5rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="https://formalita.fr" class="logo">
+            <span class="logo-icon">F</span>
+            Formalita
+        </a>
+
+        <div class="success-card">
+            <div class="success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+
+            <h1>Merci <span class="highlight">!</span></h1>
+            
+            <p class="success-message">
+                Votre demande d'analyse gratuite a bien été envoyée.<br>
+                Un expert Formalita vous contactera <strong>sous 48h maximum</strong>.
+            </p>
+
+            <div class="next-steps">
+                <h3>📋 Prochaines étapes</h3>
+                <ul class="step-list">
+                    <li>
+                        <span class="step-number">1</span>
+                        <span>Nous analysons votre situation dans les prochaines heures</span>
+                    </li>
+                    <li>
+                        <span class="step-number">2</span>
+                        <span>Un expert vous rappelle sous 48h pour un premier échange gratuit</span>
+                    </li>
+                    <li>
+                        <span class="step-number">3</span>
+                        <span>Si vous décidez de nous confier votre dossier, on s'occupe de tout !</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 <a href="mailto:contact@formalita.fr">contact@formalita.fr</a>
+                </div>
+                <div class="contact-item">
+                    📍 Chambéry, Savoie (73)
+                </div>
+            </div>
+
+            <a href="https://formalita.fr" class="btn-home">
+                ← Retour à l'accueil
+            </a>
+        </div>
+
+        <p class="footer-text">
+            © 2025 Formalita — Groupe Yuki • YUEKI SAS<br>
+            Service privé indépendant, non affilié à l'administration publique.
+        </p>
+    </div>
+
+</body>
+</html>
