@@ -1,188 +1,133 @@
-# 🟠 Formalita - Landing Page
+# 🟠 Formalita Landing Page
 
-Landing page professionnelle pour **Formalita** - Services d'accompagnement administratif.
-
-## 🚀 Déploiement rapide
-
-### Prérequis
-- Un compte [GitHub](https://github.com)
-- Un compte [Netlify](https://netlify.com)
-- Le domaine `formalita.fr` (accès DNS)
-
-### Étape 1 : Créer le repo GitHub
-
-1. Connecte-toi à GitHub
-2. Crée un nouveau repository :
-   - Nom : `formalita-landing` (ou ce que tu veux)
-   - Visibilité : **Private** (recommandé)
-   - Initialise SANS README (on a déjà les fichiers)
-
-3. Clone le repo en local :
-```bash
-git clone https://github.com/TON-USERNAME/formalita-landing.git
-cd formalita-landing
-```
-
-4. Copie les fichiers de ce dossier dans le repo
-
-5. Push vers GitHub :
-```bash
-git add .
-git commit -m "Initial commit - Landing page Formalita"
-git push origin main
-```
-
-### Étape 2 : Déployer sur Netlify
-
-1. Connecte-toi à [Netlify](https://app.netlify.com)
-2. Clique sur **"Add new site"** → **"Import an existing project"**
-3. Choisis **GitHub** et autorise l'accès
-4. Sélectionne le repo `formalita-landing`
-5. Configuration de build :
-   - **Branch to deploy** : `main`
-   - **Build command** : (laisser vide)
-   - **Publish directory** : `.`
-6. Clique **"Deploy site"**
-
-✅ Ton site est en ligne sur une URL temporaire Netlify !
-
-### Étape 3 : Connecter le domaine formalita.fr
-
-1. Dans Netlify → **Site settings** → **Domain management**
-2. Clique **"Add custom domain"**
-3. Entre : `formalita.fr`
-4. Netlify te donne des **serveurs DNS** à configurer
-
-5. Va chez ton registrar (là où tu as acheté le domaine) et configure :
-   - **Option A (recommandée)** : Change les NS (nameservers) vers Netlify
-   - **Option B** : Ajoute un enregistrement CNAME ou A
-
-6. Active **HTTPS** (Netlify le fait automatiquement avec Let's Encrypt)
-
-### Étape 4 : Vérifier les formulaires
-
-1. Dans Netlify → **Forms**
-2. Tu verras le formulaire `contact` apparaître après le premier test
-3. Les soumissions seront stockées ici
-
-**Configurer les notifications email :**
-1. **Forms** → **Form notifications** → **Add notification**
-2. Choisis **Email notification**
-3. Entre : `contact@formalita.fr`
-4. Tu recevras un email à chaque nouvelle soumission !
+> **Site web officiel** : [formalita.fr](https://formalita.fr)  
+> **Hébergement** : Netlify (auto-deploy)  
+> **Version stable** : `v1.0.0-stable`
 
 ---
 
-## 📁 Structure des fichiers
+## 🚀 Déploiement
+
+Le site est **automatiquement déployé** sur Netlify à chaque push sur `main`.
+
+| Environnement | URL | Branche |
+|---------------|-----|---------|
+| **Production** | https://formalita.fr | `main` |
+| **Backup stable** | - | `stable` |
+
+---
+
+## 📁 Structure du Repo
 
 ```
 formalita-landing/
-├── index.html        # Page principale
-├── success.html      # Page de confirmation après envoi
-├── netlify.toml      # Configuration Netlify
-└── README.md         # Ce fichier
+├── index.html          # Landing page principale
+├── DESIGN_SYSTEM.md    # Documentation Design System
+├── README.md           # Ce fichier
+└── (futures pages)     # blog.html, services.html, etc.
 ```
 
 ---
 
-## ✏️ Personnalisation
+## 🔒 Stratégie de Backup
 
-### Modifier le contenu
+### Niveaux de Protection
 
-Édite directement `index.html` :
-- **Textes** : Cherche et modifie les textes dans le HTML
-- **Statistiques** : Section `.hero-stats` (98%, 48h, 500+)
-- **Services** : Sections `#services-particuliers` et `#services-professionnels`
+| Niveau | Type | Usage |
+|--------|------|-------|
+| 🏷️ **Tag** | `v1.0.0-stable` | Version immutable de référence |
+| 🌿 **Branche** | `stable` | Backup de la version stable |
+| 📦 **Release** | GitHub Release | Archive téléchargeable |
 
-### Modifier les couleurs
+### Revenir à la version stable
 
-Les couleurs sont définies en CSS variables au début du `<style>` :
-```css
-:root {
-    --orange-primary: #F5A623;
-    --blue-primary: #2B5F9E;
-    /* ... */
-}
-```
-
-### Ajouter un numéro de téléphone
-
-Dans le footer, modifie :
-```html
-<div class="footer-contact-item">
-    <span>📞</span>
-    <span>04 XX XX XX XX</span>
-</div>
-```
-
----
-
-## 📊 Formulaire Netlify
-
-Le formulaire utilise **Netlify Forms** (gratuit jusqu'à 100 soumissions/mois).
-
-**Champs capturés :**
-- Prénom
-- Nom
-- Email
-- Téléphone
-- Profil (particulier/entreprise)
-- Besoin (type de service)
-- Message
-
-**Protection anti-spam :**
-- Honeypot field (champ caché)
-- Netlify spam filter intégré
-
----
-
-## 🔄 Mise à jour du site
-
-1. Modifie les fichiers localement
-2. Commit et push :
 ```bash
+# Option 1: Restaurer un fichier spécifique
+git checkout v1.0.0-stable -- index.html
+git commit -m "Rollback index.html to stable"
+git push
+
+# Option 2: Reset complet sur stable
+git fetch origin
+git reset --hard origin/stable
+git push --force
+
+# Option 3: Via GitHub UI
+# Releases > v1.0.0-stable > Download ZIP
+```
+
+---
+
+## 🎨 Design System
+
+Toute nouvelle page **DOIT** respecter le Design System documenté dans [`DESIGN_SYSTEM.md`](DESIGN_SYSTEM.md).
+
+### Tokens Principaux
+
+| Token | Valeur |
+|-------|--------|
+| Orange Primary | `#F97316` |
+| Blue Secondary | `#2B5F9E` |
+| Font | Inter |
+| Border Radius | 8-32px |
+
+### Créer une Nouvelle Page
+
+1. Copier la structure de `index.html`
+2. Réutiliser navbar + footer
+3. Appliquer les tokens CSS
+4. Suivre la checklist dans DESIGN_SYSTEM.md
+
+---
+
+## 📝 Workflow de Modification
+
+### Modification Simple
+```bash
+# 1. Éditer le fichier
+# 2. Commit + Push
 git add .
-git commit -m "Description des changements"
+git commit -m "Description du changement"
+git push
+# → Auto-deploy sur Netlify
+```
+
+### Modification Risquée
+```bash
+# 1. Créer une branche
+git checkout -b feature/ma-modification
+
+# 2. Faire les changements
+# 3. Tester localement
+# 4. Merger si OK
+git checkout main
+git merge feature/ma-modification
 git push
 ```
-3. Netlify déploie automatiquement en ~30 secondes !
+
+### ⚠️ En cas de problème
+```bash
+# Rollback immédiat
+git checkout v1.0.0-stable -- index.html
+git commit -m "🚨 Rollback to stable"
+git push
+```
 
 ---
 
-## 📱 Responsive
+## 🔗 Ressources
 
-Le site est optimisé pour :
-- ✅ Desktop (1200px+)
-- ✅ Tablette (768px - 1024px)
-- ✅ Mobile (< 768px)
-
----
-
-## 🔒 Sécurité
-
-- HTTPS automatique via Let's Encrypt
-- Headers de sécurité configurés dans `netlify.toml`
-- Protection honeypot contre le spam
+- **Netlify Dashboard** : [app.netlify.com](https://app.netlify.com)
+- **Site ID** : `2223fae8-6e90-4fe9-932e-9e7d2ac77e1b`
+- **Release stable** : [v1.0.0-stable](https://github.com/manu23232323/formalita-landing/releases/tag/v1.0.0-stable)
 
 ---
 
-## 📈 Prochaines étapes suggérées
+## 📞 Contact
 
-- [ ] Ajouter Google Analytics / Plausible
-- [ ] Créer une page Mentions Légales
-- [ ] Créer une page Politique de Confidentialité
-- [ ] Configurer Google Search Console
-- [ ] Ajouter le pixel Facebook/LinkedIn si nécessaire
+- **Email** : contact@formalita.fr
+- **Projet** : Groupe Yuki / Projet Y
 
 ---
 
-## 🆘 Support
-
-En cas de problème :
-- Documentation Netlify : https://docs.netlify.com
-- Documentation GitHub : https://docs.github.com
-
----
-
-**Créé le :** 05/12/2025  
-**Par :** Projet Y - Groupe Yuki
+**⚠️ Service privé indépendant, non affilié à l'administration publique. Partenaire certifié Pôle Démarches.**
