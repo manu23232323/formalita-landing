@@ -329,6 +329,26 @@
             transform: scale(1);
         }
 
+        /* Fallback: show content if JS fails */
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal, .reveal-left, .reveal-right, .reveal-scale {
+                animation: forceReveal 0.1s ease forwards;
+                animation-delay: 0.5s;
+            }
+        }
+
+        @keyframes forceReveal {
+            to {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        .revealed, .revealed.reveal, .revealed.reveal-left, .revealed.reveal-right, .revealed.reveal-scale {
+            opacity: 1;
+            transform: scale(1);
+        }
+
         /* Stagger delays */
         .stagger-1 { transition-delay: 0.1s; }
         .stagger-2 { transition-delay: 0.2s; }
@@ -3740,4 +3760,28 @@
         
         if (form) {
             form.addEventListener('submit', function(e) {
-     
+                     const btn = form.querySelector('button[type="submit"]');
+                btn.textContent = '✓ Message envoyé !';
+                btn.style.background = 'var(--success)';
+                
+                setTimeout(() => {
+                    btn.textContent = 'Démarrer mon dossier →';
+                    btn.style.background = '';
+                }, 3000);
+            });
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // INITIAL REVEAL FOR ABOVE-FOLD CONTENT
+        // ═══════════════════════════════════════════════════════════════
+        document.addEventListener('DOMContentLoaded', function() {
+            // Force reveal all elements after a short delay as fallback
+            setTimeout(() => {
+                document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+                    el.classList.add('revealed');
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>
