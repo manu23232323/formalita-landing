@@ -2807,6 +2807,50 @@
                 justify-content: center;
             }
         }
+
+        /* ========== MOBILE FIX - FORCE PHOTO DISPLAY ========== */
+        @media (max-width: 768px) {
+            .hero-visual {
+                display: block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                position: relative !important;
+                width: 100% !important;
+                height: 300px !important;
+                margin: 20px auto !important;
+                animation: none !important;
+            }
+            
+            .hero-photo-container {
+                display: block !important;
+                visibility: visible !important;
+                position: relative !important;
+                width: 100% !important;
+                height: 100% !important;
+                border-radius: 16px !important;
+                overflow: hidden !important;
+            }
+            
+            .hero-photo {
+                display: block !important;
+                visibility: visible !important;
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center top !important;
+            }
+            
+            .hero-photo-vignette,
+            .hero-photo-fade-top,
+            .hero-photo-fade-bottom,
+            .hero-float-notification,
+            .hero-float-stats,
+            .hero-float-rating {
+                display: none !important;
+            }
+        }
+        /* ========== END MOBILE FIX ========== */
+
     </style>
 </head>
 <body>
