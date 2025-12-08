@@ -2886,28 +2886,34 @@
                 color: #6b7280 !important;
             }
             
-            /* Stats en bas à gauche */
+            /* Stats en bas à gauche - COMPACT */
             .hero-float-stats {
                 display: block !important;
                 position: absolute !important;
                 bottom: 12px !important;
                 left: 12px !important;
                 background: white !important;
-                padding: 10px 14px !important;
-                border-radius: 12px !important;
+                padding: 8px 10px !important;
+                border-radius: 10px !important;
                 box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
                 animation: slideInUp 0.6s ease 0.3s forwards !important;
                 opacity: 0;
+                max-width: 55% !important;
             }
             
             .hero-float-stats-grid {
                 display: flex !important;
-                gap: 16px !important;
+                gap: 10px !important;
+            }
+            
+            .hero-float-stat {
+                text-align: center !important;
             }
             
             .hero-float-stat-value {
-                font-size: 16px !important;
+                font-size: 13px !important;
                 font-weight: 700 !important;
+                line-height: 1.2 !important;
             }
             
             .hero-float-stat-value.orange { color: #f97316 !important; }
@@ -2915,41 +2921,42 @@
             .hero-float-stat-value.blue { color: #3b82f6 !important; }
             
             .hero-float-stat-label {
-                font-size: 9px !important;
+                font-size: 8px !important;
                 color: #6b7280 !important;
                 text-transform: uppercase !important;
+                letter-spacing: 0.3px !important;
             }
             
-            /* Rating en bas à droite */
+            /* Rating en bas à droite - COMPACT */
             .hero-float-rating {
                 display: block !important;
                 position: absolute !important;
                 bottom: 12px !important;
                 right: 12px !important;
                 background: white !important;
-                padding: 8px 12px !important;
+                padding: 6px 10px !important;
                 border-radius: 10px !important;
                 box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
                 text-align: center !important;
                 animation: slideInUp 0.6s ease 0.5s forwards !important;
                 opacity: 0;
+                max-width: 40% !important;
             }
             
             .hero-float-rating-stars {
                 color: #fbbf24 !important;
-                font-size: 14px !important;
-                letter-spacing: 1px !important;
+                font-size: 12px !important;
+                letter-spacing: 0px !important;
             }
             
             .hero-float-rating-text {
-                font-size: 11px !important;
+                font-size: 10px !important;
                 font-weight: 600 !important;
                 color: #374151 !important;
             }
             
             .hero-float-rating-source {
-                font-size: 9px !important;
-                color: #9ca3af !important;
+                display: none !important;
             }
         }
         /* ========== END MOBILE FIX ========== */
