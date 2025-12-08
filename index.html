@@ -2863,9 +2863,44 @@
                 color: #6b7280 !important;
             }
             
-            /* Stats masquées sur mobile */
+            /* Stats centrées en bas */
             .hero-float-stats {
-                display: none !important;
+                display: block !important;
+                position: absolute !important;
+                bottom: 12px !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                background: white !important;
+                padding: 10px 16px !important;
+                border-radius: 12px !important;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+                animation: slideInUp 0.6s ease 0.3s forwards !important;
+                opacity: 0;
+            }
+            
+            .hero-float-stats-grid {
+                display: flex !important;
+                gap: 16px !important;
+            }
+            
+            .hero-float-stat {
+                text-align: center !important;
+            }
+            
+            .hero-float-stat-value {
+                font-size: 15px !important;
+                font-weight: 700 !important;
+                line-height: 1.2 !important;
+            }
+            
+            .hero-float-stat-value.orange { color: #f97316 !important; }
+            .hero-float-stat-value.green { color: #22c55e !important; }
+            .hero-float-stat-value.blue { color: #3b82f6 !important; }
+            
+            .hero-float-stat-label {
+                font-size: 9px !important;
+                color: #6b7280 !important;
+                text-transform: uppercase !important;
             }
             
             /* Rating masqué sur mobile */
