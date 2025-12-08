@@ -815,10 +815,35 @@
         .hero-cta-group {
             display: flex;
             flex-wrap: wrap;
-            gap: var(--space-4);
+            gap: var(--space-6);
+            align-items: center;
             margin-bottom: var(--space-10);
             animation: fadeInUp 0.8s ease 0.4s forwards;
             opacity: 0;
+        }
+
+        .hero-stats-inline {
+            display: flex;
+            gap: var(--space-6);
+            padding-left: var(--space-4);
+            border-left: 2px solid var(--gray-200);
+        }
+
+        .hero-stat-inline {
+            text-align: center;
+        }
+
+        .hero-stat-value-inline {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--gray-900);
+            line-height: 1;
+        }
+
+        .hero-stat-label-inline {
+            font-size: var(--font-size-xs);
+            color: var(--gray-500);
+            margin-top: 2px;
         }
 
         .hero-stats {
@@ -2770,30 +2795,25 @@
                             Démarrer mon dossier
                             <span>→</span>
                         </a>
-                        <a href="tel:+33456789012" class="btn btn-secondary btn-lg">
-                            <span>📞</span>
-                            Appeler un conseiller
-                        </a>
-                    </div>
-
-                    <div class="hero-stats">
-                        <div class="hero-stat">
-                            <div class="hero-stat-value">
-                                <span class="counter" data-target="1600">0</span>+
+                        <div class="hero-stats-inline">
+                            <div class="hero-stat-inline">
+                                <div class="hero-stat-value-inline">
+                                    <span class="counter" data-target="1600">0</span>+
+                                </div>
+                                <div class="hero-stat-label-inline">Dossiers traités</div>
                             </div>
-                            <div class="hero-stat-label">Dossiers traités</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-value">
-                                <span class="counter" data-target="98">0</span>%
+                            <div class="hero-stat-inline">
+                                <div class="hero-stat-value-inline">
+                                    <span class="counter" data-target="98">0</span>%
+                                </div>
+                                <div class="hero-stat-label-inline">Taux de réussite</div>
                             </div>
-                            <div class="hero-stat-label">Taux de réussite</div>
-                        </div>
-                        <div class="hero-stat">
-                            <div class="hero-stat-value">
-                                <span class="counter" data-target="48">0</span>h
+                            <div class="hero-stat-inline">
+                                <div class="hero-stat-value-inline">
+                                    <span class="counter" data-target="48">0</span>h
+                                </div>
+                                <div class="hero-stat-label-inline">Délai de réponse</div>
                             </div>
-                            <div class="hero-stat-label">Délai de réponse</div>
                         </div>
                     </div>
                 </div>
